@@ -24025,11 +24025,14 @@ var MpxScroll = function () {
   }, {
     key: 'pullDown',
     value: function pullDown(distance) {
-      if (distance < this.options.threshold) {
-        this.progress.style.height = distance + 'px';
+      var ratio = 0.2;
+      var finalDistance = void 0;
+      if (distance < this.options.threshold * ratio * 10) {
+        finalDistance = distance;
       } else {
-        this.progress.style.height = this.options.threshold + (distance - this.options.threshold) / 3 + 'px';
+        finalDistance = this.options.threshold + (distance - this.options.threshold);
       }
+      this.progress.style.height = finalDistance * ratio + 'px';
     }
   }, {
     key: 'onTouchEnd',
