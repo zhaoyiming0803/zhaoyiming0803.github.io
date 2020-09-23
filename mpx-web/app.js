@@ -24025,7 +24025,7 @@ var MpxScroll = function () {
   }, {
     key: 'pullDown',
     value: function pullDown(distance) {
-      var ratio = 0.4;
+      var ratio = 0.5;
       var finalDistance = void 0;
       if (distance < this.options.threshold * ratio * 10) {
         finalDistance = distance;
