@@ -23979,6 +23979,7 @@ var MpxScroll = function () {
       threshold: 100, // 滑动触发下拉刷新的距离
       stop: 60 // 下拉刷新时停留的位置距离屏幕顶部的距离
     };
+    this.ratio = 1;
     this.el = getElement(el);
     this.options = babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default()({}, defaultOptions, options);
     this.touchstartY = 0;
@@ -24025,14 +24026,13 @@ var MpxScroll = function () {
   }, {
     key: 'pullDown',
     value: function pullDown(distance) {
-      var ratio = 0.5;
-      var finalDistance = void 0;
-      if (distance < this.options.threshold * ratio * 10) {
-        finalDistance = distance;
+      var alteredDistance = void 0;
+      if (distance * this.ratio < this.options.threshold) {
+        alteredDistance = distance;
       } else {
-        finalDistance = this.options.threshold + (distance - this.options.threshold);
+        alteredDistance = this.options.threshold + (distance - this.options.threshold);
       }
-      this.progress.style.height = finalDistance * ratio + 'px';
+      this.progress.style.height = alteredDistance * this.ratio + 'px';
     }
   }, {
     key: 'onTouchEnd',
@@ -24044,10 +24044,11 @@ var MpxScroll = function () {
       }
 
       var distance = this.currentY - this.touchstartY;
-      if (distance > this.options.threshold) {
+      console.log('end: ', distance * this.ratio, this.options.threshold);
+      if (distance * this.ratio >= this.options.threshold) {
         this.hooks.emit('pullingDown', true);
         this.isRefresh = true;
-        this.moveBack(this.options.stop);
+        this.moveBack();
       } else if (distance > 0) {
         this.moveBack();
       }
@@ -24055,12 +24056,12 @@ var MpxScroll = function () {
   }, {
     key: 'moveBack',
     value: function moveBack() {
-      var distance = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
       var currentHeight = this.progress.offsetHeight;
-      var stop = this.options.stop;
+      var _options = this.options,
+          stop = _options.stop,
+          threshold = _options.threshold;
 
-      var finalDistance = currentHeight > stop ? stop : 0;
+      var finalDistance = currentHeight >= threshold ? stop : 0;
       this.progress.style.height = finalDistance + 'px';
     }
   }, {
@@ -24160,7 +24161,7 @@ var MpxScroll = function () {
         return window.scrollTo(0, _scrollTop);
       }
 
-      var step = Math.abs(position - _scrollTop) / speed;
+      var step = Math.floor(Math.abs(position - _scrollTop) / speed);
 
       var next = function () {
         // fix eslint
@@ -24169,7 +24170,7 @@ var MpxScroll = function () {
           return function () {
             requestAnimationFrame(function () {
               position += step;
-              if (position < _scrollTop) {
+              if (position <= _scrollTop) {
                 window.scrollTo(0, position);
                 next();
               } else {
@@ -24181,7 +24182,7 @@ var MpxScroll = function () {
           return function () {
             requestAnimationFrame(function () {
               position -= step;
-              if (position > _scrollTop) {
+              if (position >= _scrollTop) {
                 window.scrollTo(0, position);
                 next();
               } else {
