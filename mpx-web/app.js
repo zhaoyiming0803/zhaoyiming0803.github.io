@@ -24089,6 +24089,7 @@ var MpxScroll = function () {
         return;
       }
 
+      this.hooks.emit('pullingDown');
       this.pageScrollTo({
         scrollTop: 0,
         duration: 0
