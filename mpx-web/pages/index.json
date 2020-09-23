@@ -1,9 +1,0 @@
-{
-  "usingComponents": {},
-  "navigationBarTitleText": "首页123",
-  "navigationBarBackgroundColor": "#ccc",
-  "navigationBarTextStyle": "white",
-  "backgroundTextStyle": "dark",
-  "enablePullDownRefresh": true,
-  "disableScroll": false
-}
