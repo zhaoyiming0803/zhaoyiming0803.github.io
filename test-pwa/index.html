@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test - PWA</title>
+    <link rel="manifest" href="./asstes/manifest.json">
+    <!-- safari 指定桌面 icon -->
+    <link rel="apple-touch-icon" href="./asstes/logo.png">
+    <!-- safari 指定应用名称 -->
+    <meta name="apple-mobile-web-app-title" content="赵一鸣的笔记本">
+    <!-- 是否隐藏 safari 地址栏等 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 修改 ios 状态栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="./static/css/index.css">
+  </head>
+  <body>
+    <div class="title">赵一鸣的笔记本!!!</div>
+    <img src="./asstes/logo.png">
+    <script src="./static/js/index.js"></script>
+    <script src="./library/ajax.js"></script>
+    <script src="./library/utils.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.qingsongchou.com/fe-static/vue-library.min.js"></script>
+    <script>
+      console.log(Vue);
+    </script>
+    
+    <script type="text/javascript">
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('./sw.js', {scope: './'})
+            .then(function (registration) {
+              console.log('[Service Worker regist success]: ', registration);
+            })
+            .catch(function (error) {
+              console.error('[Service Worker regist error]: ', error);
+            });
+
+          navigator.serviceWorker.oncontrollerchange = function () {
+            console.log('页面已更新，请刷新');
+          }
+
+          if (!navigator.onLine) {
+            console.error('网络已断开，内容可能过期');
+
+            window.addEventListener('online', function () {
+              console.log('网络已链接，刷新获取最新内容');
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

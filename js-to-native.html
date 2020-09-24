@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      (function (window) {
+        // 通过iframe的方式试图打开APP，如果能正常打开，会直接切换到APP，并自动阻止a标签的默认行为
+        // 否则打开a标签的href链接
+        var ifr = document.createElement("iframe");
+        ifr.src = "wbmain://sfsfsdfsd";
+        ifr.style.display = "none";
+        document.body.appendChild(ifr);
+        window.setTimeout(function () {
+          ifr.src = "https://apps.apple.com/cn/app/qq/id444934666";
+        }, 1000);
+      })(window);
+    </script>
+  </body>
+</html>
