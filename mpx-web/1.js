@@ -5,8 +5,8 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_cat_mpx_page_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(352);
-/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_44b44cec_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_cat_mpx_page_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(358);
+/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_dog_mpx_page_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(352);
+/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_8405aa1e_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_dog_mpx_page_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(358);
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(339);
 var disposed = false
 /* script */
@@ -24,15 +24,15 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 
 var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(
-  _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_cat_mpx_page_true__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"],
-  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_44b44cec_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_cat_mpx_page_true__WEBPACK_IMPORTED_MODULE_1__[/* render */ "a"],
-  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_44b44cec_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_cat_mpx_page_true__WEBPACK_IMPORTED_MODULE_1__[/* staticRenderFns */ "b"],
+  _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_dog_mpx_page_true__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_8405aa1e_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_dog_mpx_page_true__WEBPACK_IMPORTED_MODULE_1__[/* render */ "a"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_8405aa1e_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_dog_mpx_page_true__WEBPACK_IMPORTED_MODULE_1__[/* staticRenderFns */ "b"],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src/packageA/cat.mpx"
+Component.options.__file = "src/packageB/dog.mpx"
 
 /* hot reload */
 if (false) {}
@@ -48,8 +48,8 @@ if (false) {}
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var _node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
 /* harmony import */ var _mpxjs_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(69);
-/* harmony import */ var static_images_cat_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(353);
-/* harmony import */ var static_images_cat_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(static_images_cat_jpg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var static_images_dog_jpg_packageName_main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(353);
+/* harmony import */ var static_images_dog_jpg_packageName_main__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(static_images_dog_jpg_packageName_main__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -58,19 +58,23 @@ if (false) {}
 //
 
 global.currentSrcMode = "wx";
-global.currentResource = "/Users/didi/Desktop/github/test-mpx-web/src/packageA/cat.mpx";
+global.currentResource = "/Users/didi/Desktop/github/test-mpx-web/src/packageB/dog.mpx";
 
 
 
 
 Object(_mpxjs_core__WEBPACK_IMPORTED_MODULE_1__["createPage"])({
   data: {
-    catAvatar: static_images_cat_jpg__WEBPACK_IMPORTED_MODULE_2___default.a
+    dogAvatar: static_images_dog_jpg_packageName_main__WEBPACK_IMPORTED_MODULE_2___default.a,
+    pageName: 'packageB/dog'
   },
-  onLoad: function onLoad() {}
+  onLoad: function onLoad() {},
+  onPageScroll: function onPageScroll(e) {
+    console.log('onPageScroll: ', e);
+  }
 });
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "page", "", undefined, {}, {}, { 'mpx-image': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(354), true) }, undefined));
+/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "page", "", undefined, { "enablePullDownRefresh": false, "disableScroll": false }, {}, { 'mpx-image': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(354), true) }, undefined));
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)))
 
 /***/ }),
@@ -78,7 +82,7 @@ Object(_mpxjs_core__WEBPACK_IMPORTED_MODULE_1__["createPage"])({
 /***/ 353:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/cat75e13fc38cfbb604346ad980c7fd788b.jpg";
+module.exports = __webpack_require__.p + "img/dog6711ed1a87a7423d586868f996ad4587.jpg";
 
 /***/ }),
 
@@ -284,7 +288,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("div", [_vm._v("hello packageA cat.mpx")])])
+    return _c("div", { staticStyle: { height: "1000px" } }, [
+      _c("div", [_vm._v("hello packageB dog.mpx")])
+    ])
   }
 ]
 render._withStripped = true

@@ -727,14 +727,14 @@ _mpxjs_core__WEBPACK_IMPORTED_MODULE_7__["default"].use(_mpxjs_api_proxy__WEBPAC
 // console.log('app end: ', app)
 
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "app", "/pages/index", undefined, {}, { '/pages/index': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(331)), '/pages/list': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(345)), '/packageA/cat': function packageACat() {
+/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "app", "/pages/index", undefined, {}, { '/pages/index': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(331)), '/pages/list': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(345)), '/packageB/dog': function packageBDog() {
     return __webpack_require__.e(/* import() */ 1).then(__webpack_require__.bind(null, 351));
-  }, '/packageA/dog': function packageADog() {
-    return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 359));
-  }, '/packageB/dog': function packageBDog() {
-    return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 362));
   }, '/packageB/cat': function packageBCat() {
-    return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 366));
+    return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 359));
+  }, '/packageA/dog': function packageADog() {
+    return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 362));
+  }, '/packageA/cat': function packageACat() {
+    return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 365));
   } }, { 'mpx-keep-alive': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(348), true) }, undefined, vue__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], vue_router__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"]));
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)))
 
@@ -1812,7 +1812,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "html,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\nu,\ni,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 22px;\n}\nol,\nul {\n  list-style: none;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\nspan {\n  white-space: pre-line;\n}\nhtml,\nbody,\n.app {\n  width: 100%;\n  height: 100%;\n}\n.pull-down-loading {\n  position: relative;\n  text-align: center;\n  width: 100%;\n  height: 60px;\n  line-height: 60px;\n}\n.dot-flashing {\n  display: inline-block;\n  position: absolute;\n  bottom: 10px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  animation-delay: 0.2s;\n}\n.dot-flashing.dark {\n  background-color: #666;\n  animation: dot-flashing-dark 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing.light {\n  background-color: #fff;\n  animation: dot-flashing-light 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing::before,\n.dot-flashing::after {\n  content: '';\n  display: inline-block;\n  position: absolute;\n  top: 0;\n}\n.dot-flashing::before {\n  left: -14px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  animation-delay: 0s;\n}\n.dot-flashing.dark::before {\n  background-color: #666;\n  animation: dot-flashing-dark 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing.light::before {\n  background-color: #fff;\n  animation: dot-flashing-light 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing::after {\n  left: 14px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  animation-delay: 0.4s;\n}\n.dot-flashing.dark::after {\n  background-color: #666;\n  animation: dot-flashing-dark 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing.light::after {\n  background-color: #fff;\n  animation: dot-flashing-light 0.4s infinite steps(2, jump-none) alternate;\n}\n@-moz-keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-webkit-keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-o-keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-moz-keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n@-webkit-keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n@-o-keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n@keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n", ""]);
+exports.push([module.i, "html,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\nu,\ni,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 22px;\n}\nol,\nul {\n  list-style: none;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\nspan {\n  white-space: pre-line;\n}\nhtml,\nbody,\n.app {\n  width: 100%;\n  height: 100%;\n}\n.pull-down-loading {\n  position: relative;\n  text-align: center;\n  width: 100%;\n  height: 40px;\n  line-height: 40px;\n}\n.dot-flashing {\n  display: inline-block;\n  position: absolute;\n  bottom: 10px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  animation-delay: 0.2s;\n}\n.dot-flashing.dark {\n  background-color: #666;\n  animation: dot-flashing-dark 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing.light {\n  background-color: #fff;\n  animation: dot-flashing-light 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing::before,\n.dot-flashing::after {\n  content: '';\n  display: inline-block;\n  position: absolute;\n  top: 0;\n}\n.dot-flashing::before {\n  left: -14px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  animation-delay: 0s;\n}\n.dot-flashing.dark::before {\n  background-color: #666;\n  animation: dot-flashing-dark 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing.light::before {\n  background-color: #fff;\n  animation: dot-flashing-light 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing::after {\n  left: 14px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  animation-delay: 0.4s;\n}\n.dot-flashing.dark::after {\n  background-color: #666;\n  animation: dot-flashing-dark 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing.light::after {\n  background-color: #fff;\n  animation: dot-flashing-light 0.4s infinite steps(2, jump-none) alternate;\n}\n@-moz-keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-webkit-keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-o-keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-moz-keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n@-webkit-keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n@-o-keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n@keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n", ""]);
 
 // exports
 
@@ -23692,13 +23692,16 @@ function pageStatusMixin(mixinType) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return pageScrollMixin; });
 /* unused harmony export MpxScroll */
-/* harmony import */ var babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
-/* harmony import */ var babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(163);
-/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(164);
-/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _helper_log__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(161);
+/* harmony import */ var babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(70);
+/* harmony import */ var babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
+/* harmony import */ var babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(163);
+/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(164);
+/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _helper_log__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(161);
+
 
 
 
@@ -23713,7 +23716,7 @@ function refreshMs(vm) {
     return true;
   } catch (e) {
     var location = vm.__mpxProxy && vm.__mpxProxy.options.mpxFileResource;
-    Object(_helper_log__WEBPACK_IMPORTED_MODULE_3__[/* error */ "a"])('MpxScroll init error, please check.', location, e);
+    Object(_helper_log__WEBPACK_IMPORTED_MODULE_4__[/* error */ "a"])('MpxScroll init error, please check.', location, e);
   }
 }
 
@@ -23770,7 +23773,7 @@ function pageScrollMixin(mixinType) {
 
       if (enablePullDownRefresh) {
         ms.usePullDownRefresh();
-        ms.hooks.on('pullingDown', this.__mpxPullDownHandler);
+        ms.hooks.pullingDown.on(this.__mpxPullDownHandler);
       }
 
       // 页面滚动
@@ -23779,7 +23782,7 @@ function pageScrollMixin(mixinType) {
         ms.debounce = 0;
       }
       if (this.onPageScroll || this.onReachBottom) {
-        ms.hooks.on('scroll', this.__mpxPageScrollHandler);
+        ms.hooks.scroll.on(this.__mpxPageScrollHandler);
       }
     },
     deactivated: function deactivated() {
@@ -23882,38 +23885,33 @@ function preventDefault(e, isStopPropagation) {
 
 var EventEmitter = function () {
   function EventEmitter() {
-    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, EventEmitter);
+    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, EventEmitter);
 
-    this.events = {};
+    this.disposer = [];
   }
 
-  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(EventEmitter, [{
+  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(EventEmitter, [{
     key: 'on',
-    value: function on(type, handler) {
-      if (!this.events[type]) {
-        this.events[type] = [];
-      }
-      this.events[type].push(handler);
+    value: function on(handler) {
+      this.disposer.push(handler);
       return this;
     }
   }, {
     key: 'emit',
-    value: function emit(type) {
-      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        args[_key - 1] = arguments[_key];
+    value: function emit() {
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
       }
 
-      if (this.events[type]) {
-        this.events[type].forEach(function (handler) {
-          return handler.apply(undefined, args);
-        });
-      }
+      this.disposer.forEach(function (handler) {
+        return handler.apply(undefined, args);
+      });
       return this;
     }
   }, {
     key: 'destroy',
     value: function destroy() {
-      this.events = {};
+      this.disposer = [];
       return this;
     }
   }]);
@@ -23925,12 +23923,12 @@ var EventEmitter = function () {
 
 var EventRegister = function () {
   function EventRegister() {
-    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, EventRegister);
+    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, EventRegister);
 
     this.disposer = [];
   }
 
-  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(EventRegister, [{
+  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(EventRegister, [{
     key: 'on',
     value: function on(el, type, handler) {
       this.disposer.push([el, type, handler]);
@@ -23947,6 +23945,42 @@ var EventRegister = function () {
   }]);
 
   return EventRegister;
+}();
+
+// --------------- ScrollAnimation
+
+var ScrollAnimation = function () {
+  function ScrollAnimation() {
+    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, ScrollAnimation);
+  }
+
+  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(ScrollAnimation, [{
+    key: 'easeOutQuart',
+    value: function easeOutQuart(time, beginPosition, endPosition, callback) {
+      var startTime = Date.now();
+      var endTime = startTime + time;
+      var bounceFn = function bounceFn(t) {
+        return 1 - --t * t * t * t;
+      };
+      var timer = null;
+      var scheduler = function scheduler() {
+        var now = Date.now();
+        if (now >= endTime) {
+          callback(endPosition);
+          window.cancelAnimationFrame(timer);
+          timer = null;
+          return;
+        }
+        var ratio = bounceFn((now - startTime) / time);
+        var currentPosition = ratio * (endPosition - beginPosition) + beginPosition;
+        callback(currentPosition);
+        timer = window.requestAnimationFrame(scheduler);
+      };
+      scheduler();
+    }
+  }]);
+
+  return ScrollAnimation;
 }();
 
 // --------------- MpxScroll
@@ -23971,39 +24005,57 @@ function getElement(el) {
 
 var MpxScroll = function () {
   function MpxScroll(el) {
+    var _this2 = this;
+
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, MpxScroll);
+    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, MpxScroll);
 
     var defaultOptions = {
-      threshold: 60, // 滑动触发下拉刷新的距离
-      stop: 60 // 下拉刷新时停留的位置距离屏幕顶部的距离
+      threshold: 90, // 滑动触发下拉刷新的距离
+      stop: 40, // 下拉刷新时停留的位置距离屏幕顶部的距离
+      bounceTime: 800 // 设置回弹动画的动画时长
     };
-    this.ratio = 0.65;
+    this.options = babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1___default()({}, defaultOptions, options);
+    this.ratio = 0.5;
     this.el = getElement(el);
-    this.options = babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default()({}, defaultOptions, options);
     this.touchstartY = 0;
     this.currentY = 0;
     this.progress = this.el.children[0];
     this.isRefresh = false;
     this.bottomReached = false;
-    this.hooks = new EventEmitter();
+
+    var hooks = ['scroll', // 页面自然滚动
+    'pageScrollTo', // 手动调用 pageScrollTo
+    'move', // pull down 时 loading 移动
+    'pullingDown' // pullDown 事件
+    ];
+    this.hooks = {};
+    hooks.forEach(function (hook) {
+      _this2.hooks[hook] = new EventEmitter();
+    });
     this.eventRegister = new EventRegister();
+    this.scrollAnimation = new ScrollAnimation();
   }
 
-  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(MpxScroll, [{
+  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(MpxScroll, [{
     key: 'usePullDownRefresh',
     value: function usePullDownRefresh() {
-      var _this2 = this;
+      var _this3 = this;
 
+      this.hooks.move.on(function (bounceTime, beginPosition, endPosition) {
+        _this3.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
+          _this3.progress.style.height = distance + 'px';
+        });
+      });
       this.eventRegister.on(this.el, 'touchstart', function (e) {
-        return _this2.onTouchStart(e);
+        return _this3.onTouchStart(e);
       });
       this.eventRegister.on(this.el, 'touchmove', function (e) {
-        return _this2.onTouchMove(e);
+        return _this3.onTouchMove(e);
       });
       this.eventRegister.on(this.el, 'touchend', function (e) {
-        return _this2.onTouchEnd(e);
+        return _this3.onTouchEnd(e);
       });
     }
   }, {
@@ -24045,7 +24097,7 @@ var MpxScroll = function () {
 
       var distance = this.currentY - this.touchstartY;
       if (distance * this.ratio >= this.options.threshold) {
-        this.hooks.emit('pullingDown', true);
+        this.hooks.pullingDown.emit(true);
         this.isRefresh = true;
         this.moveBack();
       } else if (distance > 0) {
@@ -24055,56 +24107,50 @@ var MpxScroll = function () {
   }, {
     key: 'moveBack',
     value: function moveBack() {
-      var _this3 = this;
-
       var currentHeight = this.progress.offsetHeight;
       var _options = this.options,
           stop = _options.stop,
-          threshold = _options.threshold;
+          threshold = _options.threshold,
+          bounceTime = _options.bounceTime;
 
       var finalDistance = currentHeight >= threshold ? stop : 0;
-      var distance = currentHeight - finalDistance;
-      var step = distance / 16;
-      var next = function next() {
-        window.requestAnimationFrame(function () {
-          distance -= step;
-          if (distance > finalDistance) {
-            _this3.progress.style.height = distance + 'px';
-            next();
-          } else {
-            _this3.progress.style.height = finalDistance + 'px';
-          }
-        });
-      };
-      next();
+      this.hooks.move.emit(bounceTime, currentHeight, finalDistance);
     }
   }, {
     key: 'useScroll',
     value: function useScroll() {
       var _this4 = this;
 
+      this.hooks.pageScrollTo.on(function (bounceTime, beginPosition, endPosition) {
+        _this4.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
+          window.scrollTo(0, distance);
+        });
+      });
       this.eventRegister.on(document, 'scroll', function (e) {
         var scrollTop = window.pageYOffset;
         _this4.scrollTop = scrollTop;
-        _this4.hooks.emit('scroll', scrollTop);
+        _this4.hooks.scroll.emit(scrollTop);
       });
     }
   }, {
     key: 'destroy',
     value: function destroy() {
-      this.hooks.destroy();
+      var _this5 = this;
+
+      var hooks = this.hooks;
+      babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(hooks).forEach(function (hook) {
+        _this5.hooks[hook].destroy();
+      });
       this.eventRegister.destroy();
     }
   }, {
     key: 'startPullDownRefresh',
     value: function startPullDownRefresh() {
-      var _this5 = this;
-
       if (this.isRefresh) {
         return;
       }
 
-      this.hooks.emit('pullingDown');
+      this.hooks.pullingDown.emit();
       this.pageScrollTo({
         scrollTop: 0,
         duration: 0
@@ -24112,46 +24158,24 @@ var MpxScroll = function () {
 
       this.isRefresh = true;
 
-      var stop = this.options.stop;
-      var step = stop / 16;
-      var currentHeight = 0;
+      var _options2 = this.options,
+          stop = _options2.stop,
+          bounceTime = _options2.bounceTime;
 
-      var next = function next() {
-        window.requestAnimationFrame(function () {
-          currentHeight += step;
-          if (currentHeight < stop) {
-            _this5.progress.style.height = currentHeight + 'px';
-            next();
-          } else {
-            _this5.progress.style.height = stop + 'px';
-          }
-        });
-      };
-      next();
+      this.hooks.move.emit(bounceTime, 0, stop);
     }
   }, {
     key: 'stopPullDownRefresh',
     value: function stopPullDownRefresh() {
-      var _this6 = this;
-
       if (!this.isRefresh) {
         return;
       }
-      var currentHeight = this.options.stop;
-      var step = currentHeight / 16;
-      var next = function next() {
-        window.requestAnimationFrame(function () {
-          currentHeight -= step;
-          if (currentHeight <= 0) {
-            _this6.progress.style.height = 0 + 'px';
-            _this6.isRefresh = false;
-          } else {
-            _this6.progress.style.height = currentHeight + 'px';
-            next();
-          }
-        });
-      };
-      next();
+      var _options3 = this.options,
+          stop = _options3.stop,
+          bounceTime = _options3.bounceTime;
+
+      this.hooks.move.emit(bounceTime, stop, 0);
+      this.isRefresh = false;
     }
   }, {
     key: 'pageScrollTo',
@@ -24161,7 +24185,6 @@ var MpxScroll = function () {
           _ref$duration = _ref.duration,
           duration = _ref$duration === undefined ? 300 : _ref$duration;
 
-      var speed = duration / 16;
       var position = getScrollTop();
       var _scrollTop = void 0;
 
@@ -24169,45 +24192,15 @@ var MpxScroll = function () {
         _scrollTop = scrollTop;
       } else if (isDef(selector)) {
         _scrollTop = getOffsetTop(getElement(selector));
+      } else {
+        return Object(_helper_log__WEBPACK_IMPORTED_MODULE_4__[/* error */ "a"])('[pageScrollTo error]: scrollTop and selector are not defined');
       }
 
       if (duration === 0) {
         return window.scrollTo(0, _scrollTop);
       }
 
-      var step = Math.floor(Math.abs(position - _scrollTop) / speed);
-
-      var next = function () {
-        // fix eslint
-        var requestAnimationFrame = window.requestAnimationFrame;
-        if (position < _scrollTop) {
-          return function () {
-            requestAnimationFrame(function () {
-              position += step;
-              if (position <= _scrollTop) {
-                window.scrollTo(0, position);
-                next();
-              } else {
-                window.scrollTo(0, _scrollTop);
-              }
-            });
-          };
-        } else {
-          return function () {
-            requestAnimationFrame(function () {
-              position -= step;
-              if (position >= _scrollTop) {
-                window.scrollTo(0, position);
-                next();
-              } else {
-                window.scrollTo(0, _scrollTop);
-              }
-            });
-          };
-        }
-      }();
-
-      next();
+      this.hooks.pageScrollTo.emit(duration, position, _scrollTop);
     }
   }, {
     key: 'onReachBottom',
@@ -32137,6 +32130,7 @@ exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 1
 //
 //
 //
+//
 
 global.currentSrcMode = "wx";
 global.currentResource = "/Users/didi/Desktop/github/test-mpx-web/src/pages/index.mpx";
@@ -32204,6 +32198,7 @@ Object(_mpxjs_core__WEBPACK_IMPORTED_MODULE_1__["createPage"])({
       /* mpx replace */ mpx.pageScrollTo({
         // scrollTop: 0,
         selector: '#selector',
+        duration: 3000,
         success: function success(params) {
           console.log('success: ', params);
         },
@@ -32941,7 +32936,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("mpx-button", { on: { tap: _vm.scrollToSelector } }, [
-              _vm._v("scroll to #selector")
+              _vm._v("ease scroll to #selector")
             ]),
             _vm._v(" "),
             _c("mpx-button", { on: { tap: _vm.startPullDown } }, [
