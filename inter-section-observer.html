@@ -50,7 +50,7 @@
 
     var observer = new IntersectionObserver(function(changes) {
       changes.forEach(function(change) {
-        console.log('change: ', change)
+        console.log('change: ', change, ' time: ', change.time)
       })
     }, {
       threshold: [1]
