@@ -235,8 +235,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_app_mpx_app_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(17);
-/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_5ef46707_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_app_mpx_app_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(344);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(336);
+/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_5ef46707_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_app_mpx_app_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(350);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(339);
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
@@ -727,15 +727,15 @@ _mpxjs_core__WEBPACK_IMPORTED_MODULE_7__["default"].use(_mpxjs_api_proxy__WEBPAC
 // console.log('app end: ', app)
 
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "app", "/pages/index", undefined, {}, { '/pages/index': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(331)), '/pages/list': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(337)), '/packageB/dog': function packageBDog() {
-    return __webpack_require__.e(/* import() */ 6).then(__webpack_require__.bind(null, 371));
-  }, '/packageB/cat': function packageBCat() {
-    return __webpack_require__.e(/* import() */ 7).then(__webpack_require__.bind(null, 375));
-  }, '/packageA/dog': function packageADog() {
-    return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 360));
+/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "app", "/pages/index", undefined, {}, { '/pages/index': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(331)), '/pages/list': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(345)), '/packageA/dog': function packageADog() {
+    return __webpack_require__.e(/* import() */ 1).then(__webpack_require__.bind(null, 351));
   }, '/packageA/cat': function packageACat() {
-    return __webpack_require__.e(/* import() */ 5).then(__webpack_require__.bind(null, 363));
-  } }, { 'mpx-keep-alive': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(342), true) }, undefined, vue__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], vue_router__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"]));
+    return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 354));
+  }, '/packageB/dog': function packageBDog() {
+    return __webpack_require__.e(/* import() */ 3).then(__webpack_require__.bind(null, 362));
+  }, '/packageB/cat': function packageBCat() {
+    return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 366));
+  } }, { 'mpx-keep-alive': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(348), true) }, undefined, vue__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], vue_router__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"]));
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)))
 
 /***/ }),
@@ -1812,7 +1812,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "html,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\nu,\ni,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 22px;\n}\nol,\nul {\n  list-style: none;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\nspan {\n  white-space: pre-line;\n}\nhtml,\nbody,\n.app {\n  width: 100%;\n  height: 100%;\n}\n.pull-down-loading {\n  position: relative;\n  text-align: center;\n  width: 100%;\n  height: 40px;\n  line-height: 40px;\n}\n.dot-flashing {\n  display: inline-block;\n  position: absolute;\n  bottom: 10px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  animation-delay: 0.2s;\n}\n.dot-flashing.dark {\n  background-color: #666;\n  animation: dot-flashing-dark 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing.light {\n  background-color: #fff;\n  animation: dot-flashing-light 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing::before,\n.dot-flashing::after {\n  content: '';\n  display: inline-block;\n  position: absolute;\n  top: 0;\n}\n.dot-flashing::before {\n  left: -14px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  animation-delay: 0s;\n}\n.dot-flashing.dark::before {\n  background-color: #666;\n  animation: dot-flashing-dark 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing.light::before {\n  background-color: #fff;\n  animation: dot-flashing-light 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing::after {\n  left: 14px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  animation-delay: 0.4s;\n}\n.dot-flashing.dark::after {\n  background-color: #666;\n  animation: dot-flashing-dark 0.4s infinite steps(2, jump-none) alternate;\n}\n.dot-flashing.light::after {\n  background-color: #fff;\n  animation: dot-flashing-light 0.4s infinite steps(2, jump-none) alternate;\n}\n@-moz-keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-webkit-keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-o-keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@keyframes dot-flashing-dark {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-moz-keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n@-webkit-keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n@-o-keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n@keyframes dot-flashing-light {\n  0% {\n    background-color: #fff;\n  }\n  100% {\n    background-color: #fff;\n  }\n}\n", ""]);
+exports.push([module.i, "html,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\nu,\ni,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\nbody {\n  line-height: 22px;\n}\nol,\nul {\n  list-style: none;\n}\nblockquote,\nq {\n  quotes: none;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: '';\n  content: none;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\nspan {\n  white-space: pre-line;\n}\nhtml,\nbody,\n.app {\n  width: 100%;\n  height: 100%;\n}\n.pull-down-loading {\n  position: absolute;\n  width: 100%;\n  top: -56px;\n  height: 56px;\n  line-height: 56px;\n  text-align: center;\n}\n.dot-flashing {\n  display: inline-block;\n  position: absolute;\n  bottom: 10px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  background-color: #666;\n  animation: dot-flashing 0.4s infinite steps(2, jump-none) alternate;\n  animation-delay: 0.2s;\n}\n.dot-flashing::before,\n.dot-flashing::after {\n  content: '';\n  display: inline-block;\n  position: absolute;\n  top: 0;\n}\n.dot-flashing::before {\n  left: -14px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  background-color: #666;\n  animation: dot-flashing 0.4s infinite steps(2, jump-none) alternate;\n  animation-delay: 0s;\n}\n.dot-flashing::after {\n  left: 14px;\n  width: 6px;\n  height: 6px;\n  border-radius: 50%;\n  background-color: #666;\n  animation: dot-flashing 0.4s infinite steps(2, jump-none) alternate;\n  animation-delay: 0.4s;\n}\n@-moz-keyframes dot-flashing {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-webkit-keyframes dot-flashing {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@-o-keyframes dot-flashing {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n@keyframes dot-flashing {\n  0% {\n    background-color: #666;\n  }\n  50% {\n    background-color: #bbb;\n  }\n  100% {\n    background-color: #ddd;\n  }\n}\n", ""]);
 
 // exports
 
@@ -23691,18 +23691,9 @@ function pageStatusMixin(mixinType) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return pageScrollMixin; });
-/* unused harmony export MpxScroll */
-/* harmony import */ var babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(70);
-/* harmony import */ var babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
-/* harmony import */ var babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(163);
-/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(164);
-/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _helper_log__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(161);
-
-
+/* harmony import */ var _helper_log__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(161);
+/* harmony import */ var _mpxjs_core_src_helper_MpxScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(373);
+/* harmony import */ var _helper_MpxScroll_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(374);
 
 
 
@@ -23712,11 +23703,11 @@ var ms = void 0;
 function refreshMs(vm) {
   if (ms) ms.destroy();
   try {
-    window.__ms = ms = new MpxScroll(vm.$el);
+    window.__ms = ms = new _mpxjs_core_src_helper_MpxScroll__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"]();
     return true;
   } catch (e) {
     var location = vm.__mpxProxy && vm.__mpxProxy.options.mpxFileResource;
-    Object(_helper_log__WEBPACK_IMPORTED_MODULE_4__[/* error */ "a"])('MpxScroll init error, please check.', location, e);
+    Object(_helper_log__WEBPACK_IMPORTED_MODULE_0__[/* error */ "a"])('MpxScroll init error, please check.', location, e);
   }
 }
 
@@ -23731,7 +23722,7 @@ function showLoading(vm) {
 
   loading = document.createElement('div');
   loading.className = 'pull-down-loading';
-  loading.style.cssText = 'background-color: ' + backgroundColor + '; height: 0';
+  loading.style.cssText = 'will-change\uFF1Atransform; transform: translateZ(0); background-color: ' + backgroundColor + ';';
   var dot = document.createElement('div');
   dot.className = 'dot-flashing ' + backgroundTextStyle;
   loading.append(dot);
@@ -23754,16 +23745,9 @@ function pageScrollMixin(mixinType) {
       this.__lastScrollY = 0;
     },
     activated: function activated() {
-      showLoading(this);
-
       if (!refreshMs(this)) {
         return;
       }
-
-      ms.pageScrollTo({
-        scrollTop: this.__lastScrollY,
-        duration: 0
-      });
 
       var _$options$__mpxPageCo = this.$options.__mpxPageConfig,
           disableScroll = _$options$__mpxPageCo.disableScroll,
@@ -23772,22 +23756,35 @@ function pageScrollMixin(mixinType) {
       // 下拉刷新
 
       if (enablePullDownRefresh) {
+        showLoading(this);
         ms.usePullDownRefresh();
         ms.hooks.pullingDown.on(this.__mpxPullDownHandler);
       }
 
       // 页面滚动
-      ms.useScroll();
-      if (disableScroll) {
-        ms.debounce = 0;
-      }
-      if (this.onPageScroll || this.onReachBottom) {
-        ms.hooks.scroll.on(this.__mpxPageScrollHandler);
+      if (!disableScroll) {
+        ms.pageScrollTo({
+          scrollTop: this.__lastScrollY,
+          duration: 0
+        });
+
+        ms.hooks.pageScrollTo.on(function (bounceTime, beginPosition, endPosition) {
+          ms.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
+            window.scrollTo(0, distance);
+          });
+        });
+
+        if (this.onPageScroll || this.onReachBottom) {
+          ms.useScroll();
+          ms.hooks.scroll.on(this.__mpxPageScrollHandler);
+        }
+      } else {
+        document.body.style.cssText = 'overflow: hidden;';
       }
     },
     deactivated: function deactivated() {
       if (ms) {
-        this.__lastScrollY = getScrollTop();
+        this.__lastScrollY = Object(_helper_MpxScroll_dom__WEBPACK_IMPORTED_MODULE_2__[/* getScrollTop */ "c"])();
         ms.destroy();
         hideLoading(this);
       }
@@ -23804,13 +23801,18 @@ function pageScrollMixin(mixinType) {
         var _this = this;
 
         var autoStop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+        var isRefresh = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
+        console.log(autoStop, isRefresh);
         this.__pullingDown = true;
         // 同微信保持一致
         // 如果是手动触摸下拉，3s 后用户还没有调用过 __stopPullDownRefresh，则自动调用关闭 pullDown
-        // 如果是手动调用 startPullDownRefresh 的 api，则一直处于 pull down 状态
+        // 如果是手动调用 startPullDownRefresh 的 api，则一直处于 pull down 状态，除非用户手动调用 stopPullDownRefresh
+        if (isRefresh) {
+          this.__clearPullDownTimer();
+        }
         if (autoStop) {
-          setTimeout(function () {
+          this.__mpxPullDownTimer = setTimeout(function () {
             if (_this.__pullingDown) {
               _this.__stopPullDownRefresh();
             }
@@ -23822,6 +23824,7 @@ function pageScrollMixin(mixinType) {
         this.__pullingDown = false;
         if (this.$options.__mpxPageConfig.enablePullDownRefresh && ms) {
           ms.stopPullDownRefresh();
+          this.__clearPullDownTimer();
         }
       },
       __startPullDownRefresh: function __startPullDownRefresh() {
@@ -23830,396 +23833,25 @@ function pageScrollMixin(mixinType) {
         }
       },
       __mpxPageScrollHandler: function __mpxPageScrollHandler(scrollTop) {
-        var _$options$__mpxPageCo2 = this.$options.__mpxPageConfig,
-            disableScroll = _$options$__mpxPageCo2.disableScroll,
-            _$options$__mpxPageCo3 = _$options$__mpxPageCo2.onReachBottomDistance,
-            onReachBottomDistance = _$options$__mpxPageCo3 === undefined ? 50 : _$options$__mpxPageCo3;
-
-        // 直接通过 css 或 preventDefault 禁止页面滚动时，下拉刷新也会失效
-        // 所以采用这种方式实现禁止页面滚动
-
-        if (disableScroll) {
-          return ms.pageScrollTo({
-            scrollTop: 0,
-            duration: 0
-          });
-        }
+        var _$options$__mpxPageCo2 = this.$options.__mpxPageConfig.onReachBottomDistance,
+            onReachBottomDistance = _$options$__mpxPageCo2 === undefined ? 50 : _$options$__mpxPageCo2;
 
         if (this.onPageScroll) {
           this.onPageScroll({ scrollTop: scrollTop });
         }
-
         if (this.onReachBottom) {
           ms.onReachBottom(onReachBottomDistance, this.onReachBottom);
+        }
+      },
+      __clearPullDownTimer: function __clearPullDownTimer() {
+        if (this.__mpxPullDownTimer) {
+          clearTimeout(this.__mpxPullDownTimer);
+          this.__mpxPullDownTimer = null;
         }
       }
     }
   };
 }
-
-// --------------- dom
-
-function addEvent(el, type, handler) {
-  el.addEventListener(type, handler, { passive: false });
-}
-
-function removeEvent(el, type, handler) {
-  el.removeEventListener(type, handler, { passive: false });
-}
-
-function getScrollTop() {
-  return document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-}
-
-function preventDefault(e, isStopPropagation) {
-  if (typeof e.cancelable !== 'boolean' || e.cancelable) {
-    e.preventDefault();
-  }
-
-  if (isStopPropagation) {
-    e.stopPropagation();
-  }
-}
-
-// --------------- EventEmitter
-
-var EventEmitter = function () {
-  function EventEmitter() {
-    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, EventEmitter);
-
-    this.disposer = [];
-  }
-
-  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(EventEmitter, [{
-    key: 'on',
-    value: function on(handler) {
-      this.disposer.push(handler);
-      return this;
-    }
-  }, {
-    key: 'emit',
-    value: function emit() {
-      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      this.disposer.forEach(function (handler) {
-        return handler.apply(undefined, args);
-      });
-      return this;
-    }
-  }, {
-    key: 'destroy',
-    value: function destroy() {
-      this.disposer = [];
-      return this;
-    }
-  }]);
-
-  return EventEmitter;
-}();
-
-// --------------- EventRegister
-
-var EventRegister = function () {
-  function EventRegister() {
-    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, EventRegister);
-
-    this.disposer = [];
-  }
-
-  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(EventRegister, [{
-    key: 'on',
-    value: function on(el, type, handler) {
-      this.disposer.push([el, type, handler]);
-      addEvent(el, type, handler);
-    }
-  }, {
-    key: 'destroy',
-    value: function destroy() {
-      this.disposer.forEach(function (args) {
-        removeEvent(args[0], args[1], args[2]);
-      });
-      this.disposer = [];
-    }
-  }]);
-
-  return EventRegister;
-}();
-
-// --------------- ScrollAnimation
-
-var ScrollAnimation = function () {
-  function ScrollAnimation() {
-    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, ScrollAnimation);
-  }
-
-  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(ScrollAnimation, [{
-    key: 'easeOutQuart',
-    value: function easeOutQuart(time, beginPosition, endPosition, callback) {
-      var startTime = Date.now();
-      var endTime = startTime + time;
-      var bounceFn = function bounceFn(t) {
-        return 1 - --t * t * t * t;
-      };
-      var timer = null;
-      var scheduler = function scheduler() {
-        var now = Date.now();
-        if (now >= endTime) {
-          window.cancelAnimationFrame(timer);
-          timer = null;
-          return;
-        }
-        var ratio = bounceFn((now - startTime) / time);
-        var currentPosition = ratio * (endPosition - beginPosition) + beginPosition;
-        callback(currentPosition);
-        timer = window.requestAnimationFrame(scheduler);
-      };
-      scheduler();
-    }
-  }]);
-
-  return ScrollAnimation;
-}();
-
-// --------------- MpxScroll
-
-function isDef(val) {
-  return val !== undefined;
-}
-
-function getOffsetTop(el) {
-  var top = el.offsetTop;
-  var op = el.offsetParent;
-  while (op) {
-    top += op.offsetTop;
-    op = op.offsetParent;
-  }
-  return top;
-}
-
-function getElement(el) {
-  return typeof el === 'string' ? document.querySelector(el) : el;
-}
-
-var MpxScroll = function () {
-  function MpxScroll(el) {
-    var _this2 = this;
-
-    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, MpxScroll);
-
-    var defaultOptions = {
-      threshold: 90, // 滑动触发下拉刷新的距离
-      stop: 40, // 下拉刷新时停留的位置距离屏幕顶部的距离
-      bounceTime: 800 // 设置回弹动画的动画时长
-    };
-    this.options = babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_1___default()({}, defaultOptions, options);
-    this.ratio = 0.5;
-    this.el = getElement(el);
-    this.touchstartY = 0;
-    this.currentY = 0;
-    this.progress = this.el.children[0];
-    this.isRefresh = false;
-    this.bottomReached = false;
-
-    var hooks = ['scroll', // 页面自然滚动
-    'pageScrollTo', // 手动调用 pageScrollTo
-    'move', // pull down 时 loading 移动
-    'pullingDown' // pullDown 事件
-    ];
-    this.hooks = {};
-    hooks.forEach(function (hook) {
-      _this2.hooks[hook] = new EventEmitter();
-    });
-    this.eventRegister = new EventRegister();
-    this.scrollAnimation = new ScrollAnimation();
-  }
-
-  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(MpxScroll, [{
-    key: 'usePullDownRefresh',
-    value: function usePullDownRefresh() {
-      var _this3 = this;
-
-      this.hooks.move.on(function (bounceTime, beginPosition, endPosition) {
-        _this3.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
-          _this3.progress.style.height = distance + 'px';
-        });
-      });
-      this.eventRegister.on(this.el, 'touchstart', function (e) {
-        return _this3.onTouchStart(e);
-      });
-      this.eventRegister.on(this.el, 'touchmove', function (e) {
-        return _this3.onTouchMove(e);
-      });
-      this.eventRegister.on(this.el, 'touchend', function (e) {
-        return _this3.onTouchEnd(e);
-      });
-    }
-  }, {
-    key: 'onTouchStart',
-    value: function onTouchStart(e) {
-      this.touchstartY = e.changedTouches[0].clientY;
-    }
-  }, {
-    key: 'onTouchMove',
-    value: function onTouchMove(e) {
-      var scrollTop = getScrollTop();
-      this.currentY = e.targetTouches[0].clientY;
-      if (this.currentY - this.touchstartY >= 0 && scrollTop <= 0) {
-        preventDefault(e);
-        if (!this.isRefresh) {
-          this.pullDown(this.currentY - this.touchstartY);
-        }
-      }
-    }
-  }, {
-    key: 'pullDown',
-    value: function pullDown(distance) {
-      var alteredDistance = void 0;
-      if (distance * this.ratio < this.options.threshold) {
-        alteredDistance = distance;
-      } else {
-        alteredDistance = this.options.threshold + (distance - this.options.threshold);
-      }
-      this.progress.style.height = alteredDistance * this.ratio + 'px';
-    }
-  }, {
-    key: 'onTouchEnd',
-    value: function onTouchEnd(e) {
-      var scrollTop = getScrollTop();
-
-      if (scrollTop > 0 || this.isRefresh) {
-        return;
-      }
-
-      var distance = this.currentY - this.touchstartY;
-      if (distance * this.ratio >= this.options.threshold) {
-        this.hooks.pullingDown.emit(true);
-        this.isRefresh = true;
-        this.moveBack();
-      } else if (distance > 0) {
-        this.moveBack();
-      }
-    }
-  }, {
-    key: 'moveBack',
-    value: function moveBack() {
-      var currentHeight = this.progress.offsetHeight;
-      var _options = this.options,
-          stop = _options.stop,
-          threshold = _options.threshold,
-          bounceTime = _options.bounceTime;
-
-      var finalDistance = currentHeight >= threshold ? stop : 0;
-      this.hooks.move.emit(bounceTime, currentHeight, finalDistance);
-    }
-  }, {
-    key: 'useScroll',
-    value: function useScroll() {
-      var _this4 = this;
-
-      this.hooks.pageScrollTo.on(function (bounceTime, beginPosition, endPosition) {
-        _this4.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
-          window.scrollTo(0, distance);
-        });
-      });
-      this.eventRegister.on(document, 'scroll', function (e) {
-        var scrollTop = window.pageYOffset;
-        _this4.scrollTop = scrollTop;
-        _this4.hooks.scroll.emit(scrollTop);
-      });
-    }
-  }, {
-    key: 'destroy',
-    value: function destroy() {
-      var _this5 = this;
-
-      var hooks = this.hooks;
-      babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(hooks).forEach(function (hook) {
-        _this5.hooks[hook].destroy();
-      });
-      this.eventRegister.destroy();
-    }
-  }, {
-    key: 'startPullDownRefresh',
-    value: function startPullDownRefresh() {
-      if (this.isRefresh) {
-        return;
-      }
-
-      this.hooks.pullingDown.emit();
-      this.pageScrollTo({
-        scrollTop: 0,
-        duration: 0
-      });
-
-      this.isRefresh = true;
-
-      var _options2 = this.options,
-          stop = _options2.stop,
-          bounceTime = _options2.bounceTime;
-
-      this.hooks.move.emit(bounceTime, 0, stop);
-    }
-  }, {
-    key: 'stopPullDownRefresh',
-    value: function stopPullDownRefresh() {
-      if (!this.isRefresh) {
-        return;
-      }
-      var _options3 = this.options,
-          stop = _options3.stop,
-          bounceTime = _options3.bounceTime;
-
-      this.hooks.move.emit(bounceTime, stop, 0);
-      this.isRefresh = false;
-    }
-  }, {
-    key: 'pageScrollTo',
-    value: function pageScrollTo(_ref) {
-      var scrollTop = _ref.scrollTop,
-          selector = _ref.selector,
-          _ref$duration = _ref.duration,
-          duration = _ref$duration === undefined ? 300 : _ref$duration;
-
-      var position = getScrollTop();
-      var _scrollTop = void 0;
-
-      if (isDef(scrollTop)) {
-        _scrollTop = scrollTop;
-      } else if (isDef(selector)) {
-        _scrollTop = getOffsetTop(getElement(selector));
-      } else {
-        return Object(_helper_log__WEBPACK_IMPORTED_MODULE_4__[/* error */ "a"])('[pageScrollTo error]: scrollTop and selector are not defined');
-      }
-
-      if (duration === 0) {
-        return window.scrollTo(0, _scrollTop);
-      }
-
-      this.hooks.pageScrollTo.emit(duration, position, _scrollTop);
-    }
-  }, {
-    key: 'onReachBottom',
-    value: function onReachBottom(onReachBottomDistance, callback) {
-      var _el$getBoundingClient = this.el.getBoundingClientRect(),
-          bottom = _el$getBoundingClient.bottom;
-
-      var mark = bottom - window.innerHeight <= onReachBottomDistance;
-
-      if (!this.bottomReached && mark) {
-        this.bottomReached = true;
-        callback();
-      } else if (!mark) {
-        this.bottomReached = false;
-      }
-    }
-  }]);
-
-  return MpxScroll;
-}();
 
 /***/ }),
 /* 230 */
@@ -29091,19 +28723,23 @@ function stopPullDownRefresh() {
   var router = window.__mpxRouter;
   if (router) {
     var err = void 0;
+
     var vnode = router.__mpxActiveVnode;
-    if (vnode && vnode.componentInstance && vnode.componentInstance.__stopPullDownRefresh) {
-      try {
-        vnode.componentInstance.__stopPullDownRefresh();
-      } catch (e) {
-        err = e;
+    if (vnode && vnode.componentInstance) {
+      var currentPage = vnode.tag.endsWith('mpx-tab-bar-container') ? vnode.componentInstance.$refs.tabBarPage : vnode.componentInstance;
+      if (currentPage && currentPage.__stopPullDownRefresh) {
+        try {
+          currentPage.__stopPullDownRefresh();
+        } catch (e) {
+          err = e;
+        }
       }
     }
     return new babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a(function (resolve, reject) {
       if (err) {
         var res = { errMsg: 'stopPullDownRefresh:fail ' + err };
         Object(_common_js__WEBPACK_IMPORTED_MODULE_1__[/* webHandleFail */ "a"])(res, options.fail, options.complete);
-        !options.fail && reject(res);
+        reject(res);
       } else {
         var _res = { errMsg: 'stopPullDownRefresh:ok' };
         Object(_common_js__WEBPACK_IMPORTED_MODULE_1__[/* webHandleSuccess */ "b"])(_res, options.success, options.complete);
@@ -29118,20 +28754,24 @@ function startPullDownRefresh() {
 
   var router = window.__mpxRouter;
   if (router) {
-    var err = '';
+    var err = void 0;
+
     var vnode = router.__mpxActiveVnode;
-    if (vnode && vnode.componentInstance && vnode.componentInstance.__startPullDownRefresh) {
-      try {
-        vnode.componentInstance.__startPullDownRefresh();
-      } catch (e) {
-        err = e;
+    if (vnode && vnode.componentInstance) {
+      var currentPage = vnode.tag.endsWith('mpx-tab-bar-container') ? vnode.componentInstance.$refs.tabBarPage : vnode.componentInstance;
+      if (currentPage && currentPage.__stopPullDownRefresh) {
+        try {
+          currentPage.__startPullDownRefresh();
+        } catch (e) {
+          err = e;
+        }
       }
     }
     return new babel_runtime_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a(function (resolve, reject) {
       if (err) {
         var res = { errMsg: 'startPullDownRefresh:fail ' + err };
         Object(_common_js__WEBPACK_IMPORTED_MODULE_1__[/* webHandleFail */ "a"])(res, options.fail, options.complete);
-        !options.fail && reject(res);
+        reject(res);
       } else {
         var _res2 = { errMsg: 'startPullDownRefresh:ok' };
         Object(_common_js__WEBPACK_IMPORTED_MODULE_1__[/* webHandleSuccess */ "b"])(_res2, options.success, options.complete);
@@ -31887,8 +31527,8 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/** @license MIT License (c) copyright 2010-20
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_index_mpx_isFirst_true_page_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(334);
-/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_5750d4a6_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_index_mpx_isFirst_true_page_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(335);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(336);
+/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_5750d4a6_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_index_mpx_isFirst_true_page_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(344);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(339);
 var disposed = false
 function injectStyle (context) {
   if (disposed) return
@@ -31950,7 +31590,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #f00;\n}\n.tabbar {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #f00;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -32215,210 +31855,31 @@ Object(_mpxjs_core__WEBPACK_IMPORTED_MODULE_1__["createPage"])({
   }
 });
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "page", "", undefined, { "navigationBarTitleText": "首页123", "navigationBarBackgroundColor": "#ccc", "navigationBarTextStyle": "white", "backgroundTextStyle": "dark", "enablePullDownRefresh": true, "disableScroll": false }, {}, { 'mpx-view': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(350), true), 'mpx-button': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(352), true) }, undefined));
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18), __webpack_require__(349)))
+/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "page", "", undefined, { "navigationBarTitleText": "首页123", "navigationBarBackgroundColor": "#ccc", "navigationBarTextStyle": "white", "backgroundTextStyle": "dark", "enablePullDownRefresh": true, "disableScroll": false }, {}, { 'mpx-view': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(336), true), 'mpx-button': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(340), true) }, undefined));
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18), __webpack_require__(335)))
 
 /***/ }),
 /* 335 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c(
-      "div",
-      { staticClass: "box" },
-      [
-        _c(
-          "mpx-view",
-          { class: "{active: isActive}", on: { tap: _vm.switchActiveStatus } },
-          [_vm._v("this is index.mpx!!!!!!!!")]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          [
-            _c("mpx-button", { on: { tap: _vm.toListPage } }, [
-              _vm._v("去列表页")
-            ]),
-            _vm._v(" "),
-            _c("mpx-button", { on: { tap: _vm.toPackageACat } }, [
-              _vm._v("去A分包Cat页")
-            ]),
-            _vm._v(" "),
-            _c("mpx-button", { on: { tap: _vm.toPackageBDog } }, [
-              _vm._v("去B分包Dog页")
-            ]),
-            _vm._v(" "),
-            _c("mpx-button", { on: { tap: _vm.scrollToSelector } }, [
-              _vm._v("ease scroll to #selector")
-            ]),
-            _vm._v(" "),
-            _c("mpx-button", { on: { tap: _vm.startPullDown } }, [
-              _vm._v("开始下拉刷新")
-            ]),
-            _vm._v(" "),
-            _c("mpx-button", { on: { tap: _vm.stopPullDown } }, [
-              _vm._v("停止下拉刷新")
-            ])
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "test-container" }, [
-          _c("div", [_vm._v(_vm._s(_vm.dialogShow))]),
-          _vm._v(" "),
-          _c("div", [_vm._v(_vm._s(_vm.showOneButtonDialog))]),
-          _vm._v(" "),
-          _vm.isActive ? _c("div", [_vm._v(_vm._s(_vm.list))]) : _vm._e()
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "test-container", attrs: { id: "selector" } }),
-        _vm._v(" "),
-        _c(
-          "mpx-view",
-          { staticClass: "tabbar", on: { tap: _vm.toPackageACat } },
-          [_vm._v("tab bar")]
-        )
-      ],
-      1
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
+var mpx = __webpack_require__(69);
 
-if (false) {}
+module.exports = mpx.default;
 
 /***/ }),
 /* 336 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  scriptExports = scriptExports || {}
-
-  // ES6 modules interop
-  var type = typeof scriptExports.default
-  if (type === 'object' || type === 'function') {
-    scriptExports = scriptExports.default
-  }
-
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-/* 337 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_list_mpx_name_listName_page_true_root_list__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(338);
-/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_7833ac5e_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_list_mpx_name_listName_page_true_root_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(339);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(336);
+/* harmony import */ var _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_view_vue_component_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(337);
+/* harmony import */ var _vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(339);
 var disposed = false
 /* script */
 
 
 /* template */
-
+var __vue_render__, __vue_static_render_fns__
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -32428,16 +31889,16 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 
-var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(
-  _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_list_mpx_name_listName_page_true_root_list__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"],
-  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_7833ac5e_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_list_mpx_name_listName_page_true_root_list__WEBPACK_IMPORTED_MODULE_1__[/* render */ "a"],
-  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_7833ac5e_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_list_mpx_name_listName_page_true_root_list__WEBPACK_IMPORTED_MODULE_1__[/* staticRenderFns */ "b"],
+var Component = Object(_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(
+  _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_view_vue_component_true__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"],
+  __vue_render__,
+  __vue_static_render_fns__,
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src/pages/list.mpx"
+Component.options.__file = "node_modules/@mpxjs/webpack-plugin/lib/runtime/components/web/mpx-view.vue"
 
 /* hot reload */
 if (false) {}
@@ -32446,54 +31907,92 @@ if (false) {}
 
 
 /***/ }),
-/* 338 */
+/* 337 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var _node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
-/* harmony import */ var _mpxjs_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(69);
-//
-//
-//
-//
-//
-//
-
-global.currentSrcMode = "wx";
-global.currentResource = "/Users/didi/Desktop/github/test-mpx-web/src/pages/list.mpx";
+/* harmony import */ var _getInnerListeners__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(338);
 
 
 
-Object(_mpxjs_core__WEBPACK_IMPORTED_MODULE_1__["createPage"])({
-  created: function created() {
-    console.log('list this: ', this.$options);
+/* harmony default export */ __webpack_exports__["a"] = ({
+  name: 'mpx-view',
+  data: function data() {
+    return {
+      hover: false
+    };
+  },
+
+  props: {
+    hoverClass: {
+      type: String,
+      default: 'none'
+    },
+    hoverStopPropagation: {
+      type: Boolean,
+      default: false
+    },
+    hoverStartTime: {
+      type: Number,
+      default: 50
+    },
+    hoverStayTime: {
+      type: Number,
+      default: 400
+    }
+  },
+  render: function render(createElement) {
+    var mergeAfter = void 0;
+    if (this.hoverClass && this.hoverClass !== 'none') {
+      mergeAfter = {
+        listeners: {
+          touchstart: this.handleTouchstart,
+          touchend: this.handleTouchend
+        },
+        force: true
+      };
+    }
+    var data = {
+      class: ['mpx-view', this.className],
+      on: Object(_getInnerListeners__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(this, { mergeAfter: mergeAfter })
+    };
+    return createElement('div', data, this.$slots.default);
+  },
+
+  computed: {
+    className: function className() {
+      if (this.hoverClass && this.hoverClass !== 'none' && this.hover) {
+        return this.hoverClass;
+      }
+      return '';
+    }
+  },
+  methods: {
+    handleTouchstart: function handleTouchstart(e) {
+      var _this = this;
+
+      if (e.__hoverStopPropagation) {
+        return;
+      }
+      e.__hoverStopPropagation = this.hoverStopPropagation;
+      clearTimeout(this.startTimer);
+      this.startTimer = setTimeout(function () {
+        _this.hover = true;
+      }, this.hoverStartTime);
+    },
+    handleTouchend: function handleTouchend() {
+      var _this2 = this;
+
+      clearTimeout(this.endTimer);
+      this.endTimer = setTimeout(function () {
+        _this2.hover = false;
+      }, this.hoverStayTime);
+    }
   }
 });
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "page", "", undefined, { "navigationBarTitleText": "列表页" }, {}, {}, undefined));
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)))
-
 /***/ }),
-/* 339 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("this is list.mpx")])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-if (false) {}
-
-/***/ }),
-/* 340 */,
-/* 341 */
+/* 338 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32679,304 +32178,122 @@ function getInnerListeners(context) {
 }
 
 /***/ }),
-/* 342 */
+/* 339 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  scriptExports = scriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof scriptExports.default
+  if (type === 'object' || type === 'function') {
+    scriptExports = scriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 340 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_keep_alive_vue_component_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(343);
-/* harmony import */ var _vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(336);
-var disposed = false
-/* script */
-
-
-/* template */
-var __vue_render__, __vue_static_render_fns__
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-
-var Component = Object(_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(
-  _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_keep_alive_vue_component_true__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"],
-  __vue_render__,
-  __vue_static_render_fns__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "node_modules/@mpxjs/webpack-plugin/lib/runtime/components/web/mpx-keep-alive.vue"
-
-/* hot reload */
-if (false) {}
-
-/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
-
-
-/***/ }),
-/* 343 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-function isDef(v) {
-  return v !== undefined && v !== null;
-}
-
-function remove(arr, item) {
-  if (arr.length) {
-    var index = arr.indexOf(item);
-    if (index > -1) {
-      return arr.splice(index, 1);
-    }
-  }
-}
-
-function isAsyncPlaceholder(node) {
-  return node.isComment && node.asyncFactory;
-}
-
-function getFirstComponentChild(children) {
-  if (Array.isArray(children)) {
-    for (var i = 0; i < children.length; i++) {
-      var c = children[i];
-      if (isDef(c) && (isDef(c.componentOptions) || isAsyncPlaceholder(c))) {
-        return c;
-      }
-    }
-  }
-}
-
-function getVnodeKey(vnode) {
-  if (vnode && vnode.componentOptions) {
-    return vnode.key || vnode.componentOptions.Ctor.cid + (vnode.componentOptions.tag ? '::' + vnode.componentOptions.tag : '');
-  }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'mpx-keep-alive',
-  abstract: true,
-  render: function render() {
-    var slot = this.$slots.default;
-    var vnode = getFirstComponentChild(slot);
-    var vnodeKey = getVnodeKey(vnode);
-    var router = window.__mpxRouter;
-    if (vnodeKey && router && vnode.data.routerView) {
-      if (router.needCache) {
-        router.needCache.vnode = vnode;
-        router.needCache.vnodeKey = vnodeKey;
-        router.needCache = null;
-      }
-
-      router.needRemove.forEach(function (removeItem) {
-        if (removeItem.vnode && removeItem.vnode.componentInstance && !removeItem.vnode.componentInstance._isDestroyed && router.stack.every(function (item) {
-          return !(item.vnode && item.vnode.componentInstance === removeItem.vnode.componentInstance);
-        })) {
-          removeItem.vnode.componentInstance.$destroy();
-        }
-      });
-      router.needRemove.length = 0;
-
-      var stack = router.stack;
-      if (stack.length) {
-        // 只要历史栈缓存中存在对应的页面存活实例，就进行复用
-        for (var i = stack.length; i > 0; i--) {
-          var current = stack[i - 1];
-          if (current.vnode && current.vnodeKey === vnodeKey && current.vnode.componentInstance) {
-            vnode.componentInstance = current.vnode.componentInstance;
-            break;
-          }
-        }
-      }
-
-      if (router.__mpxAction) {
-        if (router.__mpxAction.type === 'reLaunch') {
-          // reLaunch时修改新vnode的key, 确保任何情况下都新创建组件实例
-          vnode.key = (vnode.key || '') + router.__mpxAction.reLaunchCount;
-        }
-        router.__mpxAction = null;
-      }
-      vnode.data.keepAlive = true;
-    }
-
-    router.__mpxActiveVnode = vnode;
-    return vnode || slot && slot[0];
-  }
-});
-
-/***/ }),
-/* 344 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "app" },
-    [_c("mpx-keep-alive", [_c("router-view", { staticClass: "page" })], 1)],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-if (false) {}
-
-/***/ }),
-/* 345 */,
-/* 346 */,
-/* 347 */,
-/* 348 */,
-/* 349 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var mpx = __webpack_require__(69);
-
-module.exports = mpx.default;
-
-/***/ }),
-/* 350 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_view_vue_component_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(351);
-/* harmony import */ var _vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(336);
-var disposed = false
-/* script */
-
-
-/* template */
-var __vue_render__, __vue_static_render_fns__
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-
-var Component = Object(_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(
-  _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_view_vue_component_true__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"],
-  __vue_render__,
-  __vue_static_render_fns__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "node_modules/@mpxjs/webpack-plugin/lib/runtime/components/web/mpx-view.vue"
-
-/* hot reload */
-if (false) {}
-
-/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
-
-
-/***/ }),
-/* 351 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _getInnerListeners__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(341);
-
-
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'mpx-view',
-  data: function data() {
-    return {
-      hover: false
-    };
-  },
-
-  props: {
-    hoverClass: {
-      type: String,
-      default: 'none'
-    },
-    hoverStopPropagation: {
-      type: Boolean,
-      default: false
-    },
-    hoverStartTime: {
-      type: Number,
-      default: 50
-    },
-    hoverStayTime: {
-      type: Number,
-      default: 400
-    }
-  },
-  render: function render(createElement) {
-    var mergeAfter = void 0;
-    if (this.hoverClass && this.hoverClass !== 'none') {
-      mergeAfter = {
-        listeners: {
-          touchstart: this.handleTouchstart,
-          touchend: this.handleTouchend
-        },
-        force: true
-      };
-    }
-    var data = {
-      class: ['mpx-view', this.className],
-      on: Object(_getInnerListeners__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(this, { mergeAfter: mergeAfter })
-    };
-    return createElement('div', data, this.$slots.default);
-  },
-
-  computed: {
-    className: function className() {
-      if (this.hoverClass && this.hoverClass !== 'none' && this.hover) {
-        return this.hoverClass;
-      }
-      return '';
-    }
-  },
-  methods: {
-    handleTouchstart: function handleTouchstart(e) {
-      var _this = this;
-
-      if (e.__hoverStopPropagation) {
-        return;
-      }
-      e.__hoverStopPropagation = this.hoverStopPropagation;
-      clearTimeout(this.startTimer);
-      this.startTimer = setTimeout(function () {
-        _this.hover = true;
-      }, this.hoverStartTime);
-    },
-    handleTouchend: function handleTouchend() {
-      var _this2 = this;
-
-      clearTimeout(this.endTimer);
-      this.endTimer = setTimeout(function () {
-        _this2.hover = false;
-      }, this.hoverStayTime);
-    }
-  }
-});
-
-/***/ }),
-/* 352 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_button_vue_component_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(353);
-/* harmony import */ var _vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(336);
+/* harmony import */ var _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_button_vue_component_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(341);
+/* harmony import */ var _vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(339);
 var disposed = false
 /* script */
 
@@ -33010,15 +32327,15 @@ if (false) {}
 
 
 /***/ }),
-/* 353 */
+/* 341 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(173);
 /* harmony import */ var babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var builtInComponent_styl_selector_type_styles_index_0_mpx_button_vue_component_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(354);
+/* harmony import */ var builtInComponent_styl_selector_type_styles_index_0_mpx_button_vue_component_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(342);
 /* harmony import */ var builtInComponent_styl_selector_type_styles_index_0_mpx_button_vue_component_true__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(builtInComponent_styl_selector_type_styles_index_0_mpx_button_vue_component_true__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _getInnerListeners__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(341);
+/* harmony import */ var _getInnerListeners__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(338);
 
 
 
@@ -33183,11 +32500,11 @@ var loadingClassMap = {
 });
 
 /***/ }),
-/* 354 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(59);
-            var content = __webpack_require__(355);
+            var content = __webpack_require__(343);
 
             content = content.__esModule ? content.default : content;
 
@@ -33207,7 +32524,7 @@ var update = api(content, options);
 module.exports = content.locals || {};
 
 /***/ }),
-/* 355 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(14)(false);
@@ -33219,6 +32536,894 @@ exports.push([module.i, ".mpx-button-versionv2 {\n  width: 184px;\n  line-height
 
 // exports
 
+
+/***/ }),
+/* 344 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c(
+      "div",
+      { staticClass: "box" },
+      [
+        _c(
+          "mpx-view",
+          { class: "{active: isActive}", on: { tap: _vm.switchActiveStatus } },
+          [_vm._v("this is index.mpx!!!!!!!!")]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          [
+            _c("mpx-button", { on: { tap: _vm.toListPage } }, [
+              _vm._v("去列表页")
+            ]),
+            _vm._v(" "),
+            _c("mpx-button", { on: { tap: _vm.toPackageACat } }, [
+              _vm._v("去A分包Cat页")
+            ]),
+            _vm._v(" "),
+            _c("mpx-button", { on: { tap: _vm.toPackageBDog } }, [
+              _vm._v("去B分包Dog页")
+            ]),
+            _vm._v(" "),
+            _c("mpx-button", { on: { tap: _vm.scrollToSelector } }, [
+              _vm._v("ease scroll to #selector")
+            ]),
+            _vm._v(" "),
+            _c("mpx-button", { on: { tap: _vm.startPullDown } }, [
+              _vm._v("开始下拉刷新")
+            ]),
+            _vm._v(" "),
+            _c("mpx-button", { on: { tap: _vm.stopPullDown } }, [
+              _vm._v("停止下拉刷新")
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "test-container" }, [
+          _c("div", [_vm._v(_vm._s(_vm.dialogShow))]),
+          _vm._v(" "),
+          _c("div", [_vm._v(_vm._s(_vm.showOneButtonDialog))]),
+          _vm._v(" "),
+          _vm.isActive ? _c("div", [_vm._v(_vm._s(_vm.list))]) : _vm._e()
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "test-container", attrs: { id: "selector" } }),
+        _vm._v(" "),
+        _c(
+          "mpx-view",
+          { staticClass: "tabbar", on: { tap: _vm.toPackageACat } },
+          [_vm._v("fixed")]
+        )
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+if (false) {}
+
+/***/ }),
+/* 345 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_list_mpx_name_listName_page_true_root_list__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(346);
+/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_7833ac5e_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_list_mpx_name_listName_page_true_root_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(347);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(339);
+var disposed = false
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+
+var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(
+  _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_list_mpx_name_listName_page_true_root_list__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_7833ac5e_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_list_mpx_name_listName_page_true_root_list__WEBPACK_IMPORTED_MODULE_1__[/* render */ "a"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_7833ac5e_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_list_mpx_name_listName_page_true_root_list__WEBPACK_IMPORTED_MODULE_1__[/* staticRenderFns */ "b"],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/pages/list.mpx"
+
+/* hot reload */
+if (false) {}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 346 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var _node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
+/* harmony import */ var _mpxjs_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(69);
+//
+//
+//
+//
+//
+//
+
+global.currentSrcMode = "wx";
+global.currentResource = "/Users/didi/Desktop/github/test-mpx-web/src/pages/list.mpx";
+
+
+
+Object(_mpxjs_core__WEBPACK_IMPORTED_MODULE_1__["createPage"])({
+  created: function created() {
+    console.log('list this: ', this.$options);
+  }
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "page", "", undefined, { "navigationBarTitleText": "列表页" }, {}, {}, undefined));
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)))
+
+/***/ }),
+/* 347 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_vm._v("this is list.mpx")])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+if (false) {}
+
+/***/ }),
+/* 348 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_keep_alive_vue_component_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(349);
+/* harmony import */ var _vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(339);
+var disposed = false
+/* script */
+
+
+/* template */
+var __vue_render__, __vue_static_render_fns__
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+
+var Component = Object(_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(
+  _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_keep_alive_vue_component_true__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"],
+  __vue_render__,
+  __vue_static_render_fns__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "node_modules/@mpxjs/webpack-plugin/lib/runtime/components/web/mpx-keep-alive.vue"
+
+/* hot reload */
+if (false) {}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 349 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+function isDef(v) {
+  return v !== undefined && v !== null;
+}
+
+function remove(arr, item) {
+  if (arr.length) {
+    var index = arr.indexOf(item);
+    if (index > -1) {
+      return arr.splice(index, 1);
+    }
+  }
+}
+
+function isAsyncPlaceholder(node) {
+  return node.isComment && node.asyncFactory;
+}
+
+function getFirstComponentChild(children) {
+  if (Array.isArray(children)) {
+    for (var i = 0; i < children.length; i++) {
+      var c = children[i];
+      if (isDef(c) && (isDef(c.componentOptions) || isAsyncPlaceholder(c))) {
+        return c;
+      }
+    }
+  }
+}
+
+function getVnodeKey(vnode) {
+  if (vnode && vnode.componentOptions) {
+    return vnode.key || vnode.componentOptions.Ctor.cid + (vnode.componentOptions.tag ? '::' + vnode.componentOptions.tag : '');
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  name: 'mpx-keep-alive',
+  abstract: true,
+  render: function render() {
+    var slot = this.$slots.default;
+    var vnode = getFirstComponentChild(slot);
+    var vnodeKey = getVnodeKey(vnode);
+    var router = window.__mpxRouter;
+    if (vnodeKey && router && vnode.data.routerView) {
+      if (router.needCache) {
+        router.needCache.vnode = vnode;
+        router.needCache.vnodeKey = vnodeKey;
+        router.needCache = null;
+      }
+
+      router.needRemove.forEach(function (removeItem) {
+        if (removeItem.vnode && removeItem.vnode.componentInstance && !removeItem.vnode.componentInstance._isDestroyed && router.stack.every(function (item) {
+          return !(item.vnode && item.vnode.componentInstance === removeItem.vnode.componentInstance);
+        })) {
+          removeItem.vnode.componentInstance.$destroy();
+        }
+      });
+      router.needRemove.length = 0;
+
+      var stack = router.stack;
+      if (stack.length) {
+        // 只要历史栈缓存中存在对应的页面存活实例，就进行复用
+        for (var i = stack.length; i > 0; i--) {
+          var current = stack[i - 1];
+          if (current.vnode && current.vnodeKey === vnodeKey && current.vnode.componentInstance) {
+            vnode.componentInstance = current.vnode.componentInstance;
+            break;
+          }
+        }
+      }
+
+      if (router.__mpxAction) {
+        if (router.__mpxAction.type === 'reLaunch') {
+          // reLaunch时修改新vnode的key, 确保任何情况下都新创建组件实例
+          vnode.key = (vnode.key || '') + router.__mpxAction.reLaunchCount;
+        }
+        router.__mpxAction = null;
+      }
+      vnode.data.keepAlive = true;
+    }
+
+    router.__mpxActiveVnode = vnode;
+    return vnode || slot && slot[0];
+  }
+});
+
+/***/ }),
+/* 350 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "app" },
+    [_c("mpx-keep-alive", [_c("router-view", { staticClass: "page" })], 1)],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+if (false) {}
+
+/***/ }),
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _isIterable2 = __webpack_require__(370);
+
+var _isIterable3 = _interopRequireDefault(_isIterable2);
+
+var _getIterator2 = __webpack_require__(74);
+
+var _getIterator3 = _interopRequireDefault(_getIterator2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  function sliceIterator(arr, i) {
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+    var _e = undefined;
+
+    try {
+      for (var _i = (0, _getIterator3.default)(arr), _s; !(_n = (_s = _i.next()).done); _n = true) {
+        _arr.push(_s.value);
+
+        if (i && _arr.length === i) break;
+      }
+    } catch (err) {
+      _d = true;
+      _e = err;
+    } finally {
+      try {
+        if (!_n && _i["return"]) _i["return"]();
+      } finally {
+        if (_d) throw _e;
+      }
+    }
+
+    return _arr;
+  }
+
+  return function (arr, i) {
+    if (Array.isArray(arr)) {
+      return arr;
+    } else if ((0, _isIterable3.default)(Object(arr))) {
+      return sliceIterator(arr, i);
+    } else {
+      throw new TypeError("Invalid attempt to destructure non-iterable instance");
+    }
+  };
+}();
+
+/***/ }),
+/* 370 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(371), __esModule: true };
+
+/***/ }),
+/* 371 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(76);
+__webpack_require__(90);
+module.exports = __webpack_require__(372);
+
+
+/***/ }),
+/* 372 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var classof = __webpack_require__(94);
+var ITERATOR = __webpack_require__(88)('iterator');
+var Iterators = __webpack_require__(80);
+module.exports = __webpack_require__(25).isIterable = function (it) {
+  var O = Object(it);
+  return O[ITERATOR] !== undefined
+    || '@@iterator' in O
+    // eslint-disable-next-line no-prototype-builtins
+    || Iterators.hasOwnProperty(classof(O));
+};
+
+
+/***/ }),
+/* 373 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(70);
+/* harmony import */ var babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(369);
+/* harmony import */ var babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(20);
+/* harmony import */ var babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(163);
+/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(164);
+/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(374);
+/* harmony import */ var _EventEmitter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(375);
+/* harmony import */ var _EventRegister__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(376);
+/* harmony import */ var _ScrollAnimation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(377);
+
+
+
+
+
+
+
+
+
+
+function isDef(val) {
+  return val !== undefined;
+}
+
+var MpxScroll = function () {
+  function MpxScroll() {
+    var _this = this;
+
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default()(this, MpxScroll);
+
+    var defaultOptions = {
+      threshold: 90, // 滑动触发下拉刷新的距离
+      stop: 60, // 下拉刷新时停留的位置距离屏幕顶部的距离
+      bounceTime: 800, // 设置回弹动画的动画时长
+      debounce: 50 // 页面滚动防抖延时时间
+    };
+    this.options = babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2___default()({}, defaultOptions, options);
+    this.ratio = 0.5; // 下拉阻尼系数
+    this.el = Object(_dom__WEBPACK_IMPORTED_MODULE_5__[/* getElement */ "a"])('.page');
+    this.touchstartY = 0;
+    this.currentY = 0;
+    this.translateY = 0;
+    this.legacyY = 0;
+    this.isIntersecting = false;
+    this.isRefresh = false;
+    this.bottomReached = false;
+    this.scrollTimer = null;
+    this.intersectionOb = null;
+
+    var hooks = ['scroll', // 页面自然滚动
+    'pageScrollTo', // 手动调用 pageScrollTo
+    'move', // pull down 时 loading 移动
+    'pullingDown' // pullDown 事件
+    ];
+    this.hooks = {};
+    hooks.forEach(function (hook) {
+      _this.hooks[hook] = new _EventEmitter__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"]();
+    });
+    this.eventRegister = new _EventRegister__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"]();
+    this.scrollAnimation = new _ScrollAnimation__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"]();
+  }
+
+  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default()(MpxScroll, [{
+    key: 'usePullDownRefresh',
+    value: function usePullDownRefresh() {
+      var _this2 = this;
+
+      var ob = this.intersectionOb = new IntersectionObserver(function (changes) {
+        var _changes = babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(changes, 1),
+            change = _changes[0];
+
+        var isIntersecting = change.isIntersecting;
+        _this2.isIntersecting = isIntersecting;
+        if (!isIntersecting) {
+          // 非 inter section 状态下及时清除 transtorm，以免影响正常滚动时元素的 fixed 定位
+          _this2.el.style.cssText = '';
+        }
+      });
+      ob.observe(document.querySelector('.pull-down-loading'));
+
+      this.hooks.move.on(function (bounceTime, beginPosition, endPosition) {
+        _this2.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
+          _this2.transformPage(distance);
+        });
+      });
+      this.eventRegister.on(this.el, 'touchstart', function (e) {
+        return _this2.onTouchStart(e);
+      });
+      this.eventRegister.on(this.el, 'touchmove', function (e) {
+        return _this2.onTouchMove(e);
+      });
+      this.eventRegister.on(this.el, 'touchend', function (e) {
+        return _this2.onTouchEnd(e);
+      });
+    }
+  }, {
+    key: 'onTouchStart',
+    value: function onTouchStart(e) {
+      this.touchstartY = e.changedTouches[0].clientY;
+    }
+  }, {
+    key: 'onTouchMove',
+    value: function onTouchMove(e) {
+      this.currentY = e.targetTouches[0].clientY;
+      if (this.currentY - this.touchstartY >= 0 && this.isIntersecting) {
+        Object(_dom__WEBPACK_IMPORTED_MODULE_5__[/* preventDefault */ "d"])(e);
+        if (this.isRefresh) {
+          this.legacyY = this.translateY;
+          this.isRefresh = false;
+        }
+        this.pullDown(this.currentY - this.touchstartY);
+      }
+    }
+  }, {
+    key: 'pullDown',
+    value: function pullDown(distance) {
+      var alteredDistance = distance * this.ratio + this.legacyY;
+      this.transformPage(alteredDistance);
+    }
+  }, {
+    key: 'transformPage',
+    value: function transformPage(distance) {
+      this.translateY = distance;
+      this.el.style.cssText = 'transform: translateY(' + distance + 'px)';
+    }
+  }, {
+    key: 'onTouchEnd',
+    value: function onTouchEnd(e) {
+      if (this.isRefresh) {
+        return;
+      }
+
+      if (this.translateY >= this.options.threshold) {
+        this.isRefresh = true;
+        this.hooks.pullingDown.emit(true, true);
+        this.moveBack(this.translateY);
+      } else if (this.translateY > 0) {
+        this.moveBack(this.translateY);
+        this.isRefresh = false;
+      }
+    }
+  }, {
+    key: 'moveBack',
+    value: function moveBack(distance) {
+      var _options = this.options,
+          stop = _options.stop,
+          threshold = _options.threshold,
+          bounceTime = _options.bounceTime;
+
+      var finalDistance = distance >= threshold ? stop : 0;
+      this.hooks.move.emit(bounceTime, distance, finalDistance);
+    }
+  }, {
+    key: 'useScroll',
+    value: function useScroll() {
+      var _this3 = this;
+
+      this.eventRegister.on(document, 'scroll', function (e) {
+        if (_this3.scrollTimer) {
+          _this3.clearScrollTimer();
+        }
+        _this3.scrollTimer = setTimeout(function () {
+          var scrollTop = window.pageYOffset;
+          _this3.scrollTop = scrollTop;
+          _this3.hooks.scroll.emit(scrollTop);
+        }, _this3.options.debounce);
+      });
+    }
+  }, {
+    key: 'clearScrollTimer',
+    value: function clearScrollTimer() {
+      if (this.scrollTimer) {
+        clearTimeout(this.scrollTimer);
+        this.scrollTimer = null;
+      }
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      var _this4 = this;
+
+      var hooks = this.hooks;
+      babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(hooks).forEach(function (hook) {
+        _this4.hooks[hook].destroy();
+      });
+      this.eventRegister.destroy();
+      this.clearScrollTimer();
+      this.intersectionOb && this.intersectionOb.disconnect();
+    }
+  }, {
+    key: 'startPullDownRefresh',
+    value: function startPullDownRefresh() {
+      if (this.isRefresh) {
+        return;
+      }
+
+      this.hooks.pullingDown.emit();
+      this.pageScrollTo({
+        scrollTop: 0,
+        duration: 0
+      });
+
+      this.isRefresh = true;
+
+      var _options2 = this.options,
+          stop = _options2.stop,
+          bounceTime = _options2.bounceTime;
+
+      this.hooks.move.emit(bounceTime, 0, stop);
+    }
+  }, {
+    key: 'stopPullDownRefresh',
+    value: function stopPullDownRefresh() {
+      if (!this.isRefresh) {
+        return;
+      }
+      var _options3 = this.options,
+          stop = _options3.stop,
+          bounceTime = _options3.bounceTime;
+
+      this.hooks.move.emit(bounceTime, stop, 0);
+      this.isRefresh = false;
+      this.legacyY = 0;
+    }
+  }, {
+    key: 'pageScrollTo',
+    value: function pageScrollTo(_ref) {
+      var scrollTop = _ref.scrollTop,
+          selector = _ref.selector,
+          _ref$duration = _ref.duration,
+          duration = _ref$duration === undefined ? 300 : _ref$duration;
+
+      var _scrollTop = void 0;
+
+      if (isDef(scrollTop)) {
+        _scrollTop = scrollTop;
+      } else if (isDef(selector)) {
+        _scrollTop = Object(_dom__WEBPACK_IMPORTED_MODULE_5__[/* getOffsetTop */ "b"])(Object(_dom__WEBPACK_IMPORTED_MODULE_5__[/* getElement */ "a"])(selector));
+      } else {
+        return error('[pageScrollTo error]: scrollTop and selector are not defined');
+      }
+
+      if (duration === 0) {
+        return window.scrollTo(0, _scrollTop);
+      }
+
+      var position = Object(_dom__WEBPACK_IMPORTED_MODULE_5__[/* getScrollTop */ "c"])();
+
+      this.hooks.pageScrollTo.emit(duration, position, _scrollTop);
+    }
+  }, {
+    key: 'onReachBottom',
+    value: function onReachBottom(onReachBottomDistance, callback) {
+      var _el$getBoundingClient = this.el.getBoundingClientRect(),
+          bottom = _el$getBoundingClient.bottom;
+
+      var mark = bottom - window.innerHeight <= onReachBottomDistance;
+
+      if (!this.bottomReached && mark) {
+        this.bottomReached = true;
+        callback();
+      } else if (!mark) {
+        this.bottomReached = false;
+      }
+    }
+  }]);
+
+  return MpxScroll;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (MpxScroll);
+
+/***/ }),
+/* 374 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getOffsetTop; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getScrollTop; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return preventDefault; });
+function getOffsetTop(el) {
+  var top = el.offsetTop;
+  var op = el.offsetParent;
+  while (op) {
+    top += op.offsetTop;
+    op = op.offsetParent;
+  }
+  return top;
+}
+
+function getElement(el) {
+  return typeof el === 'string' ? document.querySelector(el) : el;
+}
+
+function getScrollTop() {
+  return document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+}
+
+function preventDefault(e, isStopPropagation) {
+  if (typeof e.cancelable !== 'boolean' || e.cancelable) {
+    e.preventDefault();
+  }
+
+  if (isStopPropagation) {
+    e.stopPropagation();
+  }
+}
+
+/***/ }),
+/* 375 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(163);
+/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(164);
+/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var EventEmitter = function () {
+  function EventEmitter() {
+    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, EventEmitter);
+
+    this.disposer = [];
+  }
+
+  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(EventEmitter, [{
+    key: "on",
+    value: function on(handler) {
+      this.disposer.push(handler);
+      return this;
+    }
+  }, {
+    key: "emit",
+    value: function emit() {
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      this.disposer.forEach(function (handler) {
+        return handler.apply(undefined, args);
+      });
+      return this;
+    }
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this.disposer = [];
+      return this;
+    }
+  }]);
+
+  return EventEmitter;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (EventEmitter);
+
+/***/ }),
+/* 376 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(163);
+/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(164);
+/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function addEvent(el, type, handler) {
+  el.addEventListener(type, handler, { passive: false });
+}
+
+function removeEvent(el, type, handler) {
+  el.removeEventListener(type, handler, { passive: false });
+}
+
+var EventRegister = function () {
+  function EventRegister() {
+    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, EventRegister);
+
+    this.disposer = [];
+  }
+
+  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(EventRegister, [{
+    key: "on",
+    value: function on(el, type, handler) {
+      this.disposer.push([el, type, handler]);
+      addEvent(el, type, handler);
+    }
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      this.disposer.forEach(function (args) {
+        removeEvent(args[0], args[1], args[2]);
+      });
+      this.disposer = [];
+    }
+  }]);
+
+  return EventRegister;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (EventRegister);
+
+/***/ }),
+/* 377 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(163);
+/* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(164);
+/* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var ScrollAnimation = function () {
+  function ScrollAnimation() {
+    babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, ScrollAnimation);
+  }
+
+  babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(ScrollAnimation, [{
+    key: "easeOutQuart",
+    value: function easeOutQuart(time, beginPosition, endPosition, callback) {
+      var startTime = Date.now();
+      var endTime = startTime + time;
+      var bounceFn = function bounceFn(t) {
+        return 1 - --t * t * t * t;
+      };
+      var timer = null;
+      var scheduler = function scheduler() {
+        var now = Date.now();
+        if (now >= endTime) {
+          window.cancelAnimationFrame(timer);
+          timer = null;
+          return;
+        }
+        var ratio = bounceFn((now - startTime) / time);
+        var currentPosition = ratio * (endPosition - beginPosition) + beginPosition;
+        callback(Math.floor(currentPosition));
+        timer = window.requestAnimationFrame(scheduler);
+      };
+      scheduler();
+    }
+  }]);
+
+  return ScrollAnimation;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (ScrollAnimation);
 
 /***/ })
 /******/ ]);
