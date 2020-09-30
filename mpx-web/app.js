@@ -23692,7 +23692,7 @@ function pageStatusMixin(mixinType) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return pageScrollMixin; });
 /* harmony import */ var _helper_log__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(161);
-/* harmony import */ var _mpxjs_core_src_helper_MpxScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(230);
+/* harmony import */ var _helper_MpxScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(230);
 /* harmony import */ var _helper_MpxScroll_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(235);
 
 
@@ -23703,7 +23703,7 @@ var ms = void 0;
 function refreshMs(vm) {
   if (ms) ms.destroy();
   try {
-    window.__ms = ms = new _mpxjs_core_src_helper_MpxScroll__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"]();
+    window.__ms = ms = new _helper_MpxScroll__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"]();
     return true;
   } catch (e) {
     var location = vm.__mpxProxy && vm.__mpxProxy.options.mpxFileResource;
@@ -23722,7 +23722,7 @@ function showLoading(vm) {
 
   loading = document.createElement('div');
   loading.className = 'pull-down-loading';
-  loading.style.cssText = 'will-change\uFF1Atransform; transform: translateZ(0); background-color: ' + backgroundColor + ';';
+  loading.style.cssText = 'background-color: ' + backgroundColor + ';';
   var dot = document.createElement('div');
   dot.className = 'dot-flashing ' + backgroundTextStyle;
   loading.append(dot);
@@ -23768,12 +23768,6 @@ function pageScrollMixin(mixinType) {
           duration: 0
         });
 
-        ms.hooks.pageScrollTo.on(function (bounceTime, beginPosition, endPosition) {
-          ms.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
-            window.scrollTo(0, distance);
-          });
-        });
-
         if (this.onPageScroll || this.onReachBottom) {
           ms.useScroll();
           ms.hooks.scroll.on(this.__mpxPageScrollHandler);
@@ -23803,7 +23797,6 @@ function pageScrollMixin(mixinType) {
         var autoStop = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
         var isRefresh = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
-        console.log(autoStop, isRefresh);
         this.__pullingDown = true;
         // 同微信保持一致
         // 如果是手动触摸下拉，3s 后用户还没有调用过 __stopPullDownRefresh，则自动调用关闭 pullDown
@@ -23832,12 +23825,20 @@ function pageScrollMixin(mixinType) {
           ms.startPullDownRefresh();
         }
       },
-      __mpxPageScrollHandler: function __mpxPageScrollHandler(scrollTop) {
+      __mpxPageScrollHandler: function __mpxPageScrollHandler(e) {
         var _$options$__mpxPageCo2 = this.$options.__mpxPageConfig.onReachBottomDistance,
             onReachBottomDistance = _$options$__mpxPageCo2 === undefined ? 50 : _$options$__mpxPageCo2;
 
         if (this.onPageScroll) {
-          this.onPageScroll({ scrollTop: scrollTop });
+          var _e = {};
+          Object.defineProperty(_e, 'scrollTop', {
+            configurable: false,
+            enumerable: true,
+            get: function get() {
+              return e.scrollTop;
+            }
+          });
+          this.onPageScroll(_e);
         }
         if (this.onReachBottom) {
           ms.onReachBottom(onReachBottomDistance, this.onReachBottom);
@@ -23868,10 +23869,14 @@ function pageScrollMixin(mixinType) {
 /* harmony import */ var babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(164);
 /* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(235);
-/* harmony import */ var _EventEmitter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(236);
-/* harmony import */ var _EventRegister__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(237);
-/* harmony import */ var _ScrollAnimation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(238);
+/* harmony import */ var _helper_log__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(161);
+/* harmony import */ var _dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(235);
+/* harmony import */ var _EventEmitter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(236);
+/* harmony import */ var _EventRegister__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(237);
+/* harmony import */ var _ScrollAnimation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(238);
+/* harmony import */ var _throttle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(379);
+
+
 
 
 
@@ -23898,32 +23903,39 @@ var MpxScroll = function () {
       threshold: 60, // 滑动触发下拉刷新的距离
       stop: 56, // 下拉刷新时停留的位置距离屏幕顶部的距离
       bounceTime: 800, // 设置回弹动画的动画时长
-      debounce: 50 // 页面滚动防抖延时时间
+      throttle: 800 // 页面滚动节流
     };
     this.options = babel_runtime_core_js_object_assign__WEBPACK_IMPORTED_MODULE_2___default()({}, defaultOptions, options);
-    this.ratio = 0.5; // 下拉阻尼系数
-    this.el = Object(_dom__WEBPACK_IMPORTED_MODULE_5__[/* getElement */ "a"])('.page');
+
+    // 下拉阻尼系数
+    this.ratio = 0.5;
+
+    this.el = Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getElement */ "a"])('.page');
     this.touchstartY = 0;
     this.currentY = 0;
     this.translateY = 0;
+
+    // 为了不阻断用户交互，在 pull down 过程中允许用户可以再次做下拉动作。
+    // 记录上次 pull down 的 translateY，再次下拉时加上这个 legacy 作为起始点
+    // 避免再次 touchstart 的时候 translateY 从某个值突然小于正处于 pull down 状态的 loading 高度
     this.legacyY = 0;
+
     this.isIntersecting = false;
     this.isRefresh = false;
     this.bottomReached = false;
-    this.scrollTimer = null;
-    this.intersectionOb = null;
 
     var hooks = ['scroll', // 页面自然滚动
-    'pageScrollTo', // 手动调用 pageScrollTo
     'move', // pull down 时 loading 移动
     'pullingDown' // pullDown 事件
     ];
     this.hooks = {};
     hooks.forEach(function (hook) {
-      _this.hooks[hook] = new _EventEmitter__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"]();
+      _this.hooks[hook] = new _EventEmitter__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"]();
     });
-    this.eventRegister = new _EventRegister__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"]();
-    this.scrollAnimation = new _ScrollAnimation__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"]();
+    this.scrollAnimation = new _ScrollAnimation__WEBPACK_IMPORTED_MODULE_9__[/* default */ "a"]();
+    this.pullDownEventRegister = null;
+    this.scrollEventRegister = null;
+    this.intersectionOb = null;
   }
 
   babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default()(MpxScroll, [{
@@ -23931,6 +23943,8 @@ var MpxScroll = function () {
     value: function usePullDownRefresh() {
       var _this2 = this;
 
+      // fix lint
+      var IntersectionObserver = window.IntersectionObserver;
       var ob = this.intersectionOb = new IntersectionObserver(function (changes) {
         var _changes = babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(changes, 1),
             change = _changes[0];
@@ -23940,6 +23954,24 @@ var MpxScroll = function () {
         if (!isIntersecting) {
           // 非 inter section 状态下及时清除 transtorm，以免影响正常滚动时元素的 fixed 定位
           _this2.el.style.cssText = '';
+          _this2.pullDownEventRegister && _this2.pullDownEventRegister.destroy();
+        } else {
+          _this2.pullDownEventRegister = new _EventRegister__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"](_this2.el, [{
+            name: 'touchstart',
+            handler: function handler(e) {
+              return _this2.onTouchStart(e);
+            }
+          }, {
+            name: 'touchmove',
+            handler: function handler(e) {
+              return _this2.onTouchMove(e);
+            }
+          }, {
+            name: 'touchend',
+            handler: function handler(e) {
+              return _this2.onTouchEnd(e);
+            }
+          }]);
         }
       });
       ob.observe(document.querySelector('.pull-down-loading'));
@@ -23948,15 +23980,6 @@ var MpxScroll = function () {
         _this2.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
           _this2.transformPage(distance);
         });
-      });
-      this.eventRegister.on(this.el, 'touchstart', function (e) {
-        return _this2.onTouchStart(e);
-      });
-      this.eventRegister.on(this.el, 'touchmove', function (e) {
-        return _this2.onTouchMove(e);
-      });
-      this.eventRegister.on(this.el, 'touchend', function (e) {
-        return _this2.onTouchEnd(e);
       });
     }
   }, {
@@ -23969,7 +23992,7 @@ var MpxScroll = function () {
     value: function onTouchMove(e) {
       this.currentY = e.targetTouches[0].clientY;
       if (this.currentY - this.touchstartY >= 0 && this.isIntersecting) {
-        Object(_dom__WEBPACK_IMPORTED_MODULE_5__[/* preventDefault */ "d"])(e);
+        Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* preventDefault */ "d"])(e);
         if (this.isRefresh) {
           this.legacyY = this.translateY;
           this.isRefresh = false;
@@ -24021,24 +24044,24 @@ var MpxScroll = function () {
     value: function useScroll() {
       var _this3 = this;
 
-      this.eventRegister.on(document, 'scroll', function (e) {
-        if (_this3.scrollTimer) {
-          _this3.clearScrollTimer();
-        }
-        _this3.scrollTimer = setTimeout(function () {
-          var scrollTop = window.pageYOffset;
-          _this3.scrollTop = scrollTop;
-          _this3.hooks.scroll.emit(scrollTop);
-        }, _this3.options.debounce);
+      var pageScrollHandler = Object(_throttle__WEBPACK_IMPORTED_MODULE_10__[/* default */ "a"])(function (e) {
+        var _e = {};
+        Object.defineProperty(_e, 'scrollTop', {
+          configurable: false,
+          enumerable: true,
+          get: function get() {
+            return Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getScrollTop */ "c"])();
+          }
+        });
+        _this3.hooks.scroll.emit(_e);
+      }, this.options.throttle, {
+        leading: true,
+        trailing: false
       });
-    }
-  }, {
-    key: 'clearScrollTimer',
-    value: function clearScrollTimer() {
-      if (this.scrollTimer) {
-        clearTimeout(this.scrollTimer);
-        this.scrollTimer = null;
-      }
+      this.scrollEventRegister = new _EventRegister__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"](document, [{
+        name: 'scroll',
+        handler: pageScrollHandler
+      }]);
     }
   }, {
     key: 'destroy',
@@ -24049,8 +24072,8 @@ var MpxScroll = function () {
       babel_runtime_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(hooks).forEach(function (hook) {
         _this4.hooks[hook].destroy();
       });
-      this.eventRegister.destroy();
-      this.clearScrollTimer();
+      this.scrollEventRegister && this.scrollEventRegister.destroy();
+      this.pullDownEventRegister && this.pullDownEventRegister.destroy();
       this.intersectionOb && this.intersectionOb.disconnect();
     }
   }, {
@@ -24101,18 +24124,20 @@ var MpxScroll = function () {
       if (isDef(scrollTop)) {
         _scrollTop = scrollTop;
       } else if (isDef(selector)) {
-        _scrollTop = Object(_dom__WEBPACK_IMPORTED_MODULE_5__[/* getOffsetTop */ "b"])(Object(_dom__WEBPACK_IMPORTED_MODULE_5__[/* getElement */ "a"])(selector));
+        _scrollTop = Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getOffsetTop */ "b"])(Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getElement */ "a"])(selector));
       } else {
-        return error('[pageScrollTo error]: scrollTop and selector are not defined');
+        return Object(_helper_log__WEBPACK_IMPORTED_MODULE_5__[/* error */ "a"])('[pageScrollTo error]: scrollTop and selector are not defined');
       }
 
       if (duration === 0) {
         return window.scrollTo(0, _scrollTop);
       }
 
-      var position = Object(_dom__WEBPACK_IMPORTED_MODULE_5__[/* getScrollTop */ "c"])();
+      var position = Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getScrollTop */ "c"])();
 
-      this.hooks.pageScrollTo.emit(duration, position, _scrollTop);
+      this.scrollAnimation.easeOutQuart(duration, position, _scrollTop, function (distance) {
+        window.scrollTo(0, distance);
+      });
     }
   }, {
     key: 'onReachBottom',
@@ -24322,34 +24347,51 @@ var EventEmitter = function () {
 /* harmony import */ var babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
 
 
-function addEvent(el, type, handler) {
-  el.addEventListener(type, handler, { passive: false });
+function addEvent(el, type, handler, capture) {
+  el.addEventListener(type, handler, {
+    passive: false,
+    capture: !!capture
+  });
 }
 
-function removeEvent(el, type, handler) {
-  el.removeEventListener(type, handler, { passive: false });
+function removeEvent(el, type, handler, capture) {
+  el.removeEventListener(type, handler, {
+    capture: !!capture
+  });
 }
 
 var EventRegister = function () {
-  function EventRegister() {
+  function EventRegister(wrapper, events) {
     babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, EventRegister);
 
-    this.disposer = [];
+    this.wrapper = wrapper;
+    this.events = events;
+    this.addDOMEvents();
   }
 
   babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(EventRegister, [{
-    key: "on",
-    value: function on(el, type, handler) {
-      this.disposer.push([el, type, handler]);
-      addEvent(el, type, handler);
+    key: "addDOMEvents",
+    value: function addDOMEvents(el, type, handler) {
+      this.handleDOMEvents(addEvent);
+    }
+  }, {
+    key: "removeDOMEvents",
+    value: function removeDOMEvents() {
+      this.handleDOMEvents(removeEvent);
+    }
+  }, {
+    key: "handleDOMEvents",
+    value: function handleDOMEvents(eventOperation) {
+      var wrapper = this.wrapper;
+      this.events.forEach(function (event) {
+        eventOperation(wrapper, event.name, event.handler, !!event.capture);
+      });
     }
   }, {
     key: "destroy",
     value: function destroy() {
-      this.disposer.forEach(function (args) {
-        removeEvent(args[0], args[1], args[2]);
-      });
-      this.disposer = [];
+      this.removeDOMEvents();
+      this.events = [];
     }
   }]);
 
@@ -32346,7 +32388,7 @@ Object(_mpxjs_core__WEBPACK_IMPORTED_MODULE_1__["createPage"])({
     // console.log('this.options: ', this.$options.options) 
   },
   onPageScroll: function onPageScroll(e) {
-    console.log('onPageScroll: ', e);
+    console.log('onPageScroll - scrollTop: ', e.scrollTop);
   },
 
   onPullDownRefresh: function onPullDownRefresh() {
@@ -33406,6 +33448,213 @@ var staticRenderFns = []
 render._withStripped = true
 
 if (false) {}
+
+/***/ }),
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return debounce; });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(101);
+
+
+function debounce(func, wait, options) {
+  var lastArgs = void 0,
+      lastThis = void 0,
+      maxWait = void 0,
+      result = void 0,
+      timerId = void 0,
+      lastCallTime = void 0;
+
+  var lastInvokeTime = 0;
+  var leading = false;
+  var maxing = false;
+  var trailing = true;
+
+  // Bypass `requestAnimationFrame` by explicitly setting `wait=0`.
+  var useRAF = !wait && wait !== 0 && typeof window.requestAnimationFrame === 'function';
+
+  if (typeof func !== 'function') {
+    throw new TypeError('Expected a function');
+  }
+  wait = +wait || 0;
+  if (Object(_utils__WEBPACK_IMPORTED_MODULE_0__[/* isObject */ "m"])(options)) {
+    leading = !!options.leading;
+    maxing = 'maxWait' in options;
+    maxWait = maxing ? Math.max(+options.maxWait || 0, wait) : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+
+  function invokeFunc(time) {
+    var args = lastArgs;
+    var thisArg = lastThis;
+
+    lastArgs = lastThis = undefined;
+    lastInvokeTime = time;
+    result = func.apply(thisArg, args);
+    return result;
+  }
+
+  function startTimer(pendingFunc, wait) {
+    if (useRAF) {
+      window.cancelAnimationFrame(timerId);
+      return window.requestAnimationFrame(pendingFunc);
+    }
+    return setTimeout(pendingFunc, wait);
+  }
+
+  function cancelTimer(id) {
+    if (useRAF) {
+      return window.cancelAnimationFrame(id);
+    }
+    clearTimeout(id);
+  }
+
+  function leadingEdge(time) {
+    // Reset any `maxWait` timer.
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = startTimer(timerExpired, wait);
+    // Invoke the leading edge.
+    return leading ? invokeFunc(time) : result;
+  }
+
+  function remainingWait(time) {
+    var timeSinceLastCall = time - lastCallTime;
+    var timeSinceLastInvoke = time - lastInvokeTime;
+    var timeWaiting = wait - timeSinceLastCall;
+
+    return maxing ? Math.min(timeWaiting, maxWait - timeSinceLastInvoke) : timeWaiting;
+  }
+
+  function shouldInvoke(time) {
+    var timeSinceLastCall = time - lastCallTime;
+    var timeSinceLastInvoke = time - lastInvokeTime;
+
+    // Either this is the first call, activity has stopped and we're at the
+    // trailing edge, the system time has gone backwards and we're treating
+    // it as the trailing edge, or we've hit the `maxWait` limit.
+    return lastCallTime === undefined || timeSinceLastCall >= wait || timeSinceLastCall < 0 || maxing && timeSinceLastInvoke >= maxWait;
+  }
+
+  function timerExpired() {
+    var time = Date.now();
+    if (shouldInvoke(time)) {
+      return trailingEdge(time);
+    }
+    // Restart the timer.
+    timerId = startTimer(timerExpired, remainingWait(time));
+  }
+
+  function trailingEdge(time) {
+    timerId = undefined;
+
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
+    if (trailing && lastArgs) {
+      return invokeFunc(time);
+    }
+    lastArgs = lastThis = undefined;
+    return result;
+  }
+
+  function cancel() {
+    if (timerId !== undefined) {
+      cancelTimer(timerId);
+    }
+    lastInvokeTime = 0;
+    lastArgs = lastCallTime = lastThis = timerId = undefined;
+  }
+
+  function flush() {
+    return timerId === undefined ? result : trailingEdge(Date.now());
+  }
+
+  function pending() {
+    return timerId !== undefined;
+  }
+
+  function debounced() {
+    var time = Date.now();
+    var isInvoking = shouldInvoke(time);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    lastArgs = args;
+    lastThis = this;
+    lastCallTime = time;
+
+    if (isInvoking) {
+      if (timerId === undefined) {
+        return leadingEdge(lastCallTime);
+      }
+      if (maxing) {
+        // Handle invocations in a tight loop.
+        timerId = startTimer(timerExpired, wait);
+        return invokeFunc(lastCallTime);
+      }
+    }
+    if (timerId === undefined) {
+      timerId = startTimer(timerExpired, wait);
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  debounced.flush = flush;
+  debounced.pending = pending;
+  return debounced;
+}
+
+/***/ }),
+/* 379 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return throttle; });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(101);
+/* harmony import */ var _debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(378);
+
+
+
+function throttle(func, wait, options) {
+  var leading = true;
+  var trailing = true;
+
+  if (typeof func !== 'function') {
+    throw new TypeError('Excepted a function');
+  }
+
+  if (Object(_utils__WEBPACK_IMPORTED_MODULE_0__[/* isObject */ "m"])(options)) {
+    leading = 'leading' in options ? !!options.leading : leading;
+    trailing = 'trailing' in options ? !!options.leading : trailing;
+  }
+
+  return Object(_debounce__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(func, wait, {
+    leading: leading,
+    trailing: trailing,
+    'maxWait': wait
+  });
+}
 
 /***/ })
 /******/ ]);
