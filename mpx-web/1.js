@@ -1,13 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
 
-/***/ 360:
+/***/ 357:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_dog_mpx_page_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(361);
-/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_29b8bbf0_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_dog_mpx_page_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(362);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(348);
+/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_dog_mpx_page_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(358);
+/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_29b8bbf0_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_dog_mpx_page_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(359);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(345);
 var disposed = false
 /* script */
 
@@ -42,18 +42,19 @@ if (false) {}
 
 /***/ }),
 
-/***/ 361:
+/***/ 358:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var _node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
-/* harmony import */ var _mpxjs_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(69);
+/* harmony import */ var _mpxjs_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(73);
 //
 //
 //
 //
 //
 //
+
 
 global.currentSrcMode = "wx";
 global.currentResource = "/Users/didi/Desktop/github/test-mpx-web/src/packageA/dog.mpx";
@@ -64,12 +65,12 @@ Object(_mpxjs_core__WEBPACK_IMPORTED_MODULE_1__["createPage"])({
   onLoad: function onLoad() {}
 });
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "page", "", undefined, {}, {}, {}, undefined));
+/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "page", "", undefined, {}, {}, {}, undefined, {}, undefined));
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)))
 
 /***/ }),
 
-/***/ 362:
+/***/ 359:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

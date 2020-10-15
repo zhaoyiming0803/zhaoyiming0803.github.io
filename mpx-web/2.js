@@ -1,13 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ 363:
+/***/ 360:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_cat_mpx_page_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(364);
-/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_44b44cec_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_cat_mpx_page_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(370);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(348);
+/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_cat_mpx_page_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(361);
+/* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_44b44cec_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_node_modules_mpxjs_webpack_plugin_lib_loader_js_ref_9_1_cat_mpx_page_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(367);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(345);
 var disposed = false
 /* script */
 
@@ -42,13 +42,13 @@ if (false) {}
 
 /***/ }),
 
-/***/ 364:
+/***/ 361:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var _node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
-/* harmony import */ var _mpxjs_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(69);
-/* harmony import */ var static_images_cat_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(365);
+/* harmony import */ var _mpxjs_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(73);
+/* harmony import */ var static_images_cat_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(362);
 /* harmony import */ var static_images_cat_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(static_images_cat_jpg__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
@@ -56,6 +56,7 @@ if (false) {}
 //
 //
 //
+
 
 global.currentSrcMode = "wx";
 global.currentResource = "/Users/didi/Desktop/github/test-mpx-web/src/packageA/cat.mpx";
@@ -70,25 +71,25 @@ Object(_mpxjs_core__WEBPACK_IMPORTED_MODULE_1__["createPage"])({
   onLoad: function onLoad() {}
 });
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "page", "", undefined, {}, {}, { 'mpx-image': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(366), true) }, undefined));
+/* harmony default export */ __webpack_exports__["a"] = (Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(global.currentOption, "page", "", undefined, {}, {}, { 'mpx-image': Object(_node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__[/* getComponent */ "b"])(__webpack_require__(363), { __mpxBuiltIn: true }) }, undefined, {}, undefined));
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)))
 
 /***/ }),
 
-/***/ 365:
+/***/ 362:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/cat75e13fc38cfbb604346ad980c7fd788b.jpg";
 
 /***/ }),
 
-/***/ 366:
+/***/ 363:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_image_vue_component_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(367);
-/* harmony import */ var _vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(348);
+/* harmony import */ var _babel_loader_vue_loader_lib_selector_type_script_index_0_built_in_loader_js_mpx_image_vue_component_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(364);
+/* harmony import */ var _vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(345);
 var disposed = false
 /* script */
 
@@ -123,13 +124,14 @@ if (false) {}
 
 /***/ }),
 
-/***/ 367:
+/***/ 364:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var builtInComponent_styl_selector_type_styles_index_0_mpx_image_vue_component_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(368);
+/* harmony import */ var builtInComponent_styl_selector_type_styles_index_0_mpx_image_vue_component_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(365);
 /* harmony import */ var builtInComponent_styl_selector_type_styles_index_0_mpx_image_vue_component_true__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(builtInComponent_styl_selector_type_styles_index_0_mpx_image_vue_component_true__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _getInnerListeners__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(347);
+/* harmony import */ var _getInnerListeners__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(344);
+//
 
 
 
@@ -227,11 +229,11 @@ if (false) {}
 
 /***/ }),
 
-/***/ 368:
+/***/ 365:
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(59);
-            var content = __webpack_require__(369);
+var api = __webpack_require__(63);
+            var content = __webpack_require__(366);
 
             content = content.__esModule ? content.default : content;
 
@@ -252,7 +254,7 @@ module.exports = content.locals || {};
 
 /***/ }),
 
-/***/ 369:
+/***/ 366:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(14)(false);
@@ -267,7 +269,7 @@ exports.push([module.i, ".mpx-image {\n  width: 300px;\n  height: 225px;\n  disp
 
 /***/ }),
 
-/***/ 370:
+/***/ 367:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
