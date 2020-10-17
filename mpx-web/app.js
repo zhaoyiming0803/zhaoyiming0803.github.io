@@ -24290,6 +24290,7 @@ var MpxScroll = function () {
       this.move(bounceTime, stop, 0);
       this.isRefresh = false;
       this.legacyY = 0;
+      this.el.style.cssText = '';
     }
   }, {
     key: 'move',
