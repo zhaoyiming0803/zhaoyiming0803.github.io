@@ -24290,6 +24290,7 @@ var MpxScroll = function () {
       this.move(bounceTime, stop, 0);
       this.isRefresh = false;
       this.legacyY = 0;
+      var position = Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getScrollTop */ "c"])();
       this.pageScrollTo({
         scrollTop: 0
       });
