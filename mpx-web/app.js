@@ -24139,7 +24139,7 @@ var MpxScroll = function () {
         _this2.isIntersecting = isIntersecting;
         if (!isIntersecting) {
           // 非 inter section 状态下及时清除 transtorm，以免影响正常滚动时元素的 fixed 定位
-          _this2.el.style.cssText = 'transform: none';
+          _this2.el.style.cssText = '';
           _this2.pullDownEventRegister && _this2.pullDownEventRegister.destroy();
         } else {
           _this2.pullDownEventRegister = new _EventRegister__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"](_this2.el, [{
@@ -24290,8 +24290,12 @@ var MpxScroll = function () {
       this.move(bounceTime, stop, 0);
       this.isRefresh = false;
       this.legacyY = 0;
-      window.scrollTo(0, 100);
-      window.scrollTo(0, 0);
+      window.requestAnimationFrame(function () {
+        window.scrollTo(0, 1000);
+        window.requestAnimationFrame(function () {
+          window.scrollTo(0, 0);
+        });
+      });
     }
   }, {
     key: 'move',
@@ -30545,7 +30549,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #f00;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n/*transform: translateZ(0);*/\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #f00;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -30557,7 +30561,6 @@ exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 1
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global, mpx) {/* harmony import */ var _node_modules_mpxjs_webpack_plugin_lib_runtime_optionProcessor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
 /* harmony import */ var _mpxjs_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(73);
-//
 //
 //
 //
