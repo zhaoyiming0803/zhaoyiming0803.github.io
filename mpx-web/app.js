@@ -23964,7 +23964,7 @@ function pageScrollMixin(mixinType) {
     },
     deactivated: function deactivated() {
       if (ms) {
-        this.__lastScrollY = Object(_helper_MpxScroll_dom__WEBPACK_IMPORTED_MODULE_2__[/* getScrollTop */ "b"])();
+        this.__lastScrollY = Object(_helper_MpxScroll_dom__WEBPACK_IMPORTED_MODULE_2__[/* getScrollTop */ "c"])();
         ms.destroy();
         hideLoading(this);
       }
@@ -24172,7 +24172,7 @@ var MpxScroll = function () {
     value: function onTouchMove(e) {
       this.currentY = e.targetTouches[0].clientY;
       if (this.currentY - this.touchstartY >= 0 && this.isIntersecting) {
-        Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* preventDefault */ "c"])(e);
+        Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* preventDefault */ "d"])(e);
         if (this.isRefresh) {
           this.legacyY = this.translateY;
           this.isRefresh = false;
@@ -24230,7 +24230,7 @@ var MpxScroll = function () {
           configurable: false,
           enumerable: true,
           get: function get() {
-            return Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getScrollTop */ "b"])();
+            return Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getScrollTop */ "c"])();
           }
         });
         _this3.hooks.scroll.emit(_e);
@@ -24313,8 +24313,7 @@ var MpxScroll = function () {
       if (isDef(scrollTop)) {
         _scrollTop = scrollTop;
       } else if (isDef(selector)) {
-        // _scrollTop = getOffsetTop(getElement(selector))
-        _scrollTop = 1000;
+        _scrollTop = Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getOffsetTop */ "b"])(Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getElement */ "a"])(selector));
       } else {
         return Object(_helper_log__WEBPACK_IMPORTED_MODULE_5__[/* error */ "a"])('[pageScrollTo error]: scrollTop and selector are not defined');
       }
@@ -24323,8 +24322,8 @@ var MpxScroll = function () {
         return window.scrollTo(0, _scrollTop);
       }
 
-      var position = Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getScrollTop */ "b"])();
-      // const position = 0
+      // const position = getScrollTop()
+      var position = 0;
 
       this.scrollAnimation.easeOutQuart(duration, position, _scrollTop, function (distance) {
         window.scrollTo(0, distance);
@@ -25077,10 +25076,10 @@ module.exports = isObjectLike;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export getOffsetTop */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getOffsetTop; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getScrollTop; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return preventDefault; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getScrollTop; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return preventDefault; });
 function getOffsetTop(el) {
   var top = el.offsetTop;
   var op = el.offsetParent;
@@ -30545,7 +30544,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #00f;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #f00;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
 
 // exports
 
