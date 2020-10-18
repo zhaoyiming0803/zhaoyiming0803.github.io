@@ -30546,7 +30546,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #f00;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n  border-radius: 50%;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #ff0;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n  border-radius: 50%;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -30657,8 +30657,8 @@ Object(_mpxjs_core__WEBPACK_IMPORTED_MODULE_1__["createPage"])({
     clickButton: function clickButton() {},
     scrollToSelector: function scrollToSelector() {
       /* mpx replace */ mpx.pageScrollTo({
-        // scrollTop: 0,
-        selector: '#selector',
+        scrollTop: 1500,
+        // selector: '#selector',
         duration: 3000,
         success: function success(params) {
           console.log('success: ', params);
