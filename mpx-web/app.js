@@ -24280,8 +24280,6 @@ var MpxScroll = function () {
   }, {
     key: 'stopPullDownRefresh',
     value: function stopPullDownRefresh() {
-      var _this5 = this;
-
       if (!this.isRefresh) {
         return;
       }
@@ -24292,18 +24290,17 @@ var MpxScroll = function () {
       this.move(bounceTime, stop, 0);
       this.isRefresh = false;
       this.legacyY = 0;
-
       setTimeout(function () {
-        _this5.el.style.transform = 'none';
+        window.scrollTo(0, 10);
       }, 3000);
     }
   }, {
     key: 'move',
     value: function move(bounceTime, beginPosition, endPosition) {
-      var _this6 = this;
+      var _this5 = this;
 
       this.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
-        return _this6.transformPage(distance);
+        return _this5.transformPage(distance);
       });
     }
   }, {
