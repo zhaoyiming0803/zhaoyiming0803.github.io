@@ -24308,6 +24308,7 @@ var MpxScroll = function () {
           _ref$duration = _ref.duration,
           duration = _ref$duration === undefined ? 300 : _ref$duration;
 
+      return window.scrollBy(0, 0);
       var _scrollTop = void 0;
 
       if (isDef(scrollTop)) {
@@ -24323,8 +24324,6 @@ var MpxScroll = function () {
       }
 
       var position = Object(_dom__WEBPACK_IMPORTED_MODULE_6__[/* getScrollTop */ "c"])();
-
-      return window.scrollTo(0, _scrollTop);
 
       this.scrollAnimation.easeOutQuart(duration, position, _scrollTop, function (distance) {
         window.scrollTo(0, distance);
@@ -30545,7 +30544,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #f00;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #ff0;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
 
 // exports
 
