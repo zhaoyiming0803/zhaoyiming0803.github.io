@@ -24139,7 +24139,7 @@ var MpxScroll = function () {
         _this2.isIntersecting = isIntersecting;
         if (!isIntersecting) {
           // 非 inter section 状态下及时清除 transtorm，以免影响正常滚动时元素的 fixed 定位
-          _this2.el.style.cssText = '';
+          _this2.el.style.transform = 'none';
           _this2.pullDownEventRegister && _this2.pullDownEventRegister.destroy();
         } else {
           _this2.pullDownEventRegister = new _EventRegister__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"](_this2.el, [{
@@ -24280,6 +24280,8 @@ var MpxScroll = function () {
   }, {
     key: 'stopPullDownRefresh',
     value: function stopPullDownRefresh() {
+      var _this5 = this;
+
       if (!this.isRefresh) {
         return;
       }
@@ -24290,14 +24292,18 @@ var MpxScroll = function () {
       this.move(bounceTime, stop, 0);
       this.isRefresh = false;
       this.legacyY = 0;
+
+      setTimeout(function () {
+        _this5.el.style.transform = 'none';
+      }, 3000);
     }
   }, {
     key: 'move',
     value: function move(bounceTime, beginPosition, endPosition) {
-      var _this5 = this;
+      var _this6 = this;
 
       this.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
-        return _this5.transformPage(distance);
+        return _this6.transformPage(distance);
       });
     }
   }, {
@@ -30544,7 +30550,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #ff0;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #f00;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
 
 // exports
 
