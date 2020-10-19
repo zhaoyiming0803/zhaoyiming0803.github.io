@@ -24280,6 +24280,8 @@ var MpxScroll = function () {
   }, {
     key: 'stopPullDownRefresh',
     value: function stopPullDownRefresh() {
+      var _this5 = this;
+
       if (!this.isRefresh) {
         return;
       }
@@ -24291,16 +24293,16 @@ var MpxScroll = function () {
       this.isRefresh = false;
       this.legacyY = 0;
       setTimeout(function () {
-        window.scrollTo(0, 10);
-      }, 3000);
+        _this5.el.style.transform = 'inherit';
+      }, 2000);
     }
   }, {
     key: 'move',
     value: function move(bounceTime, beginPosition, endPosition) {
-      var _this5 = this;
+      var _this6 = this;
 
       this.scrollAnimation.easeOutQuart(bounceTime, beginPosition, endPosition, function (distance) {
-        return _this5.transformPage(distance);
+        return _this6.transformPage(distance);
       });
     }
   }, {
@@ -30546,7 +30548,7 @@ exports = module.exports = __webpack_require__(14)(false);
 
 
 // module
-exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #ff0;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n  border-radius: 50%;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.test-container {\n  margin-bottom: 20px;\n  width: 100%;\n  height: 1000px;\n  background-color: #f00;\n}\n.tabbar {\n  position: fixed;\n  top: 20px;\n  left: 0;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  text-align: center;\n  background: #00f;\n  color: #fff;\n  border-radius: 50%;\n}\n.box {\n  top: 0;\n  left: 0;\n  width: 100%;\n}\n", ""]);
 
 // exports
 
