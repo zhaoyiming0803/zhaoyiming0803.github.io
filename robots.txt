@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: OAI-SearchBot
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: Applebot-Extended
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+Sitemap: https://zhaoyiming0803.github.io/sitemap.xml
