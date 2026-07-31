@@ -2,7 +2,7 @@
 /**
  * @Description  ��վ��¼/ע����֤��������
  * @Author  ��һ��
- * @OnlineDemo http://www.zhaoyiming.com/demo/verificationcode/code.html
+ * @OnlineDemo https://zhaoyiming0803.com/demo/verificationcode/code.html
  * @Date  2016��10��6��
  */
     function __autoload($classname){

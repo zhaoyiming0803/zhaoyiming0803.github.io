@@ -28,7 +28,7 @@ $(function(){
 	//通过ajax拿到后台数据
 	function show(){
 		$.ajax({
-			url:"http://www.zhaoyiming.com/demo/waterfall/data.php",
+			url:"https://zhaoyiming0803.com/demo/waterfall/data.php",
 			type:"POST",
 			success:function(data){
 				imgData = eval(data);
