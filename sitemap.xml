@@ -2,32 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
        <loc>https://zhaoyiming0803.github.io/</loc>
-       <lastmod>2026-07-31T11:37:28+00:00</lastmod>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0</priority>
   </url>
   <url>
+       <loc>https://zhaoyiming0803.github.io/ryanair-baggage-allowance-2026.html</loc>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.9</priority>
+  </url>
+  <url>
+       <loc>https://zhaoyiming0803.github.io/lufthansa-baggage-allowance-2026.html</loc>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.9</priority>
+  </url>
+  <url>
+       <loc>https://zhaoyiming0803.github.io/qatar-airways-baggage-allowance-2026.html</loc>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.9</priority>
+  </url>
+  <url>
+       <loc>https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html</loc>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.9</priority>
+  </url>
+  <url>
+       <loc>https://zhaoyiming0803.github.io/air-peace-baggage-allowance-2026.html</loc>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.9</priority>
+  </url>
+  <url>
+       <loc>https://zhaoyiming0803.github.io/japan-airlines-baggage-allowance-2026.html</loc>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.9</priority>
+  </url>
+  <url>
+       <loc>https://zhaoyiming0803.github.io/easyjet-baggage-allowance-2026.html</loc>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.9</priority>
+  </url>
+  <url>
+       <loc>https://zhaoyiming0803.github.io/wizz-air-baggage-allowance-2026.html</loc>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.9</priority>
+  </url>
+  <url>
        <loc>https://zhaoyiming0803.github.io/eu-100cm-7kg-carry-on-rule-explained.html</loc>
-       <lastmod>2026-07-31T00:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
        <priority>0.8</priority>
   </url>
   <url>
        <loc>https://zhaoyiming0803.github.io/eu-free-cabin-bag-rules-2027.html</loc>
-       <lastmod>2026-07-31T00:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
        <priority>0.8</priority>
   </url>
   <url>
        <loc>https://zhaoyiming0803.github.io/will-ryanair-carry-on-be-free-2027.html</loc>
-       <lastmod>2026-07-31T00:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
        <priority>0.8</priority>
   </url>
   <url>
        <loc>https://zhaoyiming0803.github.io/ryanair-eu-2027-baggage-rules.html</loc>
-       <lastmod>2026-07-31T00:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
+       <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
        <priority>0.8</priority>
   </url>
 </urlset>
