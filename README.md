@@ -56,24 +56,24 @@ Airline official websites have extensive content, but it's often hard to find th
 
 | Airline | Page |
 |---------|------|
-| Ryanair | [ryanair-baggage-allowance-2026.html](https://zhaoyiming0803.github.io/ryanair-baggage-allowance-2026.html) |
-| easyJet | [easyjet-baggage-allowance-2026.html](https://zhaoyiming0803.github.io/easyjet-baggage-allowance-2026.html) |
-| Wizz Air | [wizz-air-baggage-allowance-2026.html](https://zhaoyiming0803.github.io/wizz-air-baggage-allowance-2026.html) |
-| Lufthansa | [lufthansa-baggage-allowance-2026.html](https://zhaoyiming0803.github.io/lufthansa-baggage-allowance-2026.html) |
-| Qatar Airways | [qatar-airways-baggage-allowance-2026.html](https://zhaoyiming0803.github.io/qatar-airways-baggage-allowance-2026.html) |
-| Aer Lingus | [aer-lingus-baggage-allowance-2026.html](https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html) |
-| Japan Airlines | [japan-airlines-baggage-allowance-2026.html](https://zhaoyiming0803.github.io/japan-airlines-baggage-allowance-2026.html) |
-| Air Peace | [air-peace-baggage-allowance-2026.html](https://zhaoyiming0803.github.io/air-peace-baggage-allowance-2026.html) |
-| Delta Air Lines | [delta-air-lines-baggage-allowance-2026.html](https://zhaoyiming0803.github.io/delta-air-lines-baggage-allowance-2026.html) |
+| Ryanair | [Ryanair Baggage Sizes, Fees & Rules 2026 | Luggage Validator](https://zhaoyiming0803.github.io/ryanair-baggage-allowance-2026.html) |
+| easyJet | [easyJet Baggage Allowance 2026: Fees, Cost, Delays & Check-In | Luggage Validator](https://zhaoyiming0803.github.io/easyjet-baggage-allowance-2026.html) |
+| Wizz Air | [Wizz Air Baggage Allowance 2026: Fees at Gate, 10kg/20kg/23kg Prices | Luggage Validator](https://zhaoyiming0803.github.io/wizz-air-baggage-allowance-2026.html) |
+| Lufthansa | [Lufthansa Baggage Allowance Calculator 2026: Sizes, Fees & Rules | Luggage Validator](https://zhaoyiming0803.github.io/lufthansa-baggage-allowance-2026.html) |
+| Qatar Airways | [Qatar Airways Baggage Allowance 2026: Sizes, Fees & Student Club | Luggage Validator](https://zhaoyiming0803.github.io/qatar-airways-baggage-allowance-2026.html) |
+| Aer Lingus | [Aer Lingus Baggage Allowance 2026: Sizes, Fees & Lost Baggage Claims | Luggage Validator](https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html) |
+| Japan Airlines | [Japan Airlines Baggage Allowance 2026: Fees, Cost & Rules | Luggage Validator](https://zhaoyiming0803.github.io/japan-airlines-baggage-allowance-2026.html) |
+| Air Peace | [Air Peace Baggage Allowance 2026: Fees, Cost & Rules | Luggage Validator](https://zhaoyiming0803.github.io/air-peace-baggage-allowance-2026.html) |
+| Delta Air Lines | [Delta Air Lines Baggage Allowance 2026: Fees, Size, Weight & Gate Rules | Luggage Validator](https://zhaoyiming0803.github.io/delta-air-lines-baggage-allowance-2026.html) |
 
 ### Guides & Explainers
 
 | Topic | Page |
 |-------|------|
-| EU 100cm 7kg Carry-on Rule | [eu-100cm-7kg-carry-on-rule-explained.html](https://zhaoyiming0803.github.io/eu-100cm-7kg-carry-on-rule-explained.html) |
-| EU Free Cabin Bag Rules 2027 | [eu-free-cabin-bag-rules-2027.html](https://zhaoyiming0803.github.io/eu-free-cabin-bag-rules-2027.html) |
-| Will Ryanair Carry-on Be Free in 2027? | [will-ryanair-carry-on-be-free-2027.html](https://zhaoyiming0803.github.io/will-ryanair-carry-on-be-free-2027.html) |
-| Ryanair EU 2027 Baggage Rules | [ryanair-eu-2027-baggage-rules.html](https://zhaoyiming0803.github.io/ryanair-eu-2027-baggage-rules.html) |
+| EU 100cm 7kg Carry-on Rule | [EU 100cm 7kg Carry-on Rule Explained 2027 | Luggage Validator](https://zhaoyiming0803.github.io/eu-100cm-7kg-carry-on-rule-explained.html) |
+| EU Free Cabin Bag Rules 2027 | [EU Free Cabin Bag Rules 2027: Complete Guide | Luggage Validator](https://zhaoyiming0803.github.io/eu-free-cabin-bag-rules-2027.html) |
+| Will Ryanair Carry-on Be Free in 2027? | [Will Ryanair Carry-on Be Free in 2027? | Luggage Validator](https://zhaoyiming0803.github.io/will-ryanair-carry-on-be-free-2027.html) |
+| Ryanair EU 2027 Baggage Rules | [Ryanair EU 2027 Baggage Rules: Free Cabin Bag Guide | Luggage Validator](https://zhaoyiming0803.github.io/ryanair-eu-2027-baggage-rules.html) |
 
 ---
 
