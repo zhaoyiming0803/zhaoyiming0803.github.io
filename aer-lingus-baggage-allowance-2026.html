@@ -80,8 +80,8 @@ a:hover { text-decoration: underline; }
   margin: 40px 0 16px; color: #1e293b;
 }
 .content h3 {
-  font-size: 20px; font-weight: 600;
-  margin: 28px 0 12px; color: #1e293b;
+  font-size: 16px; font-weight: 600;
+  margin: 12px 0 12px; color: #1e293b;
 }
 .content p { margin-bottom: 16px; color: #334155; }
 .content ul, .content ol { margin: 12px 0 16px 24px; }
@@ -189,41 +189,56 @@ td.paid { color: #dc2626; font-weight: 600; }
 .route-badge.transatlantic { background: #dcfce7; color: #166534; }
 
 /* FAQ */
-.faq-item {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.faq-question {
-  padding: 16px 20px;
-  cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  font-weight: 600; color: #1e293b;
-  background: #f8fafc;
-  transition: background 0.2s;
-}
-.faq-question:hover { background: #f1f5f9; }
-.faq-question .icon {
-  font-size: 10px; color: #64748b;
-  transition: transform 0.2s;
-}
-.faq-item.open .faq-question .icon { transform: rotate(180deg); }
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0; overflow: hidden;
-  transition: all 0.3s ease;
-}
-.faq-item.open .faq-answer {
-  padding: 16px 20px;
-  max-height: 1000px;
-}
-.faq-answer p { margin-bottom: 12px; color: #475569; }
-.faq-answer p:last-child { margin-bottom: 0; }
-.faq-answer ul { margin: 8px 0 12px 20px; }
-.faq-answer li { margin-bottom: 6px; color: #475569; }
-
-/* Airline link */
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 20px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #1e293b;
+      background: #f8fafc;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-question:hover { background: #f1f5f9; }
+    .faq-question-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.5;
+    }
+    .faq-icon {
+      color: #64748b;
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    details[open] .faq-icon svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer-wrapper {
+      padding: 0 20px;
+    }
+    .faq-answer {
+      padding: 16px 0;
+    }
+    .faq-answer p { margin-bottom: 12px; color: #475569; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; }
+    
+    /* Airline link */
 .airline-link {
   display: inline-flex; align-items: center; gap: 6px;
   background: #f1f5f9;
@@ -1070,29 +1085,39 @@ td.paid { color: #dc2626; font-weight: 600; }
 
     <h2>Frequently Asked Questions</h2>
     
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Aer Lingus' carry-on baggage allowance?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Aer Lingus allows two items of carry-on baggage:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-aer-lingus-carry-on-baggage-allowance" data-v-732fe6a8="">What is Aer Lingus' carry-on baggage allowance?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Aer Lingus allows two items of carry-on baggage:</p>
         <ul>
           <li><strong>1 small personal item:</strong> 40 × 30 × 20 cm — free on all fares, must fit under the seat in front</li>
           <li><strong>1 cabin bag:</strong> 55 × 40 × 24 cm, up to 10 kg</li>
         </ul>
         <p><strong>Important:</strong> On European flights with a Saver fare, you must pay a fee (~€9.99/£9.99) to bring the cabin bag into the cabin. Alternatively, you can check it for free at the airport. On transatlantic and regional flights, the cabin bag is free for all fares.</p>
         <p>On regional ATR aircraft, the cabin bag size is reduced to 48 × 33 × 20 cm (7 kg), and larger bags are gate-checked.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much checked baggage does Aer Lingus allow?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Aer Lingus' checked baggage allowance depends on your route and fare type:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-checked-baggage-does-aer-lingus-allow" data-v-732fe6a8="">How much checked baggage does Aer Lingus allow?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Aer Lingus' checked baggage allowance depends on your route and fare type:</p>
         <p><strong>European / Short-Haul routes:</strong></p>
         <ul>
           <li>Saver: 0 free bags (buy 20/25/30 kg extra)</li>
@@ -1105,16 +1130,22 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Business Class: 3 × 23 kg (69 kg total)</li>
         </ul>
         <p>All bags must not exceed 158 cm (L+W+H) and 32 kg maximum weight per bag.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much does extra baggage cost on Aer Lingus?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Extra baggage fees depend on the route and when you purchase:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-does-extra-baggage-cost-on-aer-lingus" data-v-732fe6a8="">How much does extra baggage cost on Aer Lingus?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Extra baggage fees depend on the route and when you purchase:</p>
         <p><strong>European routes (Saver fare, online prices):</strong></p>
         <ul>
           <li>20 kg: ~€24.99–€44.99 (near/mid/far routes)</li>
@@ -1128,16 +1159,22 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Overweight (23–32 kg): €75 / £65 / $100</li>
         </ul>
         <p>Always add baggage online before your flight — it is much cheaper than paying at the airport. You can add baggage up to 2 hours before departure.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Aer Lingus' infant baggage allowance?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Infants (under 2 years) traveling on an adult's lap are entitled to:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-aer-lingus-infant-baggage-allowance" data-v-732fe6a8="">What is Aer Lingus' infant baggage allowance?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Infants (under 2 years) traveling on an adult's lap are entitled to:</p>
         <p><strong>European routes:</strong> No free checked baggage</p>
         <p><strong>Transatlantic routes:</strong> 1 checked bag up to 10 kg</p>
         <p><strong>Free on all routes:</strong></p>
@@ -1147,16 +1184,22 @@ td.paid { color: #dc2626; font-weight: 600; }
         </ul>
         <p><strong>Important:</strong> Infants do NOT get their own carry-on baggage allowance. All baby items (diapers, bottles, food) must fit within the accompanying adult's carry-on allowance.</p>
         <p>Children aged 2 and over with their own seat get the full adult baggage allowance.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Can I bring sports equipment on Aer Lingus?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, Aer Lingus accepts sports equipment on both European and transatlantic flights:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="can-i-bring-sports-equipment-on-aer-lingus" data-v-732fe6a8="">Can I bring sports equipment on Aer Lingus?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, Aer Lingus accepts sports equipment on both European and transatlantic flights:</p>
         <p><strong>European flights:</strong></p>
         <ul>
           <li>1 item per passenger, max 23 kg</li>
@@ -1169,56 +1212,80 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Additional items: ~€75 each</li>
         </ul>
         <p>All sports equipment must be properly packed in a suitable protective case. Always book in advance, especially for bicycles and large items.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does Aer Lingus weigh carry-on bags?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, Aer Lingus does weigh and measure carry-on bags at many airports, especially at check-in and boarding gates. The 10 kg weight limit and 55 × 40 × 24 cm size limit are enforced.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-aer-lingus-weigh-carry-on-bags" data-v-732fe6a8="">Does Aer Lingus weigh carry-on bags?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, Aer Lingus does weigh and measure carry-on bags at many airports, especially at check-in and boarding gates. The 10 kg weight limit and 55 × 40 × 24 cm size limit are enforced.</p>
         <p>If your carry-on bag is overweight or too large, you may be required to check it in and pay excess baggage fees. On European Saver fares, if you haven't paid for the cabin bag, you will be charged at the gate (which is more expensive than paying online).</p>
         <p>It is always better to pack within the limits to avoid unexpected charges at the airport.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is the maximum weight for a single checked bag?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p><strong>32 kg</strong> is the absolute maximum weight for any single checked bag on Aer Lingus, regardless of class or route.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-the-maximum-weight-for-a-single-checked-bag" data-v-732fe6a8="">What is the maximum weight for a single checked bag?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p><strong>32 kg</strong> is the absolute maximum weight for any single checked bag on Aer Lingus, regardless of class or route.</p>
         <p>If your bag weighs more than 32 kg, you must split the contents into multiple bags. Bags over 32 kg will not be accepted as checked baggage — they must be shipped as cargo instead.</p>
         <p>Note: The standard free allowance is 20 kg (European) or 23 kg (transatlantic Economy). If your bag is 23–32 kg, you will pay an overweight fee of €75 / £65 / $100.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Can I bring a musical instrument on Aer Lingus?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, you can bring musical instruments on Aer Lingus flights:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="can-i-bring-a-musical-instrument-on-aer-lingus" data-v-732fe6a8="">Can I bring a musical instrument on Aer Lingus?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, you can bring musical instruments on Aer Lingus flights:</p>
         <ul>
           <li><strong>Small instruments:</strong> Can be carried as cabin baggage if they fit within the 55 × 40 × 24 cm size and 10 kg weight limit</li>
           <li><strong>Medium instruments:</strong> Up to 94 × 58 × 41 cm — can travel in the cabin if you buy an extra seat (book as "EXTRA ITEM SEAT")</li>
           <li><strong>Large instruments:</strong> Must be checked in as hold baggage; standard baggage rates apply</li>
         </ul>
         <p>On European routes, checked musical instruments cost approximately €40 online (€50 at airport). Always use a hard-shell case to protect your instrument.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What happens if Aer Lingus loses my baggage?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>If Aer Lingus loses your baggage, you are entitled to compensation under the Montreal Convention:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-happens-if-aer-lingus-loses-my-baggage" data-v-732fe6a8="">What happens if Aer Lingus loses my baggage?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>If Aer Lingus loses your baggage, you are entitled to compensation under the Montreal Convention:</p>
         <ul>
           <li><strong>Liability limit:</strong> Approximately 1,288 SDR (≈ €1,885 / $1,700) per passenger</li>
           <li><strong>Declared lost:</strong> After 21 days of unsuccessful tracing</li>
@@ -1226,16 +1293,22 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li><strong>Refund of fees:</strong> You also get your baggage fees refunded</li>
         </ul>
         <p><strong>What to do:</strong> Report immediately at the airport baggage desk, get a PIR number, fill out the baggage tracing questionnaire, and keep all receipts. Claims are typically processed in 5–10 business days after approval.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How do I claim for delayed or damaged baggage on Aer Lingus?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p><strong>Delayed baggage:</strong></p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-do-i-claim-for-delayed-or-damaged-baggage-on-aer-lingus" data-v-732fe6a8="">How do I claim for delayed or damaged baggage on Aer Lingus?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p><strong>Delayed baggage:</strong></p>
         <ul>
           <li>Report at the airport baggage desk before leaving — get a PIR number</li>
           <li>If already left, report within 5 days online via WorldTracer</li>
@@ -1250,11 +1323,13 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Keep the damaged bag for inspection</li>
         </ul>
         <p><strong>Important:</strong> Always keep all receipts and your PIR number. Time limits are strict — miss the deadline and your claim can be rejected.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
         <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/air-peace-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Air Peace Baggage Allowance 2026</div>
@@ -1297,7 +1372,7 @@ td.paid { color: #dc2626; font-weight: 600; }
     </div>
 
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://luggagevalidator.com/airlines/aer-lingus">Luggage Validator — Aer Lingus Baggage Calculator 2026</a></li>
         <li><a href="https://www.aerlingus.com/html/en-IE/baggage-information.html" rel="noopener noreferrer nofollow" target="_blank">Aer Lingus — Baggage Information</a></li>
@@ -1319,11 +1394,6 @@ td.paid { color: #dc2626; font-weight: 600; }
   <script>
 // FAQ 折叠
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-question').forEach(function(q) {
-    q.addEventListener('click', function() {
-      q.parentElement.classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>

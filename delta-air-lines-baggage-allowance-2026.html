@@ -346,7 +346,7 @@
       background: white;
     }
     .faq-question {
-      padding: 16px 20px;
+      padding: 14px 20px;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
@@ -354,34 +354,48 @@
       font-weight: 600;
       color: #1e293b;
       transition: background 0.2s;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
     }
     .faq-question:hover {
       background: #f8fafc;
     }
-    .faq-question .icon {
-      font-size: 12px;
+    .faq-question-text {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.4;
+    }
+    .faq-icon {
       color: #94a3b8;
       transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
     }
-    .faq-item.open .faq-question .icon {
+    details[open] .faq-icon svg {
       transform: rotate(180deg);
     }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
+    .faq-answer-wrapper {
       padding: 0 20px;
     }
-    .faq-item.open .faq-answer {
-      max-height: 500px;
-      padding: 0 20px 16px;
+    .faq-answer {
+      padding: 16px 0;
     }
     .faq-answer p {
-      margin: 0;
+      margin: 0 0 12px 0;
       color: #475569;
       font-size: 14px;
     }
-
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; font-size: 14px; }
+    
     /* Sources */
     .sources {
       display: block;
@@ -1148,90 +1162,138 @@
     <div class="faq-section">
       <h2>Frequently Asked Questions</h2>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>How much is Delta's checked baggage fee?</span>
-          <span class="icon">▼</span>
-        </div>
-        <div class="faq-answer">
+      <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-is-deltas-checked-baggage-fee" data-v-732fe6a8="">How much is Delta's checked baggage fee?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
           <p>For domestic US/Canada flights, Delta charges <strong>$45</strong> for the first checked bag and <strong>$55</strong> for the second checked bag (each way). For international flights, the first checked bag is usually free for Main Cabin passengers, but Basic Economy passengers may pay $60-$75. Excess, overweight, and oversized bags cost extra. Use our <a href="https://luggagevalidator.com/guide/american-vs-delta-vs-united">Delta baggage calculator</a> for exact fees for your route.</p>
         </div>
+        <!--]-->
       </div>
+    </details>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What is Delta's carry-on size limit?</span>
-          <span class="icon">▼</span>
-        </div>
-        <div class="faq-answer">
+      <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-deltas-carry-on-size-limit" data-v-732fe6a8="">What is Delta's carry-on size limit?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
           <p>Delta's carry-on bag size limit is <strong>22 x 14 x 9 inches (56 x 35 x 23 cm)</strong>, including handles and wheels. You also get one personal item (17 x 13 x 8 inches) that must fit under the seat in front of you. Unlike some other US carriers, Delta includes a free carry-on bag even for Basic Economy passengers.</p>
         </div>
+        <!--]-->
       </div>
+    </details>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>Does Delta charge a gate check fee for carry-on bags?</span>
-          <span class="icon">▼</span>
-        </div>
-        <div class="faq-answer">
+      <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-delta-charge-a-gate-check-fee-for-carry-on-bags" data-v-732fe6a8="">Does Delta charge a gate check fee for carry-on bags?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
           <p>Delta generally does not charge a separate gate check fee. If overhead bin space is full, gate agents will gate-check your carry-on bag <strong>for free</strong>. However, if your bag is clearly oversized and you're in Basic Economy, you may be charged the standard checked bag fee. Delta is considered more lenient than budget carriers like Spirit or Frontier when it comes to gate checks.</p>
         </div>
+        <!--]-->
       </div>
+    </details>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>How strict is Delta with carry-on weight?</span>
-          <span class="icon">▼</span>
-        </div>
-        <div class="faq-answer">
+      <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-strict-is-delta-with-carry-on-weight" data-v-732fe6a8="">How strict is Delta with carry-on weight?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
           <p>Delta does not have a published weight limit for carry-on bags on domestic US flights. The main requirement is that the bag fits in the overhead bin and you can lift it into the bin yourself. On some international routes, there may be weight restrictions, but Delta is generally less strict about carry-on weight compared to Asian or European carriers.</p>
         </div>
+        <!--]-->
       </div>
+    </details>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What is the maximum weight for a checked bag on Delta?</span>
-          <span class="icon">▼</span>
-        </div>
-        <div class="faq-answer">
+      <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-the-maximum-weight-for-a-checked-bag-on-delta" data-v-732fe6a8="">What is the maximum weight for a checked bag on Delta?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
           <p>The maximum weight for a checked bag on Delta is <strong>50 lbs (23 kg)</strong> for Economy and Comfort+ passengers. First Class, Delta One, and Premium Select passengers get a <strong>70 lbs (32 kg)</strong> limit. Bags over 50 lbs (or 70 lbs in premium cabins) incur overweight fees: $100 for 51-70 lbs and $200 for 71-100 lbs. Bags over 100 lbs are not accepted.</p>
         </div>
+        <!--]-->
       </div>
+    </details>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>Does Basic Economy include a carry-on on Delta?</span>
-          <span class="icon">▼</span>
-        </div>
-        <div class="faq-answer">
+      <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-basic-economy-include-a-carry-on-on-delta" data-v-732fe6a8="">Does Basic Economy include a carry-on on Delta?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
           <p><strong>Yes</strong>, Delta Basic Economy includes a free carry-on bag plus a personal item, unlike United and American Basic Economy which only allow a personal item. However, Basic Economy passengers board last, so overhead bin space may be limited and your carry-on might need to be gate-checked (which is free on Delta).</p>
         </div>
+        <!--]-->
       </div>
+    </details>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>How can I calculate my Delta baggage fees?</span>
-          <span class="icon">▼</span>
-        </div>
-        <div class="faq-answer">
+      <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-can-i-calculate-my-delta-baggage-fees" data-v-732fe6a8="">How can I calculate my Delta baggage fees?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
           <p>You can use the <a href="https://luggagevalidator.com/guide/american-vs-delta-vs-united">Luggage Validator Delta Air Lines baggage calculator</a> to quickly check your exact allowance and fees based on your route, cabin class, and number of bags. The calculator takes into account domestic vs international routes, different fare types, overweight and oversized fees, and more. It's completely free to use.</p>
         </div>
+        <!--]-->
       </div>
+    </details>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          <span>What's the difference between domestic and international baggage on Delta?</span>
-          <span class="icon">▼</span>
-        </div>
-        <div class="faq-answer">
+      <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="whats-the-difference-between-domestic-and-international-baggage-on-delta" data-v-732fe6a8="">What's the difference between domestic and international baggage on Delta?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
           <p>On domestic US/Canada flights, all economy passengers pay for checked bags ($45 first bag, $55 second). On most international routes (Europe, Asia, Australia), Main Cabin passengers get the first checked bag free, and the second bag costs $100. Basic Economy passengers on international routes may still pay for the first bag ($60-$75 depending on the region).</p>
         </div>
+        <!--]-->
       </div>
+    </details>
     </div>
 
     <!-- Related Pages -->
     <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Aer Lingus Baggage Allowance 2026</div>
@@ -1274,7 +1336,7 @@
 
     <!-- Sources -->
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://luggagevalidator.com/airlines/delta-air-lines">Luggage Validator — Delta Air Lines Baggage Policy 2026</a></li>
         <li><a href="https://www.delta.com/us/en/baggage/carry-on-baggage" rel="noopener noreferrer nofollow" target="_blank">Delta Air Lines — Carry-On Baggage</a></li>
@@ -1295,13 +1357,6 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', function() {
-          item.classList.toggle('open');
-        });
-      });
     });
   </script>
 </body>

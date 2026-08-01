@@ -80,8 +80,8 @@ a:hover { text-decoration: underline; }
   margin: 40px 0 16px; color: #1e293b;
 }
 .content h3 {
-  font-size: 20px; font-weight: 600;
-  margin: 28px 0 12px; color: #1e293b;
+  font-size: 16px; font-weight: 600;
+  margin: 12px 0 12px; color: #1e293b;
 }
 .content p { margin-bottom: 16px; color: #334155; }
 .content ul, .content ol { margin: 12px 0 16px 24px; }
@@ -189,41 +189,56 @@ td.paid { color: #dc2626; font-weight: 600; }
 .concept-badge.weight { background: #dcfce7; color: #166534; }
 
 /* FAQ */
-.faq-item {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.faq-question {
-  padding: 16px 20px;
-  cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  font-weight: 600; color: #1e293b;
-  background: #f8fafc;
-  transition: background 0.2s;
-}
-.faq-question:hover { background: #f1f5f9; }
-.faq-question .icon {
-  font-size: 10px; color: #64748b;
-  transition: transform 0.2s;
-}
-.faq-item.open .faq-question .icon { transform: rotate(180deg); }
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0; overflow: hidden;
-  transition: all 0.3s ease;
-}
-.faq-item.open .faq-answer {
-  padding: 16px 20px;
-  max-height: 1000px;
-}
-.faq-answer p { margin-bottom: 12px; color: #475569; }
-.faq-answer p:last-child { margin-bottom: 0; }
-.faq-answer ul { margin: 8px 0 12px 20px; }
-.faq-answer li { margin-bottom: 6px; color: #475569; }
-
-/* Airline link */
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 20px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #1e293b;
+      background: #f8fafc;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-question:hover { background: #f1f5f9; }
+    .faq-question-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.5;
+    }
+    .faq-icon {
+      color: #64748b;
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    details[open] .faq-icon svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer-wrapper {
+      padding: 0 20px;
+    }
+    .faq-answer {
+      padding: 16px 0;
+    }
+    .faq-answer p { margin-bottom: 12px; color: #475569; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; }
+    
+    /* Airline link */
 .airline-link {
   display: inline-flex; align-items: center; gap: 6px;
   background: #f1f5f9;
@@ -968,44 +983,60 @@ td.paid { color: #dc2626; font-weight: 600; }
 
     <h2>Frequently Asked Questions</h2>
     
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Qatar Airways' carry-on baggage allowance?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Qatar Airways' carry-on allowance depends on your travel class:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-qatar-airways-carry-on-baggage-allowance" data-v-732fe6a8="">What is Qatar Airways' carry-on baggage allowance?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Qatar Airways' carry-on allowance depends on your travel class:</p>
         <ul>
           <li><strong>Economy Class:</strong> 1 piece, max 50 × 37 × 25 cm, up to 7 kg</li>
           <li><strong>Business / First Class:</strong> 2 pieces, max 50 × 37 × 25 cm each, total 15 kg</li>
         </ul>
         <p><strong>Important:</strong> Laptops must fit inside your main carry-on bag. A separate laptop bag counts as one of your carry-on items — so in Economy, you cannot have both a laptop bag and a separate suitcase. Pack your laptop inside your main bag.</p>
         <p>For flights to/from Brazil, Economy passengers get 10 kg instead of 7 kg.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is the difference between piece concept and weight concept?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Qatar Airways uses two different baggage systems:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-the-difference-between-piece-concept-and-weight-concept" data-v-732fe6a8="">What is the difference between piece concept and weight concept?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Qatar Airways uses two different baggage systems:</p>
         <ul>
           <li><strong>Piece Concept:</strong> Applies to flights to/from Africa and the Americas. You get a set number of bags (pieces), each with a maximum weight (23kg in Economy, 32kg in Business). Extra bags are charged per piece.</li>
           <li><strong>Weight Concept:</strong> Applies to all other routes (Europe, Middle East, Asia, etc.). You get a total weight allowance (e.g., 25kg, 30kg) that you can split across any number of bags. Extra weight is charged per kilogram.</li>
         </ul>
         <p>Always check which concept applies to your specific route before packing.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much checked baggage does Qatar Airways allow?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Qatar Airways' checked baggage allowance depends on your fare class and route:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-checked-baggage-does-qatar-airways-allow" data-v-732fe6a8="">How much checked baggage does Qatar Airways allow?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Qatar Airways' checked baggage allowance depends on your fare class and route:</p>
         <p><strong>Piece Concept (Africa/Americas):</strong></p>
         <ul>
           <li>Economy Lite: 1 piece × 23 kg</li>
@@ -1020,16 +1051,22 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Economy Comfort: 35 kg total</li>
           <li>Business / First: 40 kg total</li>
         </ul>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much does extra baggage cost on Qatar Airways?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Extra baggage fees depend on the route and when you purchase:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-does-extra-baggage-cost-on-qatar-airways" data-v-732fe6a8="">How much does extra baggage cost on Qatar Airways?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Extra baggage fees depend on the route and when you purchase:</p>
         <p><strong>Piece Concept routes:</strong></p>
         <ul>
           <li>Additional 23kg bag: $130 – $255 (prepaid online)</li>
@@ -1041,16 +1078,22 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Extra weight: approximately $25 – $55 per kg, depending on route</li>
         </ul>
         <p>Purchasing online in advance (at least 6 hours before departure) is significantly cheaper than paying at the airport. Use Qatar Airways' excess baggage calculator for exact prices for your route.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Qatar Airways' infant baggage allowance?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Infants (under 2 years) traveling on an adult's lap are entitled to:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-qatar-airways-infant-baggage-allowance" data-v-732fe6a8="">What is Qatar Airways' infant baggage allowance?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Infants (under 2 years) traveling on an adult's lap are entitled to:</p>
         <ul>
           <li><strong>Piece Concept (Africa/Americas):</strong> 1 piece up to 23 kg, max 115 cm</li>
           <li><strong>Weight Concept (other routes):</strong> 10 kg total weight</li>
@@ -1058,62 +1101,88 @@ td.paid { color: #dc2626; font-weight: 600; }
         </ul>
         <p><strong>Important:</strong> Infants do NOT get their own carry-on baggage allowance. All baby items (diapers, bottles, food) must fit within the accompanying adult's carry-on allowance.</p>
         <p>Infants with their own booked seat get the full adult baggage allowance.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Can I bring a laptop bag plus a carry-on on Qatar Airways?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p><strong>No</strong> — not in Economy Class. Qatar Airways counts a laptop bag as one of your carry-on items. If you carry a separate laptop bag, it uses up your single carry-on allowance in Economy.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="can-i-bring-a-laptop-bag-plus-a-carry-on-on-qatar-airways" data-v-732fe6a8="">Can I bring a laptop bag plus a carry-on on Qatar Airways?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p><strong>No</strong> — not in Economy Class. Qatar Airways counts a laptop bag as one of your carry-on items. If you carry a separate laptop bag, it uses up your single carry-on allowance in Economy.</p>
         <p>To avoid issues, pack your laptop <strong>inside</strong> your main carry-on bag (the 50 × 37 × 25 cm bag). That way you have one bag that includes everything, and you can also bring a small personal item like a handbag.</p>
         <p>In Business and First Class, you get 2 carry-on items, so you could have a laptop bag plus another bag.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does Qatar Airways weigh carry-on bags?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, Qatar Airways does weigh carry-on bags at many airports, especially at check-in and boarding gates. The 7 kg (Economy) and 15 kg (Business/First) weight limits are enforced.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-qatar-airways-weigh-carry-on-bags" data-v-732fe6a8="">Does Qatar Airways weigh carry-on bags?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, Qatar Airways does weigh carry-on bags at many airports, especially at check-in and boarding gates. The 7 kg (Economy) and 15 kg (Business/First) weight limits are enforced.</p>
         <p>If your carry-on bag is overweight or too large, you may be required to check it in and pay excess baggage fees. It is always better to pack within the limits to avoid unexpected charges at the airport.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is the maximum weight for a single checked bag?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p><strong>32 kg</strong> is the absolute maximum weight for any single checked bag on Qatar Airways, regardless of class or route.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-the-maximum-weight-for-a-single-checked-bag" data-v-732fe6a8="">What is the maximum weight for a single checked bag?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p><strong>32 kg</strong> is the absolute maximum weight for any single checked bag on Qatar Airways, regardless of class or route.</p>
         <p>If your bag weighs more than 32 kg, you must split the contents into multiple bags. Bags over 32 kg will not be accepted as checked baggage — they must be shipped as cargo instead.</p>
         <p>Note: In Economy Class on piece concept routes, the free allowance is 23 kg per bag. If your bag is 23–32 kg, you will pay an overweight fee of approximately $75–$90.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does Qatar Airways Student Club give extra baggage?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p><strong>Yes.</strong> Qatar Airways Student Club members get extra baggage on top of their standard allowance:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-qatar-airways-student-club-give-extra-baggage" data-v-732fe6a8="">Does Qatar Airways Student Club give extra baggage?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p><strong>Yes.</strong> Qatar Airways Student Club members get extra baggage on top of their standard allowance:</p>
         <ul>
           <li><strong>Weight Concept routes:</strong> +10 kg additional checked baggage</li>
           <li><strong>Piece Concept routes:</strong> +1 additional piece of baggage</li>
         </ul>
         <p>Other Student Club benefits include: up to 20% off fares (graduated discount), 2 free date changes, complimentary in-flight Wi-Fi, and a Privilege Club tier upgrade when you graduate (if you fly at least one round-trip per year).</p>
         <p>Membership is free for full-time students aged 18–30. You verify your status through SheerID and receive a promo code to use when booking.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
         <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Aer Lingus Baggage Allowance 2026</div>
@@ -1156,7 +1225,7 @@ td.paid { color: #dc2626; font-weight: 600; }
     </div>
 
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://luggagevalidator.com/airlines/qatar-airways">Luggage Validator — Qatar Airways Baggage Calculator 2026</a></li>
         <li><a href="https://www.qatarairways.com/en/baggage/allowance.html" rel="noopener noreferrer nofollow" target="_blank">Qatar Airways — Baggage Allowance</a></li>
@@ -1176,11 +1245,6 @@ td.paid { color: #dc2626; font-weight: 600; }
   <script>
 // FAQ 折叠
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-question').forEach(function(q) {
-    q.addEventListener('click', function() {
-      q.parentElement.classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>

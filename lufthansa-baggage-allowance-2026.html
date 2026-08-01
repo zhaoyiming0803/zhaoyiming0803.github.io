@@ -80,8 +80,8 @@ a:hover { text-decoration: underline; }
   margin: 40px 0 16px; color: #1e293b;
 }
 .content h3 {
-  font-size: 20px; font-weight: 600;
-  margin: 28px 0 12px; color: #1e293b;
+  font-size: 16px; font-weight: 600;
+  margin: 12px 0 12px; color: #1e293b;
 }
 .content p { margin-bottom: 16px; color: #334155; }
 .content ul, .content ol { margin: 12px 0 16px 24px; }
@@ -174,41 +174,56 @@ td.paid { color: #dc2626; font-weight: 600; }
 .class-badge.first { background: #fce7f3; color: #9d174d; }
 
 /* FAQ */
-.faq-item {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.faq-question {
-  padding: 16px 20px;
-  cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  font-weight: 600; color: #1e293b;
-  background: #f8fafc;
-  transition: background 0.2s;
-}
-.faq-question:hover { background: #f1f5f9; }
-.faq-question .icon {
-  font-size: 10px; color: #64748b;
-  transition: transform 0.2s;
-}
-.faq-item.open .faq-question .icon { transform: rotate(180deg); }
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0; overflow: hidden;
-  transition: all 0.3s ease;
-}
-.faq-item.open .faq-answer {
-  padding: 16px 20px;
-  max-height: 1000px;
-}
-.faq-answer p { margin-bottom: 12px; color: #475569; }
-.faq-answer p:last-child { margin-bottom: 0; }
-.faq-answer ul { margin: 8px 0 12px 20px; }
-.faq-answer li { margin-bottom: 6px; color: #475569; }
-
-/* Airline link */
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 20px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #1e293b;
+      background: #f8fafc;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-question:hover { background: #f1f5f9; }
+    .faq-question-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.5;
+    }
+    .faq-icon {
+      color: #64748b;
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    details[open] .faq-icon svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer-wrapper {
+      padding: 0 20px;
+    }
+    .faq-answer {
+      padding: 16px 0;
+    }
+    .faq-answer p { margin-bottom: 12px; color: #475569; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; }
+    
+    /* Airline link */
 .airline-link {
   display: inline-flex; align-items: center; gap: 6px;
   background: #f1f5f9;
@@ -818,44 +833,60 @@ td.paid { color: #dc2626; font-weight: 600; }
 
     <h2>Frequently Asked Questions</h2>
     
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Lufthansa's carry-on baggage allowance?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Lufthansa's carry-on allowance depends on your travel class and route:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-lufthansas-carry-on-baggage-allowance" data-v-732fe6a8="">What is Lufthansa's carry-on baggage allowance?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Lufthansa's carry-on allowance depends on your travel class and route:</p>
         <ul>
           <li><strong>Economy (most fares):</strong> 1 personal item (40 × 30 × 15 cm) + 1 cabin bag (55 × 40 × 23 cm, 8 kg)</li>
           <li><strong>Economy Basic (short/medium haul):</strong> Only 1 personal item (40 × 30 × 15 cm)</li>
           <li><strong>Business / First Class:</strong> 1 personal item + 2 cabin bags (8 kg each)</li>
         </ul>
         <p>All measurements include wheels and handles. The personal item must fit under the seat, and cabin bags go in the overhead locker.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much checked baggage does Lufthansa allow?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Lufthansa's checked baggage allowance varies by class and route:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-checked-baggage-does-lufthansa-allow" data-v-732fe6a8="">How much checked baggage does Lufthansa allow?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Lufthansa's checked baggage allowance varies by class and route:</p>
         <ul>
           <li><strong>European routes:</strong> Economy Light/Basic = 0 bags; Economy Comfort/Flex = 1 bag (23 kg); Business = 2 bags (32 kg each)</li>
           <li><strong>Intercontinental routes:</strong> Economy Light = 0 bags; Economy Classic/Flex = 1 bag (23 kg); Premium Economy = 2 bags (23 kg each); Business = 2 bags (32 kg each); First = 3 bags (32 kg each)</li>
         </ul>
         <p>All bags must not exceed 158 cm in total dimensions (length + width + height).</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much does extra baggage cost on Lufthansa?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Extra baggage fees vary by route and when you pay:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-does-extra-baggage-cost-on-lufthansa" data-v-732fe6a8="">How much does extra baggage cost on Lufthansa?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Extra baggage fees vary by route and when you pay:</p>
         <ul>
           <li><strong>Within Europe:</strong> Additional bags cost €50–€75 when prepaid online, more at the airport</li>
           <li><strong>Intercontinental:</strong> Additional bags cost €65–€200+ depending on route</li>
@@ -863,16 +894,22 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li><strong>Oversized (158–292 cm):</strong> €50 within Europe, €100–€150 intercontinental</li>
         </ul>
         <p>Prepaying online saves up to 25–50% compared to airport prices. Use Lufthansa's baggage calculator for exact prices for your route.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Can I bring sports equipment on Lufthansa?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, you can bring sports equipment on Lufthansa. The rules depend on whether it fits within your free baggage allowance:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="can-i-bring-sports-equipment-on-lufthansa" data-v-732fe6a8="">Can I bring sports equipment on Lufthansa?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, you can bring sports equipment on Lufthansa. The rules depend on whether it fits within your free baggage allowance:</p>
         <ul>
           <li><strong>Within allowance:</strong> Free (number of items + weight must not exceed your class limit). Does not apply to Economy Light.</li>
           <li><strong>Exceeds allowance:</strong> Charged at flat sports equipment rates, max 32 kg per item</li>
@@ -880,54 +917,78 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li><strong>Winter sports:</strong> One ski/snowboard set is often free on many routes</li>
         </ul>
         <p>Always register sports equipment in advance (at least 24 hours before departure).</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Lufthansa's infant baggage allowance?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Infants (0–2 years) traveling on an adult's lap are entitled to:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-lufthansas-infant-baggage-allowance" data-v-732fe6a8="">What is Lufthansa's infant baggage allowance?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Infants (0–2 years) traveling on an adult's lap are entitled to:</p>
         <ul>
           <li><strong>1 free checked bag</strong> — up to 23 kg, 158 cm total dimensions</li>
           <li><strong>1 foldable stroller / buggy</strong> — free, can be taken to the gate</li>
           <li><strong>1 baby car seat or bassinet</strong> — free if used on board</li>
         </ul>
         <p>This applies to most fares, but not to Economy Basic / Light fares on European routes. Children over 2 have the same baggage allowance as adults in the same class.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Is a backpack considered a personal item on Lufthansa?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, a small backpack can count as your personal item on Lufthansa, as long as it fits within the <strong>40 × 30 × 15 cm</strong> dimensions and fits under the seat in front of you.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="is-a-backpack-considered-a-personal-item-on-lufthansa" data-v-732fe6a8="">Is a backpack considered a personal item on Lufthansa?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, a small backpack can count as your personal item on Lufthansa, as long as it fits within the <strong>40 × 30 × 15 cm</strong> dimensions and fits under the seat in front of you.</p>
         <p>If your backpack is larger than 40 × 30 × 15 cm, it will count as your cabin bag (55 × 40 × 23 cm, 8 kg) — and you won't be able to bring an additional cabin bag. Make sure your bag fits within the size for the category you intend it for.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does Lufthansa weigh carry-on bags?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Lufthansa does weigh carry-on bags at some airports, especially on busy routes or if your bag appears heavy. The 8 kg weight limit for cabin bags is enforced.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-lufthansa-weigh-carry-on-bags" data-v-732fe6a8="">Does Lufthansa weigh carry-on bags?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Lufthansa does weigh carry-on bags at some airports, especially on busy routes or if your bag appears heavy. The 8 kg weight limit for cabin bags is enforced.</p>
         <p>Personal items (40 × 30 × 15 cm) are less likely to be weighed, but they must fit under the seat. Lufthansa also uses baggage sizers to check dimensions at the gate. If your bag is too big or too heavy, you may have to check it in and pay excess baggage fees.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Economy Basic on Lufthansa?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Economy Basic is Lufthansa's cheapest fare, available on short and medium-haul European routes. It includes:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-economy-basic-on-lufthansa" data-v-732fe6a8="">What is Economy Basic on Lufthansa?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Economy Basic is Lufthansa's cheapest fare, available on short and medium-haul European routes. It includes:</p>
         <ul>
           <li>Only <strong>1 personal item</strong> (40 × 30 × 15 cm) — no cabin bag allowed</li>
           <li>No checked baggage</li>
@@ -935,11 +996,13 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Non-flexible ticket</li>
         </ul>
         <p>If you want to bring a cabin bag, you need to book at least Economy Light or pay to add a cabin bag. Be careful — many travelers are caught out by the no-cabin-bag rule on Basic fares.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
         <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Aer Lingus Baggage Allowance 2026</div>
@@ -982,7 +1045,7 @@ td.paid { color: #dc2626; font-weight: 600; }
     </div>
 
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://luggagevalidator.com/airlines/lufthansa">Luggage Validator — Lufthansa Baggage Calculator 2026</a></li>
         <li><a href="https://www.lufthansa.com/us/en/carry-on-baggage" rel="noopener noreferrer nofollow" target="_blank">Lufthansa — Carry-on Baggage Rules</a></li>
@@ -1001,11 +1064,6 @@ td.paid { color: #dc2626; font-weight: 600; }
   <script>
 // FAQ 折叠
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-question').forEach(function(q) {
-    q.addEventListener('click', function() {
-      q.parentElement.classList.toggle('open');
-    });
-  });
 });
 
 // Route tabs - carry on

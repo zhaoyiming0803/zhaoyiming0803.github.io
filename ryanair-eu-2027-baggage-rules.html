@@ -80,8 +80,8 @@ a:hover { text-decoration: underline; }
   margin: 40px 0 16px; color: #1e293b;
 }
 .content h3 {
-  font-size: 20px; font-weight: 600;
-  margin: 28px 0 12px; color: #1e293b;
+  font-size: 16px; font-weight: 600;
+  margin: 12px 0 12px; color: #1e293b;
 }
 .content p { margin-bottom: 16px; color: #334155; }
 .content ul, .content ol { margin: 12px 0 16px 24px; }
@@ -147,39 +147,56 @@ th {
 tr:hover td { background: #f8fafc; }
 
 /* FAQ */
-.faq-item {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.faq-question {
-  padding: 16px 20px;
-  cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  font-weight: 600; color: #1e293b;
-  background: #f8fafc;
-  transition: background 0.2s;
-}
-.faq-question:hover { background: #f1f5f9; }
-.faq-question .icon {
-  font-size: 10px; color: #64748b;
-  transition: transform 0.2s;
-}
-.faq-item.open .faq-question .icon { transform: rotate(180deg); }
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0; overflow: hidden;
-  transition: all 0.3s ease;
-}
-.faq-item.open .faq-answer {
-  padding: 16px 20px;
-  max-height: 1000px;
-}
-.faq-answer p { margin-bottom: 12px; color: #475569; }
-.faq-answer p:last-child { margin-bottom: 0; }
-
-/* Airline link */
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 20px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #1e293b;
+      background: #f8fafc;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-question:hover { background: #f1f5f9; }
+    .faq-question-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.5;
+    }
+    .faq-icon {
+      color: #64748b;
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    details[open] .faq-icon svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer-wrapper {
+      padding: 0 20px;
+    }
+    .faq-answer {
+      padding: 16px 0;
+    }
+    .faq-answer p { margin-bottom: 12px; color: #475569; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; }
+    
+    /* Airline link */
 .airline-link {
   display: inline-flex; align-items: center; gap: 6px;
   background: #f1f5f9;
@@ -389,48 +406,72 @@ tr:hover td { background: #f8fafc; }
 
     <h2>Frequently Asked Questions</h2>
     
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Will my 2027 Ryanair booking include a free cabin bag?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="will-my-2027-ryanair-booking-include-a-free-cabin-bag" data-v-732fe6a8="">Will my 2027 Ryanair booking include a free cabin bag?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>If the flight departs from an EU airport and the travel date is after the regulation takes effect (expected second half of 2027), then yes — the base fare must include a free cabin bag.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>If the flight departs from an EU airport and the travel date is after the regulation takes effect (expected second half of 2027), then yes — the base fare must include a free cabin bag.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What size will the free cabin bag be?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-size-will-the-free-cabin-bag-be" data-v-732fe6a8="">What size will the free cabin bag be?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>The EU rule sets a weight limit of 7 kg and a maximum linear dimension. Ryanair may set its own specific dimensions as long as they meet or exceed the EU minimum. Check our <a href="http://luggagevalidator.com/eu-100cm-7kg-carry-on-rule-explained.html">100cm 7kg rule guide</a> for details on how the size limit works.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>The EU rule sets a weight limit of 7 kg and a maximum linear dimension. Ryanair may set its own specific dimensions as long as they meet or exceed the EU minimum. Check our <a href="http://luggagevalidator.com/eu-100cm-7kg-carry-on-rule-explained.html">100cm 7kg rule guide</a> for details on how the size limit works.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does this apply to Ryanair flights from the UK?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-this-apply-to-ryanair-flights-from-the-uk" data-v-732fe6a8="">Does this apply to Ryanair flights from the UK?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>The EU regulation applies to flights departing from EU airports. UK domestic flights and UK-to-non-EU flights on Ryanair are not covered. However, flights from the UK to the EU on Ryanair may be affected depending on the final scope of the regulation.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>The EU regulation applies to flights departing from EU airports. UK domestic flights and UK-to-non-EU flights on Ryanair are not covered. However, flights from the UK to the EU on Ryanair may be affected depending on the final scope of the regulation.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Will priority boarding still exist?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="will-priority-boarding-still-exist" data-v-732fe6a8="">Will priority boarding still exist?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Probably yes. The rule only requires a free cabin bag — it doesn't say anything about boarding priority. Ryanair will likely still sell priority boarding as a separate add-on.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>Probably yes. The rule only requires a free cabin bag — it doesn't say anything about boarding priority. Ryanair will likely still sell priority boarding as a separate add-on.</p>
-      </div>
-    </div>
+    </details>
 
         <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Aer Lingus Baggage Allowance 2026</div>
@@ -473,7 +514,7 @@ tr:hover td { background: #f8fafc; }
     </div>
 
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://luggagevalidator.com/airlines/ryanair">Luggage Validator — Ryanair Baggage Rules</a></li>
         <li><a href="https://www.ryanair.com/gb/en/useful-info/help-centre/faq-overview/Baggage" rel="noopener noreferrer nofollow" target="_blank">Ryanair — Baggage Policy</a></li>
@@ -489,11 +530,6 @@ tr:hover td { background: #f8fafc; }
   <script>
 // FAQ 折叠
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-question').forEach(function(q) {
-    q.addEventListener('click', function() {
-      q.parentElement.classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>

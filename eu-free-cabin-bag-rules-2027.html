@@ -80,8 +80,8 @@ a:hover { text-decoration: underline; }
   margin: 40px 0 16px; color: #1e293b;
 }
 .content h3 {
-  font-size: 20px; font-weight: 600;
-  margin: 28px 0 12px; color: #1e293b;
+  font-size: 16px; font-weight: 600;
+  margin: 12px 0 12px; color: #1e293b;
 }
 .content p { margin-bottom: 16px; color: #334155; }
 .content ul, .content ol { margin: 12px 0 16px 24px; }
@@ -147,39 +147,56 @@ th {
 tr:hover td { background: #f8fafc; }
 
 /* FAQ */
-.faq-item {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.faq-question {
-  padding: 16px 20px;
-  cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  font-weight: 600; color: #1e293b;
-  background: #f8fafc;
-  transition: background 0.2s;
-}
-.faq-question:hover { background: #f1f5f9; }
-.faq-question .icon {
-  font-size: 10px; color: #64748b;
-  transition: transform 0.2s;
-}
-.faq-item.open .faq-question .icon { transform: rotate(180deg); }
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0; overflow: hidden;
-  transition: all 0.3s ease;
-}
-.faq-item.open .faq-answer {
-  padding: 16px 20px;
-  max-height: 1000px;
-}
-.faq-answer p { margin-bottom: 12px; color: #475569; }
-.faq-answer p:last-child { margin-bottom: 0; }
-
-/* Airline link */
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 20px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #1e293b;
+      background: #f8fafc;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-question:hover { background: #f1f5f9; }
+    .faq-question-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.5;
+    }
+    .faq-icon {
+      color: #64748b;
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    details[open] .faq-icon svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer-wrapper {
+      padding: 0 20px;
+    }
+    .faq-answer {
+      padding: 16px 0;
+    }
+    .faq-answer p { margin-bottom: 12px; color: #475569; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; }
+    
+    /* Airline link */
 .airline-link {
   display: inline-flex; align-items: center; gap: 6px;
   background: #f1f5f9;
@@ -401,58 +418,88 @@ tr:hover td { background: #f8fafc; }
 
     <h2>Frequently Asked Questions</h2>
     
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does this apply to flights within the EU only?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-this-apply-to-flights-within-the-eu-only" data-v-732fe6a8="">Does this apply to flights within the EU only?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>The rule applies to <strong>all flights departing from an EU airport</strong>, whether domestic, intra-EU, or long-haul. It also applies to flights arriving in the EU on EU-based carriers.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>The rule applies to <strong>all flights departing from an EU airport</strong>, whether domestic, intra-EU, or long-haul. It also applies to flights arriving in the EU on EU-based carriers.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Will ticket prices go up?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="will-ticket-prices-go-up" data-v-732fe6a8="">Will ticket prices go up?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Most analysts expect base fares on budget airlines to increase, since the cost of the cabin bag will be built into the ticket price. However, the total cost (fare + bag) may end up similar to what passengers pay today when they add a bag separately.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>Most analysts expect base fares on budget airlines to increase, since the cost of the cabin bag will be built into the ticket price. However, the total cost (fare + bag) may end up similar to what passengers pay today when they add a bag separately.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What if my bag is bigger than the limit?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-if-my-bag-is-bigger-than-the-limit" data-v-732fe6a8="">What if my bag is bigger than the limit?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Airlines can still charge for oversized or overweight bags. The rule only guarantees that a bag within the specified size and weight limits is included for free. Bags that exceed the limits may still incur fees at the gate.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>Airlines can still charge for oversized or overweight bags. The rule only guarantees that a bag within the specified size and weight limits is included for free. Bags that exceed the limits may still incur fees at the gate.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does this apply to basic economy fares?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-this-apply-to-basic-economy-fares" data-v-732fe6a8="">Does this apply to basic economy fares?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes. The rule requires the free cabin bag to be included in the <strong>base fare</strong> — the cheapest available ticket. This is the key change that ends the budget airline model of charging extra for a wheeled carry-on.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>Yes. The rule requires the free cabin bag to be included in the <strong>base fare</strong> — the cheapest available ticket. This is the key change that ends the budget airline model of charging extra for a wheeled carry-on.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>When exactly does it take effect?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="when-exactly-does-it-take-effect" data-v-732fe6a8="">When exactly does it take effect?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>The regulation is expected to take effect in the <strong>second half of 2027</strong>. The exact date will be specified in the final published text of the regulation. Airlines will have a transition period to adjust their systems and fare structures.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>The regulation is expected to take effect in the <strong>second half of 2027</strong>. The exact date will be specified in the final published text of the regulation. Airlines will have a transition period to adjust their systems and fare structures.</p>
-      </div>
-    </div>
+    </details>
 
         <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Aer Lingus Baggage Allowance 2026</div>
@@ -495,7 +542,7 @@ tr:hover td { background: #f8fafc; }
     </div>
 
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://www.europarl.europa.eu/news/en/press-room" rel="noopener noreferrer nofollow" target="_blank">European Parliament — Press Releases</a></li>
       </ul>
@@ -510,11 +557,6 @@ tr:hover td { background: #f8fafc; }
   <script>
 // FAQ 折叠
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-question').forEach(function(q) {
-    q.addEventListener('click', function() {
-      q.parentElement.classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>

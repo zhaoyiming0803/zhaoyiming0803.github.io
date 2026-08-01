@@ -80,8 +80,8 @@ a:hover { text-decoration: underline; }
   margin: 40px 0 16px; color: #1e293b;
 }
 .content h3 {
-  font-size: 20px; font-weight: 600;
-  margin: 28px 0 12px; color: #1e293b;
+  font-size: 16px; font-weight: 600;
+  margin: 12px 0 12px; color: #1e293b;
 }
 .content p { margin-bottom: 16px; color: #334155; }
 .content ul, .content ol { margin: 12px 0 16px 24px; }
@@ -190,41 +190,56 @@ td.paid { color: #dc2626; font-weight: 600; }
 .route-badge.international { background: #fef3c7; color: #92400e; }
 
 /* FAQ */
-.faq-item {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.faq-question {
-  padding: 16px 20px;
-  cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  font-weight: 600; color: #1e293b;
-  background: #f8fafc;
-  transition: background 0.2s;
-}
-.faq-question:hover { background: #f1f5f9; }
-.faq-question .icon {
-  font-size: 10px; color: #64748b;
-  transition: transform 0.2s;
-}
-.faq-item.open .faq-question .icon { transform: rotate(180deg); }
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0; overflow: hidden;
-  transition: all 0.3s ease;
-}
-.faq-item.open .faq-answer {
-  padding: 16px 20px;
-  max-height: 1000px;
-}
-.faq-answer p { margin-bottom: 12px; color: #475569; }
-.faq-answer p:last-child { margin-bottom: 0; }
-.faq-answer ul { margin: 8px 0 12px 20px; }
-.faq-answer li { margin-bottom: 6px; color: #475569; }
-
-/* Airline link */
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 20px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #1e293b;
+      background: #f8fafc;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-question:hover { background: #f1f5f9; }
+    .faq-question-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.5;
+    }
+    .faq-icon {
+      color: #64748b;
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    details[open] .faq-icon svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer-wrapper {
+      padding: 0 20px;
+    }
+    .faq-answer {
+      padding: 16px 0;
+    }
+    .faq-answer p { margin-bottom: 12px; color: #475569; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; }
+    
+    /* Airline link */
 .airline-link {
   display: inline-flex; align-items: center; gap: 6px;
   background: #f1f5f9;
@@ -957,13 +972,17 @@ td.paid { color: #dc2626; font-weight: 600; }
 
     <h2>Frequently Asked Questions</h2>
     
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Air Peace's carry-on baggage allowance?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Air Peace carry-on allowance depends on your route and cabin class:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-air-peaces-carry-on-baggage-allowance" data-v-732fe6a8="">What is Air Peace's carry-on baggage allowance?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Air Peace carry-on allowance depends on your route and cabin class:</p>
         <p><strong>Domestic / Regional flights:</strong></p>
         <ul>
           <li>Economy: 6 kg</li>
@@ -976,16 +995,22 @@ td.paid { color: #dc2626; font-weight: 600; }
         </ul>
         <p>All cabin bags must not exceed <strong>45 × 33 × 20 cm</strong>. You may also bring a small personal item like a laptop bag, handbag, or small backpack that fits under the seat in front.</p>
         <p><strong>Note:</strong> Air Peace strictly enforces carry-on weight limits, especially on domestic routes. Overweight bags will be checked and charged excess fees.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much checked baggage does Air Peace allow?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Air Peace has three different baggage systems depending on your route:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-checked-baggage-does-air-peace-allow" data-v-732fe6a8="">How much checked baggage does Air Peace allow?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Air Peace has three different baggage systems depending on your route:</p>
         <p><strong>Domestic (Nigeria) — weight concept:</strong></p>
         <ul>
           <li>Economy: 20 kg total</li>
@@ -1002,16 +1027,22 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Business: 2 pieces × 32 kg</li>
         </ul>
         <p>Maximum per bag: 32 kg. Maximum dimensions: 160 cm (L+W+H) on international routes.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much does excess baggage cost on Air Peace?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Excess baggage fees on Air Peace vary by route type:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-does-excess-baggage-cost-on-air-peace" data-v-732fe6a8="">How much does excess baggage cost on Air Peace?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Excess baggage fees on Air Peace vary by route type:</p>
         <p><strong>Domestic / Regional (weight concept):</strong></p>
         <ul>
           <li>Domestic Nigeria: ~₦1,000 per kg at the airport</li>
@@ -1031,16 +1062,22 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Extra kg (1-9kg): USD 20/kg / GBP 15/kg</li>
         </ul>
         <p>Always buy extra baggage online — it is significantly cheaper than airport rates.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Air Peace baggage allowance for London to Lagos?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>The Air Peace London ↔ Lagos route uses the piece concept system:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-air-peace-baggage-allowance-for-london-to-lagos" data-v-732fe6a8="">What is Air Peace baggage allowance for London to Lagos?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>The Air Peace London ↔ Lagos route uses the piece concept system:</p>
         <p><strong>Economy Class:</strong></p>
         <ul>
           <li>2 pieces of checked baggage</li>
@@ -1060,16 +1097,22 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Extra kg (1-9kg): USD 20/kg / GBP 15/kg</li>
           <li>Each additional bag increases by USD 50</li>
         </ul>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Air Peace's infant baggage allowance?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Infants (under 2 years) traveling on an adult's lap on Air Peace:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-air-peaces-infant-baggage-allowance" data-v-732fe6a8="">What is Air Peace's infant baggage allowance?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Infants (under 2 years) traveling on an adult's lap on Air Peace:</p>
         <ul>
           <li><strong>Infant fare:</strong> 10% of the adult ticket price</li>
           <li><strong>Free checked baggage:</strong> 10 kg total</li>
@@ -1079,42 +1122,60 @@ td.paid { color: #dc2626; font-weight: 600; }
         </ul>
         <p>Children aged 2 and over with their own seat get the <strong>full adult baggage allowance</strong> for their travel class.</p>
         <p>Unaccompanied minor service is available for children ages 5–15 for a fee of approximately USD 80–100.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does Air Peace weigh carry-on bags?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, Air Peace does weigh carry-on bags at many airports, especially on domestic Nigerian routes. The 6 kg (Economy) and 10 kg (Business) limits are enforced.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-air-peace-weigh-carry-on-bags" data-v-732fe6a8="">Does Air Peace weigh carry-on bags?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, Air Peace does weigh carry-on bags at many airports, especially on domestic Nigerian routes. The 6 kg (Economy) and 10 kg (Business) limits are enforced.</p>
         <p>If your carry-on bag is overweight or too large, you will be required to check it in and may have to pay excess baggage fees at the airport rate, which is more expensive than pre-purchasing online.</p>
         <p>On international routes, enforcement may be slightly more relaxed, but you should still pack within the limits to avoid unexpected charges.</p>
         <p>It is always better to pack within the limits or pre-purchase extra checked baggage online to save money.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is the maximum weight for a single bag on Air Peace?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p><strong>32 kg</strong> is the absolute maximum weight for any single checked bag on Air Peace, regardless of cabin class or route.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-the-maximum-weight-for-a-single-bag-on-air-peace" data-v-732fe6a8="">What is the maximum weight for a single bag on Air Peace?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p><strong>32 kg</strong> is the absolute maximum weight for any single checked bag on Air Peace, regardless of cabin class or route.</p>
         <p>If your bag weighs more than 32 kg, you must split the contents into multiple bags. Bags over 32 kg will not be accepted as checked baggage — they must be shipped as cargo instead.</p>
         <p>Note: The standard free allowance varies by route and class. On international routes, Economy bags are limited to 23 kg each. If your bag is 23–32 kg, you will pay excess baggage fees (either per kg or per piece depending on the route).</p>
         <p>Maximum dimensions per bag: 160 cm total (length + width + height) on international routes.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Can I bring sports equipment on Air Peace?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, Air Peace accepts sports equipment on most routes, but there are important things to know:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="can-i-bring-sports-equipment-on-air-peace" data-v-732fe6a8="">Can I bring sports equipment on Air Peace?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, Air Peace accepts sports equipment on most routes, but there are important things to know:</p>
         <ul>
           <li><strong>Prior approval required:</strong> You must contact Air Peace in advance to arrange sports equipment transport</li>
           <li><strong>Types accepted:</strong> Golf bags, surfboards, bicycles, diving equipment, and more</li>
@@ -1123,11 +1184,13 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li><strong>Proper packing required:</strong> All sports equipment must be in a suitable protective case</li>
         </ul>
         <p>Always call Air Peace customer service well before your flight to confirm availability, fees, and any special requirements for your specific sports equipment.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
         <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Aer Lingus Baggage Allowance 2026</div>
@@ -1170,7 +1233,7 @@ td.paid { color: #dc2626; font-weight: 600; }
     </div>
 
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://luggagevalidator.com/airlines/air-peace">Luggage Validator — Air Peace Baggage Calculator 2026</a></li>
         <li><a href="https://flyairpeace.com/baggage-policy/" rel="noopener noreferrer nofollow" target="_blank">Air Peace — Baggage Policy</a></li>
@@ -1189,11 +1252,6 @@ td.paid { color: #dc2626; font-weight: 600; }
   <script>
 // FAQ 折叠
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-question').forEach(function(q) {
-    q.addEventListener('click', function() {
-      q.parentElement.classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>

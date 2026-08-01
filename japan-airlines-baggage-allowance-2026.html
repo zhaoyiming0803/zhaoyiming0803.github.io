@@ -80,8 +80,8 @@ a:hover { text-decoration: underline; }
   margin: 40px 0 16px; color: #1e293b;
 }
 .content h3 {
-  font-size: 20px; font-weight: 600;
-  margin: 28px 0 12px; color: #1e293b;
+  font-size: 16px; font-weight: 600;
+  margin: 12px 0 12px; color: #1e293b;
 }
 .content p { margin-bottom: 16px; color: #334155; }
 .content ul, .content ol { margin: 12px 0 16px 24px; }
@@ -190,41 +190,56 @@ td.paid { color: #dc2626; font-weight: 600; }
 .route-badge.international { background: #fef3c7; color: #92400e; }
 
 /* FAQ */
-.faq-item {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.faq-question {
-  padding: 16px 20px;
-  cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  font-weight: 600; color: #1e293b;
-  background: #f8fafc;
-  transition: background 0.2s;
-}
-.faq-question:hover { background: #f1f5f9; }
-.faq-question .icon {
-  font-size: 10px; color: #64748b;
-  transition: transform 0.2s;
-}
-.faq-item.open .faq-question .icon { transform: rotate(180deg); }
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0; overflow: hidden;
-  transition: all 0.3s ease;
-}
-.faq-item.open .faq-answer {
-  padding: 16px 20px;
-  max-height: 1000px;
-}
-.faq-answer p { margin-bottom: 12px; color: #475569; }
-.faq-answer p:last-child { margin-bottom: 0; }
-.faq-answer ul { margin: 8px 0 12px 20px; }
-.faq-answer li { margin-bottom: 6px; color: #475569; }
-
-/* Airline link */
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 20px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #1e293b;
+      background: #f8fafc;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-question:hover { background: #f1f5f9; }
+    .faq-question-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.5;
+    }
+    .faq-icon {
+      color: #64748b;
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    details[open] .faq-icon svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer-wrapper {
+      padding: 0 20px;
+    }
+    .faq-answer {
+      padding: 16px 0;
+    }
+    .faq-answer p { margin-bottom: 12px; color: #475569; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; }
+    
+    /* Airline link */
 .airline-link {
   display: inline-flex; align-items: center; gap: 6px;
   background: #f1f5f9;
@@ -942,13 +957,17 @@ td.paid { color: #dc2626; font-weight: 600; }
 
     <h2>Frequently Asked Questions</h2>
     
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Japan Airlines' carry-on baggage allowance?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Japan Airlines (JAL) allows 1 carry-on bag plus 1 personal item on all flights.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-japan-airlines-carry-on-baggage-allowance" data-v-732fe6a8="">What is Japan Airlines' carry-on baggage allowance?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Japan Airlines (JAL) allows 1 carry-on bag plus 1 personal item on all flights.</p>
         <ul>
           <li><strong>Carry-on bag:</strong> 55 × 40 × 25 cm (115 cm total linear dimensions)</li>
           <li><strong>Personal item:</strong> Handbag, laptop bag, or small backpack</li>
@@ -956,16 +975,22 @@ td.paid { color: #dc2626; font-weight: 600; }
         </ul>
         <p><strong>Important:</strong> JAL is known for strictly enforcing carry-on weight limits. The 10 kg combined limit is often checked at the gate, especially on busy flights. If your bags are overweight, you will be required to check them and pay excess baggage fees at the airport rate.</p>
         <p>Personal items allowed include: handbag, laptop bag, small backpack, camera bag, coat, umbrella, reading material, infant food, and mobility aids.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much checked baggage does Japan Airlines allow?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Japan Airlines has two completely different baggage systems depending on your route:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-checked-baggage-does-japan-airlines-allow" data-v-732fe6a8="">How much checked baggage does Japan Airlines allow?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Japan Airlines has two completely different baggage systems depending on your route:</p>
         <p><strong>Domestic (Japan) — weight concept:</strong></p>
         <ul>
           <li>Economy / Class J: 20 kg total (unlimited number of bags)</li>
@@ -980,16 +1005,22 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Max per bag: 45 kg / 203 cm total dimensions</li>
         </ul>
         <p><strong>Note:</strong> If your domestic flight is included in an international ticket, international piece-concept rules apply to the domestic segment as well.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much does excess baggage cost on Japan Airlines?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>JAL excess baggage fees depend on your route and the type of excess:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-does-excess-baggage-cost-on-japan-airlines" data-v-732fe6a8="">How much does excess baggage cost on Japan Airlines?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>JAL excess baggage fees depend on your route and the type of excess:</p>
         <p><strong>International flights:</strong></p>
         <ul>
           <li><strong>Additional bag:</strong> JPY 10,000 (~USD 100) for Asia/Guam/Oceania routes, or JPY 20,000 (~USD 200) for Americas/Europe/Middle East/Africa</li>
@@ -1000,16 +1031,22 @@ td.paid { color: #dc2626; font-weight: 600; }
         </ul>
         <p><strong>Important:</strong> Fees stack! A bag that is extra AND overweight AND oversize incurs all three charges.</p>
         <p><strong>Domestic flights:</strong> Excess is charged per kilogram. Rates vary by route.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is JAL baggage allowance for domestic flights in Japan?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Japan Airlines domestic flights use a weight concept system:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-jal-baggage-allowance-for-domestic-flights-in-japan" data-v-732fe6a8="">What is JAL baggage allowance for domestic flights in Japan?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Japan Airlines domestic flights use a weight concept system:</p>
         <ul>
           <li><strong>Economy Class / Class J:</strong> 20 kg total free checked baggage</li>
           <li><strong>First Class:</strong> 45 kg total free checked baggage</li>
@@ -1019,16 +1056,22 @@ td.paid { color: #dc2626; font-weight: 600; }
         </ul>
         <p><strong>Important exception:</strong> If your domestic Japan flight is included in an international ticket (e.g., you are connecting from an international JAL flight), <strong>international baggage rules apply</strong> to the domestic segment. You get the piece-concept allowance (2 bags × 23 kg in Economy), not the domestic 20 kg weight allowance.</p>
         <p>Excess baggage on domestic flights is charged per kilogram at the airport.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Japan Airlines' infant baggage allowance?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Infants (under 2 years) traveling on an adult's lap on JAL:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-japan-airlines-infant-baggage-allowance" data-v-732fe6a8="">What is Japan Airlines' infant baggage allowance?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Infants (under 2 years) traveling on an adult's lap on JAL:</p>
         <p><strong>International flights:</strong></p>
         <ul>
           <li>1 checked bag (up to 115 cm total dimensions)</li>
@@ -1043,16 +1086,22 @@ td.paid { color: #dc2626; font-weight: 600; }
         </ul>
         <p>Children aged 2 and over with their own seat get the <strong>full adult baggage allowance</strong> for their travel class.</p>
         <p>Unaccompanied minor service is available for children ages 5–11 for a fee.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does JAL weigh carry-on bags?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, Japan Airlines does weigh carry-on bags, and the 10 kg combined limit is enforced more strictly than on many other airlines.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-jal-weigh-carry-on-bags" data-v-732fe6a8="">Does JAL weigh carry-on bags?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, Japan Airlines does weigh carry-on bags, and the 10 kg combined limit is enforced more strictly than on many other airlines.</p>
         <p>JAL is known for checking carry-on weights at the gate, especially on:</p>
         <ul>
           <li>Busy flights (especially domestic Japan routes)</li>
@@ -1061,30 +1110,42 @@ td.paid { color: #dc2626; font-weight: 600; }
         </ul>
         <p>If your carry-on bag is overweight or too large, you will be required to check it in and may have to pay excess baggage fees at the airport rate, which is more expensive than pre-purchasing online.</p>
         <p>It is always better to pack within the 10 kg limit. Weigh your bags at home before heading to the airport to avoid unexpected charges.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is the maximum weight for a single bag on JAL?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p><strong>45 kg (100 lbs)</strong> is the absolute maximum weight for any single checked bag on Japan Airlines international flights.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-the-maximum-weight-for-a-single-bag-on-jal" data-v-732fe6a8="">What is the maximum weight for a single bag on JAL?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p><strong>45 kg (100 lbs)</strong> is the absolute maximum weight for any single checked bag on Japan Airlines international flights.</p>
         <p>If your bag weighs more than 45 kg, you must split the contents into multiple bags. Bags over 45 kg will not be accepted as checked baggage — they must be shipped as cargo instead.</p>
         <p><strong>Domestic flights:</strong> Maximum per bag is 32 kg.</p>
         <p>Note: The standard free allowance varies by class and route. On international Economy, bags are limited to 23 kg each. If your bag is 23–32 kg, you will pay an overweight fee of ~JPY 10,000 (USD 100). If it is 32–45 kg, the overweight fee jumps to ~JPY 60,000 (USD 600).</p>
         <p>Maximum dimensions per bag: 203 cm total (length + width + height) on international routes.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Can I bring sports equipment on Japan Airlines?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, Japan Airlines accepts most types of sports equipment on both domestic and international flights.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="can-i-bring-sports-equipment-on-japan-airlines" data-v-732fe6a8="">Can I bring sports equipment on Japan Airlines?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, Japan Airlines accepts most types of sports equipment on both domestic and international flights.</p>
         <p><strong>Most sports equipment counts toward your standard baggage allowance:</strong></p>
         <ul>
           <li>Golf bags (counts as 1 bag)</li>
@@ -1100,11 +1161,13 @@ td.paid { color: #dc2626; font-weight: 600; }
           <li>Additional overweight/oversize fees may apply</li>
         </ul>
         <p>All sports equipment must be properly packed in a suitable protective case. Standard size and weight limits apply (203 cm, 45 kg max on international routes).</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
         <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Aer Lingus Baggage Allowance 2026</div>
@@ -1147,7 +1210,7 @@ td.paid { color: #dc2626; font-weight: 600; }
     </div>
 
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://luggagevalidator.com/airlines/japan-airlines">Luggage Validator — Japan Airlines Baggage Calculator 2026</a></li>
         <li><a href="https://www.jal.co.jp/jp/en/inter/baggage/checked/" rel="noopener noreferrer nofollow" target="_blank">JAL — Checked Baggage (International)</a></li>
@@ -1166,11 +1229,6 @@ td.paid { color: #dc2626; font-weight: 600; }
   <script>
 // FAQ 折叠
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-question').forEach(function(q) {
-    q.addEventListener('click', function() {
-      q.parentElement.classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>

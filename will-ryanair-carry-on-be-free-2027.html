@@ -80,8 +80,8 @@ a:hover { text-decoration: underline; }
   margin: 40px 0 16px; color: #1e293b;
 }
 .content h3 {
-  font-size: 20px; font-weight: 600;
-  margin: 28px 0 12px; color: #1e293b;
+  font-size: 16px; font-weight: 600;
+  margin: 12px 0 12px; color: #1e293b;
 }
 .content p { margin-bottom: 16px; color: #334155; }
 .content ul, .content ol { margin: 12px 0 16px 24px; }
@@ -147,39 +147,56 @@ th {
 tr:hover td { background: #f8fafc; }
 
 /* FAQ */
-.faq-item {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.faq-question {
-  padding: 16px 20px;
-  cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  font-weight: 600; color: #1e293b;
-  background: #f8fafc;
-  transition: background 0.2s;
-}
-.faq-question:hover { background: #f1f5f9; }
-.faq-question .icon {
-  font-size: 10px; color: #64748b;
-  transition: transform 0.2s;
-}
-.faq-item.open .faq-question .icon { transform: rotate(180deg); }
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0; overflow: hidden;
-  transition: all 0.3s ease;
-}
-.faq-item.open .faq-answer {
-  padding: 16px 20px;
-  max-height: 1000px;
-}
-.faq-answer p { margin-bottom: 12px; color: #475569; }
-.faq-answer p:last-child { margin-bottom: 0; }
-
-/* Airline link */
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 20px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #1e293b;
+      background: #f8fafc;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-question:hover { background: #f1f5f9; }
+    .faq-question-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.5;
+    }
+    .faq-icon {
+      color: #64748b;
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    details[open] .faq-icon svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer-wrapper {
+      padding: 0 20px;
+    }
+    .faq-answer {
+      padding: 16px 0;
+    }
+    .faq-answer p { margin-bottom: 12px; color: #475569; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; }
+    
+    /* Airline link */
 .airline-link {
   display: inline-flex; align-items: center; gap: 6px;
   background: #f1f5f9;
@@ -402,58 +419,88 @@ tr:hover td { background: #f8fafc; }
 
     <h2>Frequently Asked Questions</h2>
     
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Is Ryanair carry-on really going to be free?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="is-ryanair-carry-on-really-going-to-be-free" data-v-732fe6a8="">Is Ryanair carry-on really going to be free?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes — but "free" means included in the base fare. The ticket price itself will likely go up. You won't pay a separate bag fee anymore, but the overall ticket price will probably be higher than today's basic no-bag fare.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>Yes — but "free" means included in the base fare. The ticket price itself will likely go up. You won't pay a separate bag fee anymore, but the overall ticket price will probably be higher than today's basic no-bag fare.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does this apply to all Ryanair flights?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-this-apply-to-all-ryanair-flights" data-v-732fe6a8="">Does this apply to all Ryanair flights?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>No. It applies to flights departing from EU airports. Ryanair flights outside the EU (e.g., domestic UK, Morocco, Turkey routes) are not covered by this EU regulation.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>No. It applies to flights departing from EU airports. Ryanair flights outside the EU (e.g., domestic UK, Morocco, Turkey routes) are not covered by this EU regulation.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Will my 10kg cabin bag still be free?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="will-my-10kg-cabin-bag-still-be-free" data-v-732fe6a8="">Will my 10kg cabin bag still be free?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>The EU rule sets a minimum of 7 kg. Ryanair could choose to allow more (they currently offer 10 kg on Plus fares), but they are only required to allow 7 kg for free. Check back closer to 2027 for the exact details.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>The EU rule sets a minimum of 7 kg. Ryanair could choose to allow more (they currently offer 10 kg on Plus fares), but they are only required to allow 7 kg for free. Check back closer to 2027 for the exact details.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Can I still pay for priority boarding?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="can-i-still-pay-for-priority-boarding" data-v-732fe6a8="">Can I still pay for priority boarding?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Most likely yes. The regulation only requires a free cabin bag — it doesn't regulate boarding priority. Ryanair will probably still sell priority boarding as a separate add-on service.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>Most likely yes. The regulation only requires a free cabin bag — it doesn't regulate boarding priority. Ryanair will probably still sell priority boarding as a separate add-on service.</p>
-      </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What if I already booked a 2027 flight?</span>
-        <span class="icon">▼</span>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-if-i-already-booked-a-2027-flight" data-v-732fe6a8="">What if I already booked a 2027 flight?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>If your flight is after the regulation takes effect, the new rules should apply — even if you booked earlier. Airlines are required to comply with the law in effect on the date of travel, not the date of booking.</p>
+        </div>
+        <!--]-->
       </div>
-      <div class="faq-answer">
-        <p>If your flight is after the regulation takes effect, the new rules should apply — even if you booked earlier. Airlines are required to comply with the law in effect on the date of travel, not the date of booking.</p>
-      </div>
-    </div>
+    </details>
 
         <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Aer Lingus Baggage Allowance 2026</div>
@@ -466,9 +513,6 @@ tr:hover td { background: #f8fafc; }
         </a>
         <a href="https://zhaoyiming0803.github.io/easyjet-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">easyJet Baggage Allowance 2026</div>
-        </a>
-        <a href="https://zhaoyiming0803.github.io/eu-100cm-7kg-carry-on-rule-explained.html" class="related-card">
-          <div class="related-title">EU 100cm 7kg Carry-on Rule Explained</div>
         </a>
         <a href="https://zhaoyiming0803.github.io/eu-free-cabin-bag-rules-2027.html" class="related-card">
           <div class="related-title">EU Free Cabin Bag Rules 2027</div>
@@ -496,7 +540,7 @@ tr:hover td { background: #f8fafc; }
     </div>
 
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://luggagevalidator.com/airlines/ryanair">Luggage Validator — Ryanair Baggage Rules</a></li>
         <li><a href="https://www.ryanair.com/gb/en/useful-info/help-centre/faq-overview/Baggage" rel="noopener noreferrer nofollow" target="_blank">Ryanair Official Baggage Policy</a></li>
@@ -513,11 +557,6 @@ tr:hover td { background: #f8fafc; }
   <script>
 // FAQ 折叠
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-question').forEach(function(q) {
-    q.addEventListener('click', function() {
-      q.parentElement.classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>

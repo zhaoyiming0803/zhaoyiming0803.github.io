@@ -80,8 +80,8 @@ a:hover { text-decoration: underline; }
   margin: 40px 0 16px; color: #1e293b;
 }
 .content h3 {
-  font-size: 20px; font-weight: 600;
-  margin: 28px 0 12px; color: #1e293b;
+  font-size: 16px; font-weight: 600;
+  margin: 12px 0 12px; color: #1e293b;
 }
 .content p { margin-bottom: 16px; color: #334155; }
 .content ul, .content ol { margin: 12px 0 16px 24px; }
@@ -161,41 +161,56 @@ td.free { color: #16a34a; font-weight: 600; }
 td.paid { color: #dc2626; font-weight: 600; }
 
 /* FAQ */
-.faq-item {
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.faq-question {
-  padding: 16px 20px;
-  cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  font-weight: 600; color: #1e293b;
-  background: #f8fafc;
-  transition: background 0.2s;
-}
-.faq-question:hover { background: #f1f5f9; }
-.faq-question .icon {
-  font-size: 10px; color: #64748b;
-  transition: transform 0.2s;
-}
-.faq-item.open .faq-question .icon { transform: rotate(180deg); }
-.faq-answer {
-  padding: 0 20px;
-  max-height: 0; overflow: hidden;
-  transition: all 0.3s ease;
-}
-.faq-item.open .faq-answer {
-  padding: 16px 20px;
-  max-height: 1000px;
-}
-.faq-answer p { margin-bottom: 12px; color: #475569; }
-.faq-answer p:last-child { margin-bottom: 0; }
-.faq-answer ul { margin: 8px 0 12px 20px; }
-.faq-answer li { margin-bottom: 6px; color: #475569; }
-
-/* Airline link */
+    .faq-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 20px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #1e293b;
+      background: #f8fafc;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+    .faq-question:hover { background: #f1f5f9; }
+    .faq-question-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.5;
+    }
+    .faq-icon {
+      color: #64748b;
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    details[open] .faq-icon svg {
+      transform: rotate(180deg);
+    }
+    .faq-answer-wrapper {
+      padding: 0 20px;
+    }
+    .faq-answer {
+      padding: 16px 0;
+    }
+    .faq-answer p { margin-bottom: 12px; color: #475569; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; }
+    
+    /* Airline link */
 .airline-link {
   display: inline-flex; align-items: center; gap: 6px;
   background: #f1f5f9;
@@ -640,123 +655,171 @@ td.paid { color: #dc2626; font-weight: 600; }
 
     <h2>Frequently Asked Questions</h2>
     
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is Ryanair's free carry-on bag size in 2026?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Ryanair's free carry-on bag (small personal bag) must be no larger than <strong>40 × 30 × 20 cm</strong>, including wheels and handles. There is no official weight limit, but it must fit under the seat in front of you. This is included with every fare type.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-ryanairs-free-carry-on-bag-size-in-2026" data-v-732fe6a8="">What is Ryanair's free carry-on bag size in 2026?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Ryanair's free carry-on bag (small personal bag) must be no larger than <strong>40 × 30 × 20 cm</strong>, including wheels and handles. There is no official weight limit, but it must fit under the seat in front of you. This is included with every fare type.</p>
         <p>Ryanair uses baggage sizers at many gates, so make sure your bag fits within these dimensions to avoid gate fees.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>How much does Priority & 2 Cabin Bags cost?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Priority & 2 Cabin Bags costs between <strong>€12 and €35.99</strong> when purchased at the time of booking, depending on the route and travel dates. Prices are higher if added after booking through Manage My Booking.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="how-much-does-priority-2-cabin-bags-cost" data-v-732fe6a8="">How much does Priority & 2 Cabin Bags cost?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Priority & 2 Cabin Bags costs between <strong>€12 and €35.99</strong> when purchased at the time of booking, depending on the route and travel dates. Prices are higher if added after booking through Manage My Booking.</p>
         <p>It includes:</p>
         <ul>
           <li>1 small personal bag (40 × 30 × 20 cm) — under seat</li>
           <li>1 cabin bag (55 × 40 × 20 cm, 10 kg) — overhead locker</li>
           <li>Priority boarding (board first)</li>
         </ul>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What are Ryanair's checked baggage fees?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Ryanair offers three checked baggage options:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-are-ryanairs-checked-baggage-fees" data-v-732fe6a8="">What are Ryanair's checked baggage fees?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Ryanair offers three checked baggage options:</p>
         <ul>
           <li><strong>10kg Check-in Bag:</strong> €9.49 – €44.99 online (1 per passenger)</li>
           <li><strong>20kg Check-in Bag:</strong> €18.99 – €59.99 online (up to 3 per passenger)</li>
           <li><strong>23kg Check-in Bag:</strong> Higher price (1 per passenger)</li>
         </ul>
         <p>Prices vary by route and travel dates. Buying at the airport is significantly more expensive — 10kg bags cost €35.99–€40 at the desk, and gate fees for unpaid cabin bags can be €50–€70+.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Can I bring sports equipment on Ryanair?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes, you can bring sports equipment on Ryanair. The rules depend on the size and type of equipment:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="can-i-bring-sports-equipment-on-ryanair" data-v-732fe6a8="">Can I bring sports equipment on Ryanair?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes, you can bring sports equipment on Ryanair. The rules depend on the size and type of equipment:</p>
         <ul>
           <li><strong>Small items</strong> that fit within your cabin baggage allowance are free to bring on board</li>
           <li><strong>Large sports equipment</strong> (golf clubs, skis, surfboards, etc.) must be checked in for a fee, with a 20kg weight limit per item</li>
           <li><strong>Bicycles</strong> have a 30kg weight limit, must be non-electric, and properly protected</li>
         </ul>
         <p>Sports equipment fees are separate from your standard checked baggage allowance.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What is the baggage allowance for infants?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Infants (under 2 years old) traveling on an adult's lap do not get their own cabin baggage allowance. However, the accompanying adult can bring:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-is-the-baggage-allowance-for-infants" data-v-732fe6a8="">What is the baggage allowance for infants?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Infants (under 2 years old) traveling on an adult's lap do not get their own cabin baggage allowance. However, the accompanying adult can bring:</p>
         <ul>
           <li><strong>1 additional baby bag</strong> weighing up to 5kg</li>
           <li><strong>2 items of baby equipment</strong> checked in for free (stroller, car seat, travel cot, high chair, etc.)</li>
         </ul>
         <p>Strollers can be taken to the boarding gate and then placed in the hold free of charge.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Does Ryanair weigh the free small bag?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Ryanair does not officially state a weight limit for the free small personal bag, and they generally do not weigh it. However, they do check the <strong>size</strong> using baggage sizers at the gate.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="does-ryanair-weigh-the-free-small-bag" data-v-732fe6a8="">Does Ryanair weigh the free small bag?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Ryanair does not officially state a weight limit for the free small personal bag, and they generally do not weigh it. However, they do check the <strong>size</strong> using baggage sizers at the gate.</p>
         <p>That said, the bag must be small enough to fit under the seat in front of you, and staff can use their discretion if a bag appears excessively heavy or oversized.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Can I bring a laptop bag plus a backpack?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>No — with a standard (non-Priority) ticket, you are only allowed <strong>one</strong> small personal bag. You cannot bring both a laptop bag and a backpack as separate items.</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="can-i-bring-a-laptop-bag-plus-a-backpack" data-v-732fe6a8="">Can I bring a laptop bag plus a backpack?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>No — with a standard (non-Priority) ticket, you are only allowed <strong>one</strong> small personal bag. You cannot bring both a laptop bag and a backpack as separate items.</p>
         <p>You have two options:</p>
         <ul>
           <li>Put your laptop inside your backpack so you only have one bag</li>
           <li>Purchase Priority & 2 Cabin Bags, which allows two bags (small bag + cabin bag)</li>
         </ul>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What happens if my bag is too big at the gate?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>If your bag does not fit in the baggage sizer at the gate and you do not have Priority boarding, Ryanair will:</p>
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-happens-if-my-bag-is-too-big-at-the-gate" data-v-732fe6a8="">What happens if my bag is too big at the gate?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>If your bag does not fit in the baggage sizer at the gate and you do not have Priority boarding, Ryanair will:</p>
         <ul>
           <li>Place your bag in the aircraft hold (cargo)</li>
           <li>Charge you a <strong>gate fee</strong> of approximately €50–€70+</li>
         </ul>
         <p>This is the most expensive way to check a bag. It is always cheaper to buy Priority or a checked bag in advance online.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
         <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Aer Lingus Baggage Allowance 2026</div>
@@ -799,7 +862,7 @@ td.paid { color: #dc2626; font-weight: 600; }
     </div>
 
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://luggagevalidator.com/airlines/ryanair">Luggage Validator — Ryanair Baggage Calculator 2026</a></li>
         <li><a href="https://www.ryanair.com/gb/en/useful-info/help-centre/faq-overview/Baggage" rel="noopener noreferrer nofollow" target="_blank">Ryanair Official Baggage Policy</a></li>
@@ -817,11 +880,6 @@ td.paid { color: #dc2626; font-weight: 600; }
   <script>
 // FAQ 折叠
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.faq-question').forEach(function(q) {
-    q.addEventListener('click', function() {
-      q.parentElement.classList.toggle('open');
-    });
-  });
 });
 </script>
 </body>

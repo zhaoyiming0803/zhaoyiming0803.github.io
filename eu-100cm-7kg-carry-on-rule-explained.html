@@ -146,9 +146,9 @@
     }
 
     .content h3 {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 600;
-      margin: 28px 0 12px;
+      margin: 12px 0 12px;
       color: #1e293b;
     }
 
@@ -270,54 +270,49 @@
       margin-bottom: 12px;
       overflow: hidden;
     }
-
     .faq-question {
-      padding: 16px 20px;
+      padding: 14px 20px;
       cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 600;
-      color: #1e293b;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #1e293b;
       background: #f8fafc;
       transition: background 0.2s;
+      list-style: none;
     }
-
-    .faq-question:hover {
-      background: #f1f5f9;
+    .faq-question::-webkit-details-marker {
+      display: none;
     }
-
-    .faq-question .icon {
-      font-size: 10px;
+    .faq-question:hover { background: #f1f5f9; }
+    .faq-question-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 12px 0 12px;
+      line-height: 1.5;
+    }
+    .faq-icon {
       color: #64748b;
       transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: 16px;
     }
-
-    .faq-item.open .faq-question .icon {
+    details[open] .faq-icon svg {
       transform: rotate(180deg);
     }
-
-    .faq-answer {
+    .faq-answer-wrapper {
       padding: 0 20px;
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.3s ease;
     }
-
-    .faq-item.open .faq-answer {
-      padding: 16px 20px;
-      max-height: 1000px;
+    .faq-answer {
+      padding: 16px 0;
     }
-
-    .faq-answer p {
-      margin-bottom: 12px;
-      color: #475569;
-    }
-
-    .faq-answer p:last-child {
-      margin-bottom: 0;
-    }
-
+    .faq-answer p { margin-bottom: 12px; color: #475569; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { margin: 8px 0 12px 20px; }
+    .faq-answer li { margin-bottom: 6px; color: #475569; }
+    
     /* Airline link */
     .airline-link {
       display: inline-flex;
@@ -659,66 +654,96 @@
 
     <h2>Frequently Asked Questions</h2>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Is 100cm the exact official number?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>The EU regulation sets a framework for free cabin bags, but the exact final dimensions will be confirmed in
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="is-100cm-the-exact-official-number" data-v-732fe6a8="">Is 100cm the exact official number?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>The EU regulation sets a framework for free cabin bags, but the exact final dimensions will be confirmed in
           the implementing acts. The 100 cm / 7 kg figure is based on the proposed text and media reports. Check the
           official EU sources for the final exact numbers.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Will my 20-inch carry-on still work?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>A standard 20-inch carry-on (about 55×40×20 cm = 115 cm total) is larger than the 100 cm EU minimum. However,
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="will-my-20-inch-carry-on-still-work" data-v-732fe6a8="">Will my 20-inch carry-on still work?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>A standard 20-inch carry-on (about 55×40×20 cm = 115 cm total) is larger than the 100 cm EU minimum. However,
           many airlines may continue to allow larger bags — the EU rule only sets a minimum, not a maximum. Check your
           specific airline's policy.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Do wheels and handles count?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes. Airlines always measure at the widest/tallest/longest points, which includes wheels, handles, and
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="do-wheels-and-handles-count" data-v-732fe6a8="">Do wheels and handles count?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes. Airlines always measure at the widest/tallest/longest points, which includes wheels, handles, and
           external pockets. A bag that is "55 cm body only" might be 60+ cm with wheels and handles extended.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>What if my bag is slightly over?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>It depends on the airline and the airport. Some are strict and use sizer boxes; others are more lenient. But
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="what-if-my-bag-is-slightly-over" data-v-732fe6a8="">What if my bag is slightly over?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>It depends on the airline and the airport. Some are strict and use sizer boxes; others are more lenient. But
           to be safe, your bag should fit within the stated limits. Gate fees for oversized bags can be €50–100 or more.
         </p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Can I bring both a cabin bag and a personal item?</span>
-        <span class="icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Yes — under the new EU rule, the base fare includes both a wheeled cabin bag (overhead bin) and a personal
+    <details class="faq-item" data-v-732fe6a8="">
+      <summary class="faq-question" data-v-732fe6a8="">
+        <h3 class="faq-question-text" id="can-i-bring-both-a-cabin-bag-and-a-personal-item" data-v-732fe6a8="">Can I bring both a cabin bag and a personal item?</h3>
+        <span class="faq-icon" data-v-732fe6a8="">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-732fe6a8=""><polyline points="6 9 12 15 18 9" data-v-732fe6a8=""></polyline></svg>
+        </span>
+      </summary>
+      <div class="faq-answer-wrapper" data-v-732fe6a8="">
+        <!--[-->
+        <div class="faq-answer" data-v-732fe6a8="">
+          <p>Yes — under the new EU rule, the base fare includes both a wheeled cabin bag (overhead bin) and a personal
           item (under seat). That is two items total, both for free.</p>
+        </div>
+        <!--]-->
       </div>
-    </div>
+    </details>
 
         <div class="related-pages">
-      <h3>Related Pages</h3>
+      <h2>Related Pages</h2>
       <div class="related-grid">
         <a href="https://zhaoyiming0803.github.io/aer-lingus-baggage-allowance-2026.html" class="related-card">
           <div class="related-title">Aer Lingus Baggage Allowance 2026</div>
@@ -761,7 +786,7 @@
     </div>
 
     <div class="sources">
-      <h3>Official Sources</h3>
+      <h2>Official Sources</h2>
       <ul>
         <li><a href="https://luggagevalidator.com/airlines/">Luggage Validator — All Airlines</a></li>
         <li><a href="https://www.europarl.europa.eu/news/en/press-room" rel="noopener noreferrer nofollow"
@@ -778,13 +803,6 @@
       documents.</p>
   </footer>
   <script>
-    // FAQ 折叠
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('.faq-question').forEach(function (q) {
-        q.addEventListener('click', function () {
-          q.parentElement.classList.toggle('open');
-        });
-      });
     });
   </script>
 </body>
